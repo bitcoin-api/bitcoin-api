@@ -142,7 +142,7 @@ a user (i.e. the addresses associated with a mega code).
 {
     "deposits": [
         {
-            "amountDeposited": "3HPxYpriHZSSgT93kMAt67tiLfaEp1oXRr",
+            "amountDeposited": 1.0563,
             "time": 1234192134,
             "confirmations": 420,
             "id": "23823u7283",
