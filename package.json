@@ -1,0 +1,20 @@
+{
+  "name": "bitcoin-api",
+  "version": "2.1.0",
+  "description": "Bitcoin-Api.io - more info soon.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitcoin-api/bitcoin-api.git"
+  },
+  "author": "Bitcoin-Api.io",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bitcoin-api/bitcoin-api/issues"
+  },
+  "homepage": "https://github.com/bitcoin-api/bitcoin-api#readme",
+  "dependencies": {}
+}
