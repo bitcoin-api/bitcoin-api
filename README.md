@@ -113,7 +113,7 @@ amountUserPays = (amount user inputs) + fee
 **without the fee, the fee will be added automatically.**
 
 Part of the fee will go to the environment🌲🌳, with every withdraw you
-make a small amount of satoshis will go to an environmental initiative savings wallet.
+make a small amount of satoshis (currently 100 satoshis) will go to an environmental initiative savings wallet.
 The money accumulated in this wallet will go to an environmental
 intiative chosen by Bitcoin-Api.io users.
 
