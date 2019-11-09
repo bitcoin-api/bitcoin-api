@@ -23,8 +23,36 @@ All requests to Bitcoin-Api must be JSON and must contain the following HTTP hea
 }
 ```
 
+## Endpoints
 
-## /v2/fee_data (get fee estimate)
+
+### /v2/mega_codes (get Mega Code)
+
+#### POST
+
+This endpoint creates a mega code (will be changed to `token` in v3).
+A mega code is used with the other endpoints
+to access and to perform operations with your bitcoins.
+
+
+##### Request Body:
+```
+{}
+```
+
+##### Response:
+``` .json
+{        
+    "megaCode": "qwerrtjhgfdjhi...."
+}
+```
+The `megaCode` is a very long string, such as:
+
+`69c9938f02684337b75a4d2d101260ba07f978886dcb41198bea1c13b07ca28727970dbc9b8541dea78c5aa19268b29704743cfe70524f70b52864fac9d6c5568608a7744def42d7ae23279c3ee1d7daab8e97ed07d44d20a26e55f1c184751cf0f5ad1e37f64308ae99ca513f9d18189d0553fb3bbf4ca8ba03e79de0746a500d065c0a07c2495c89eeebcbb179a75e3a4f9fe623084baeaf4b845ecb4803bc5b65b4795cc448f399bccd2c82722c7d4e9c133f901b4a50ba112865ac994db6163aafc1d0034122bdc5e2520ba7a9feb09c1431418746329b2b7720df0ebeb0adb91656f9bd43e889b460afad94403a04a47a479f5a4164b69f39e44378f4afc009375e276c4c65bc153adf42e23d4a05d9f55bf57340e8b9f0cc084364d1e52b96b9a8aa314390bb422e2b75972a36db9a95173d2a44b4b2cb400d1354c98599bbc504ce4245e2a97eae41a6883420`
+**This is like a username and a password in one - it provides access to your bitcoins and it is your responsibility for keeping this mega code safe.**
+
+
+### /v2/fee_data (get fee estimate)
 
 #### POST
 
@@ -55,7 +83,7 @@ make a small amount of satoshis will go to an environmental initiative savings w
 The money accumulated in this wallet will go to an environmental
 intiative chosen by Bitcoin-Api.io users.
 
-### Errors:
+## Errors
 
 #### Standard Format - 200 Response
 ``` .json
