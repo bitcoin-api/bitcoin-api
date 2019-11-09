@@ -52,6 +52,40 @@ The `megaCode` is a very long string, such as:
 **This is like a username and a password in one - it provides access to your bitcoins and it is your responsibility for keeping this mega code safe.**
 
 
+### /v2/addresses (get desposit address)
+
+#### POST
+Gets an unused address you can use to deposit bitcoins.
+Will return the same address if called again until the address
+becomes used (receives bitcoins).
+
+May return `null`, if that's the case then no fresh addresses are
+available at the moment and you must try again later.
+
+##### Request Body:
+```
+{
+    "megaCode": "qwerrtjhgfdjhi...."
+}
+```
+
+##### Response:
+``` .json
+{        
+    "address": "3HPxYpriHZSSgT93kMAt67tiLfaEp1oXRr",
+    "timeOfExpiry": 1570976393545
+}
+```
+##### Address Expiry
+If an address is **NOT** used before the `timeOfExpiry` (which is
+now set to 100 days after the address it first gotten),
+the address will be returned to bitcoin-api to be redistributed.
+This is eco friendly - it prevents wasted server space and usage.🌳🌲
+
+Note: Bitcoin-Api.io will never redistribute addresses
+that have received bitcoins.
+
+
 ### /v2/fee_data (get fee estimate)
 
 #### POST
@@ -82,6 +116,140 @@ Part of the fee will go to the environment🌲🌳, with every withdraw you
 make a small amount of satoshis will go to an environmental initiative savings wallet.
 The money accumulated in this wallet will go to an environmental
 intiative chosen by Bitcoin-Api.io users.
+
+
+### /v2/deposits (view deposits)
+
+#### PATCH
+Get the deposits that have been made in the addresses associated with
+a user (i.e. the addresses associated with a mega code).
+
+* order is from recent deposit to the oldest deposit
+
+
+##### Request Body:
+``` .json
+{
+    "megaCode": "qwerrtjhgfdjhi....", // required
+    "startTime": 1559193500000, // required
+    "endTime": 1559798300000, // required
+
+    "keyToGetMoreValues": "uihwejrhihh" // optional, see explanation below
+}
+```
+##### Response:
+``` .js
+{
+    "deposits": [
+        {
+            "amountDeposited": "3HPxYpriHZSSgT93kMAt67tiLfaEp1oXRr",
+            "time": 1234192134,
+            "confirmations": 420,
+            "id": "23823u7283",
+        },
+        ...
+    ],
+    "keyToGetMoreValues": "uihwejrhihh"
+}
+```
+If the `keyToGetMoreValues` property exists,
+then there are more deposits to retrieve within the specified time period.
+Pass that value in the body of the same request you just made to get the
+next values.
+
+The time range between the start and the end dates must be between
+one minute and one month.
+
+
+
+### /v2/balances (get balance)
+
+#### POST
+Get balance associated with a user. If the balance is in the
+`transformation` state,
+that means a withdraw is currently being processed and the
+balance is not yet finalized.
+
+##### Request Body:
+``` .json
+{
+    "megaCode": "qwerrtjhgfdjhi...."
+}
+```
+##### Response:
+``` .js
+{
+    "balance": 42.69420,
+    "state": "normal" | "transformation"
+}
+```
+
+
+### /v2/withdraws (do withdraw)
+
+#### POST
+
+##### Request Body:
+```
+{
+    "megaCode": "qwerrtjhgfdjhi....",
+    "amountInBtcWithoutFee": 0.19,
+    "address": "3HPxYpriHZSSgT93kMAt67tiLfaEp1oXRr"
+}
+```
+**Note:**
+minimum amount: 0.00004 BTC
+maxiumum amount: 69 BTC
+
+
+##### Response:
+``` .json
+{}
+```
+
+
+### /v2/withdraws (view withdraws)
+
+#### PATCH
+
+View withdraws associated with a user.
+* order is from recent withdraw to the oldest withdraw
+
+##### Request Body:
+``` .json
+{
+    "megaCode": "qwerrtjhgfdjhi....",
+    "startTime": 1559193500000,
+    "endTime": 1559798300000,
+    "keyToGetMoreValues": "uihwejrhihh"
+}
+```
+
+##### Response:
+``` .js
+{
+    "withdraws": [
+        {
+            "time": 3483743824231,
+            "status": "loading" | "error" | "good",
+            "address": "3HPxYpriHZSSgT93kMAt67tiLfaEp1oXRr",
+            "amountWithdrew": 0.003,
+            "fee": 0.0000001,
+        },
+        ...
+    ],
+    "keyToGetMoreValues": "wow43r8534"
+}
+```
+
+If the `keyToGetMoreValues` property exists,
+then there are more withdraws to retrieve within the specified time period.
+Pass that value in the body of the same request you just made to get the
+next values.
+
+The time range between the start and the end dates must be between
+one minute and one month.
+
 
 ## Errors
 
