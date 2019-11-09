@@ -17,7 +17,7 @@ estimate for withdraws, a POST request needs to be made to the
 ### Headers
 
 All requests to Bitcoin-Api must be JSON and must contain the following HTTP header:
-``` .json
+``` .js
 {
     "Content-Type": "application/json"
 }
@@ -41,7 +41,7 @@ to access and to perform operations with your bitcoins.
 ```
 
 ##### Response:
-``` .json
+``` .js
 {        
     "megaCode": "qwerrtjhgfdjhi...."
 }
@@ -70,7 +70,7 @@ available at the moment and you must try again later.
 ```
 
 ##### Response:
-``` .json
+``` .js
 {        
     "address": "3HPxYpriHZSSgT93kMAt67tiLfaEp1oXRr",
     "timeOfExpiry": 1570976393545
@@ -93,11 +93,11 @@ that have received bitcoins.
 Get a fee estimate for making withdraws.
 
 ##### Request Body:
-``` .json
+``` .js
 {}
 ```
 ##### Response:
-``` .json
+``` .js
 {
     "fee": 0.00010234
 }
@@ -128,7 +128,7 @@ a user (i.e. the addresses associated with a mega code).
 
 
 ##### Request Body:
-``` .json
+``` .js
 {
     "megaCode": "qwerrtjhgfdjhi....", // required
     "startTime": 1559193500000, // required
@@ -171,7 +171,7 @@ that means a withdraw is currently being processed and the
 balance is not yet finalized.
 
 ##### Request Body:
-``` .json
+``` .js
 {
     "megaCode": "qwerrtjhgfdjhi...."
 }
@@ -203,7 +203,7 @@ maxiumum amount: 69 BTC
 
 
 ##### Response:
-``` .json
+``` .js
 {}
 ```
 
@@ -216,7 +216,7 @@ View withdraws associated with a user.
 * order is from recent withdraw to the oldest withdraw
 
 ##### Request Body:
-``` .json
+``` .js
 {
     "megaCode": "qwerrtjhgfdjhi....",
     "startTime": 1559193500000,
@@ -254,7 +254,7 @@ one minute and one month.
 ## Errors
 
 #### Standard Format - 200 Response
-``` .json
+``` .js
 {
     "isError": true,
     "statusCode": 500,
