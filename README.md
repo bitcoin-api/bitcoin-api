@@ -26,7 +26,7 @@ All requests to Bitcoin-Api must be JSON and must contain the following HTTP hea
 ## Endpoints
 
 
-### /v2/mega_codes (get Mega Code)
+### /v2/mega_codes (get "mega code")
 
 #### POST
 
@@ -50,6 +50,28 @@ The `megaCode` is a very long string, such as:
 
 `69c9938f02684337b75a4d2d101260ba07f9 ... 83420` (abbreviated)
 **This is like a username and a password in one - it provides access to your bitcoins and it is your responsibility for keeping this mega code safe.**
+
+
+### /v2/users (verify user)
+
+#### POST
+
+Used to ensure a mega code belongs to a user.
+
+##### Request Body:
+```
+{
+    "megaCode": "qwerrtjhgfdjhi...."
+}
+```
+
+##### Response:
+``` .json
+{        
+    "isValidUser": true | false
+}
+```
+
 
 
 ### /v2/addresses (get deposit address)
