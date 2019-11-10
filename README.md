@@ -66,7 +66,7 @@ Used to ensure a mega code belongs to a user.
 ```
 
 ##### Response:
-``` .json
+``` .js
 {        
     "isValidUser": true | false
 }
