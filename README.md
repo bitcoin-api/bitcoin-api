@@ -2,7 +2,7 @@
 
 ## API for Handling Bitcoins by Bitcoin-Api.io
 
-# API V1/V2 [![npm version](https://badge.fury.io/js/bitcoin-api.svg)](https://badge.fury.io/js/bitcoin-api)
+# API V2 [![npm version](https://badge.fury.io/js/bitcoin-api.svg)](https://badge.fury.io/js/bitcoin-api)
 
 - preliminary versions - is working and is production ready
 - some endpoint paths and methods are temporary (e.g. using POST in place of GET will be changed to GET)
@@ -26,7 +26,7 @@ All requests to Bitcoin-Api must be JSON and must contain the following HTTP hea
 ## Endpoints
 
 
-### /v1/mega_codes (get Mega Code)
+### /v2/mega_codes (get Mega Code)
 
 #### POST
 
@@ -52,7 +52,7 @@ The `megaCode` is a very long string, such as:
 **This is like a username and a password in one - it provides access to your bitcoins and it is your responsibility for keeping this mega code safe.**
 
 
-### /v1/addresses (get deposit address)
+### /v2/addresses (get deposit address)
 
 #### POST
 Gets an unused address you can use to deposit bitcoins.
@@ -117,7 +117,7 @@ make a small amount of satoshis (currently 100 satoshis) will go to an environme
 The money accumulated in this wallet will go to an environmental
 intiative chosen by Bitcoin-Api.io users.
 
-### /v1/deposits (view deposits)
+### /v2/deposits (view deposits)
 
 #### PATCH
 Get the deposits that have been made in the addresses associated with
@@ -161,7 +161,7 @@ one minute and one month.
 
 
 
-### /v1/balances (get balance)
+### /v2/balances (get balance)
 
 #### POST
 Get balance associated with a user. If the balance is in the
@@ -184,7 +184,7 @@ balance is not yet finalized.
 ```
 
 
-### /v1/withdraws (do withdraw)
+### /v2/withdraws (do withdraw)
 
 #### POST
 
@@ -207,7 +207,7 @@ maxiumum amount: 69 BTC
 ```
 
 
-### /v1/withdraws (view withdraws)
+### /v2/withdraws (view withdraws)
 
 #### PATCH
 
