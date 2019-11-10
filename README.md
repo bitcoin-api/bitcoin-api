@@ -5,7 +5,7 @@
 # API V1/V2 [![npm version](https://badge.fury.io/js/bitcoin-api.svg)](https://badge.fury.io/js/bitcoin-api)
 
 - preliminary versions - is working and is production ready
-- some endpoint paths and methods are temporary (i.e. using POST in place of GET will be changed to GET)
+- some endpoint paths and methods are temporary (e.g. using POST in place of GET will be changed to GET)
 - `mega_codes` will be changed to `tokens`
 
 ### Base url
