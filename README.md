@@ -52,7 +52,7 @@ The `megaCode` is a very long string, such as:
 **This is like a username and a password in one - it provides access to your bitcoins and it is your responsibility for keeping this mega code safe.**
 
 
-### /v1/addresses (get desposit address)
+### /v1/addresses (get deposit address)
 
 #### POST
 Gets an unused address you can use to deposit bitcoins.
