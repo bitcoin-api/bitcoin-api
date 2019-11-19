@@ -1,7 +1,7 @@
 {
   "name": "bitcoin-api",
   "version": "2.1.16",
-  "description": "Bitcoin-Api.io - more info soon.",
+  "description": "Bitcoin-Api.io - API for Handling Bitcoins.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
