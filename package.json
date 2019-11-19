@@ -1,6 +1,6 @@
 {
   "name": "bitcoin-api",
-  "version": "2.1.16",
+  "version": "2.1.17",
   "description": "Bitcoin-Api.io - API for Handling Bitcoins.",
   "main": "index.js",
   "scripts": {
