@@ -300,9 +300,9 @@ if you have version x.y.z:
 > 👁**The Watchful Eye of Bitcoin-Api:** "Be bitcoin happy with Bitcoin-Api!"🔻
 ---
 
-## Limited Edition Official Authentic Bespoken Artisanal Genuine Hipster T-Shirt - 0.00420 BTC
-![Official T-Shirt](https://bitcoin-api.s3.amazonaws.com/merch/tshirts/Bitcoin-Api.io_tShirt_v1.jpeg "Official T-Shirt")
-email bitcoin.api.io@gmail.com to purchase
+## Limited Edition High Quality 90% Cotton, 10% Polyester  T-Shirt - Durable, Comfortable, and Aesthetic - 0.0042 BTC
+![Official T-Shirt](https://bitcoin-api.s3.amazonaws.com/merch/tshirts/Bitcoin-Api.io_tShirt_v1_0_1.jpeg "Official T-Shirt")
+Email bitcoin.api.io@gmail.com to get one now!
 
 
 ---
