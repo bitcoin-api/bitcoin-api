@@ -298,14 +298,14 @@ if you have version x.y.z:
 ![https://the-watchful-eye.s3.amazonaws.com/images/the-watchful-eye_small.png](https://the-watchful-eye.s3.amazonaws.com/images/the-watchful-eye_small.png)
 
 > 👁**The Watchful Eye of Bitcoin-Api:** "Be bitcoin happy with Bitcoin-Api!"🔻
+<!--
 ---
-
 ## Limited Edition High Quality 90% Cotton, 10% Polyester  T-Shirt
 ### Durable, Comfortable, and Aesthetic
 ![Official T-Shirt](https://bitcoin-api.s3.amazonaws.com/merch/tshirts/Bitcoin-Api.io_tShirt_v1_0_1.jpeg "Official T-Shirt")
 #### 0.0042 BTC
-Email bitcoin.api.io@gmail.com to get one now!
-
+Email support@bitcoin-api.io to get one now!
+ -->
 
 ---
 Part of the profits will go to the environment🌲🌳 -- The Bitcoin-Api.io Promise
