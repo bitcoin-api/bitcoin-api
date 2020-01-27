@@ -1,10 +1,10 @@
 {
   "name": "bitcoin-api",
-  "version": "2.1.20",
-  "description": "Bitcoin-Api.io - API for Handling Bitcoins.",
+  "version": "3.0.2",
+  "description": "Bitcoin-Api.io - Bitcoin as a Service.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Welcome to Bitcoin-Api.io - Bitcoin as a Service. Be bitcoin happy with Bitcoin-Api!\" && exit 0"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,18 @@
     "url": "https://github.com/bitcoin-api/bitcoin-api/issues"
   },
   "homepage": "https://github.com/bitcoin-api/bitcoin-api#readme",
-  "dependencies": {}
+  "dependencies": {},
+  "keywords": [
+    "bitcoin",
+    "api",
+    "bitcoin-api",
+    "api-bitcoin",
+    "quick",
+    "lightweight",
+    "small",
+    "fast",
+    "easy",
+    "light",
+    "btc"
+  ]
 }
