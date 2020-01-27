@@ -74,7 +74,7 @@ Activate your livenet token with the following link:
 Once you have an Activated-Token,
 you can add it to your HTTPS request header
 like below to make authorized requests to token-only endpoints:
-```.json
+```.js
 {
     "Content-Type": "application/json",
     "Token": "YOUR_ACTIVATED-TOKEN_GOES_HERE_INSTEAD_OF_THIS_TEXT"
@@ -150,12 +150,12 @@ Public Endpoint
 
 
 ##### Request Body Example
-```.json
+```.js
 {}
 ```
 
 ##### Response Body Example
-```.json
+```.js
 {
         "statusCode": 200,
         "body": {
@@ -172,7 +172,7 @@ This endpoint gets info associated with a token.
 General-Token Endpoint
 
 ##### Response Body Example
-```.json
+```.js
 {
     "statusCode": 200,
     "body": {
@@ -217,12 +217,12 @@ bitcoin sent to it.
 Activated-Token Endpoint
 
 ##### Request Body Example
-```.json
+```.js
 {}
 ```
 
 ##### Response Body Example
-```.json
+```.js
 {
     "statusCode": 200,
     "body": {
@@ -242,7 +242,7 @@ amount. 000001 BTC goes to the environment🌲🌴🌳! (livenet only)
 Public Endpoint
 
 ##### Response Body Example
-```.json
+```.js
 {
     "statusCode": 200,
     "body": {
@@ -261,7 +261,7 @@ This endpoint withdraws bitcoin associated with your token.
 Activated-Token Endpoint
 
 ##### Request Body Example
-```.json
+```.js
 {
     amountInBtcWithoutFee: 0.00004, // min withdraw amount
     address: '3AfV9QQQTgtCH6YEjBpDTyH5sswgGD5MLp'
@@ -269,7 +269,7 @@ Activated-Token Endpoint
 ```
 
 ##### Response Body Example
-```.json
+```.js
 {
     "statusCode": 200,
     "body": {}
