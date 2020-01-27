@@ -99,7 +99,7 @@ response in the following form:
 ```.js
 {
     
-    "statusCode": 2xx, // number (200-299)
+    "statusCode": 200, // number (200-299)
     
     "body": { 
 
@@ -124,7 +124,7 @@ the contents of that response will be in the following form:
 ```.js
 {
 
-    "statusCode": 4xx || 5xx, // number (400-599)
+    "statusCode": 400 || 500, // number (400-599)
 
     "isError": true,
     
