@@ -1,303 +1,303 @@
-# bitcoin-api
+# Bitcoin-Api.io 
+### API v3 Documentation [![npm version](https://badge.fury.io/js/bitcoin-api.svg)](https://badge.fury.io/js/bitcoin-api)
+[Bitcoin-Api.io](https://bitcoin-api.io) - Bitcoin as a service. Be bitcoin happy with Bitcoin-Api!
 
-## API for Handling Bitcoins by Bitcoin-Api.io
+## Requests
 
-# API V2 [![npm version](https://badge.fury.io/js/bitcoin-api.svg)](https://badge.fury.io/js/bitcoin-api)
+### Base Url
 
-- preliminary version - is working and is production ready
-- some endpoint paths and methods are temporary (e.g. using POST in place of GET will be changed to GET)
-- `mega_codes` will be changed to `tokens`
+##### Tesnet:
+`https://api-bitcoin.io/v3`
 
-### Base url
-The base url is bitcoin-api.io. For example, to get a fee
-estimate for withdraws, a POST request needs to be made to the
-`https://bitcoin-api.io/v2/fee_data` endpoint.
+##### Livenet:
+`https://bitcoin-api.io/v3`  
+
+(livenet API currently not enabled)
 
 
-### Headers
+### Public Endpoints
+**Public Endpoints** can be accessed using HTTPS requests with the following headers:
 
-All requests to Bitcoin-Api must be JSON and must contain the following HTTP header:
-``` .js
+```.js
+// HTTP headers to add to make requests to Public Endpoints
 {
     "Content-Type": "application/json"
 }
 ```
 
+### General-Token Endpoints
+**General-Token Endpoints** are endpoints that must be accessed
+using a token in the header.
+You first acquire a token by making a request to the [/tokens POST public endpoint](#).
+
+Once you have a token,
+you can add it to your HTTPS request header
+like below to make authorized requests to
+General-Token Endpoints:
+```.js
+// HTTP headers to add to make requests to General-Token Endpoints
+{
+    "Content-Type": "application/json",
+    "Token": "YOUR_TOKEN_GOES_HERE_INSTEAD_OF_THIS_TEXT"
+}
+```
+
+
+#### About Tokens
+Tokens are used to make authorized requests to the Bitcoin-Api.io API.
+These authorized requests allow you to access
+and to control your bitcoin.
+A token is a key that gives you access to your bitcoin,
+bitcoin addresses, withdraws,
+and any other resources associated with that token.
+**It is very important that you keep your token
+secret and secure in order
+to protect your bitcoins
+and any token-associated data.**
+
+
+### Activated-Token Endpoints
+As the name suggests, an **Activated-Token Endpoint**
+can only be accessed using an **Activated-Token**.
+To activate your token, use the appropriate link below:
+
+Activate your testnet token with the following link:
+
+### [Testnet Token Activator (for Api-Bitcoin.io)](https://api-bitcoin.io/token-activator)  
+
+Activate your livenet token with the following link:
+
+### Livenet Token Activator (for Bitcoin-Api.io)
+
+(not enabled: the livenet site will be active in the future)
+
+Once you have an Activated-Token,
+you can add it to your HTTPS request header
+like below to make authorized requests to token-only endpoints:
+```.json
+{
+    "Content-Type": "application/json",
+    "Token": "YOUR_ACTIVATED-TOKEN_GOES_HERE_INSTEAD_OF_THIS_TEXT"
+}
+```
+
+
+## Responses
+**All responses, success or error,
+should always respond with a 200 status code
+in the actual HTTPS response.**
+
+This implies that any non 200 status code responses
+should be considered unexpected internal server errors
+or the request itself was invalid
+(e.g. accidentally using the wrong HTTP method).
+
+
+### Successful Responses
+Requests that executed successfully will return a
+response in the following form:
+```.js
+{
+    
+    "statusCode": 2xx, // number (200-299)
+    
+    "body": { 
+
+        "key_1": "value_1",
+        "key_2": "value_2",
+        "key_3": "value_3",
+        ...,
+        "key_i": "value_i",
+        ...,
+        "key_n": "value_n"
+
+    }, // object
+}
+```
+
+### Error Responses
+Assuming the request was properly formed
+and there were no internal server errors,
+as explained above,
+the HTTPS request itself will respond with a 200 status code although
+the contents of that response will be in the following form:
+```.js
+{
+
+    "statusCode": 4xx || 5xx, // number (400-599)
+
+    "isError": true,
+    
+    "message": "the error message will be here instead of this text", // string
+}
+```
+
+
+
 ## Endpoints
 
 
-### /v2/mega_codes (get "mega code")
+### /tokens
 
-#### POST
+#### POST - Create Token
+Create a new token.
+Tokens provide access to your bitcoins and associated resources
+by authorizing token-only requests.
 
-This endpoint creates a mega code (will be changed to `token` in v3).
-A mega code is used with the other endpoints
-to access and to perform operations with your bitcoins.
+
+##### Authorization
+Public Endpoint
 
 
-##### Request Body:
-```
+##### Request Body Example
+```.json
 {}
 ```
 
-##### Response:
-``` .js
-{        
-    "megaCode": "qwerrtjhgfdjhi...."
-}
-```
-The `megaCode` is a very long string, such as:
-
-`69c9938f02684337b75a4d2d101260ba07f9 ... 83420` (abbreviated)
-**This is like a username and a password in one - it provides access to your bitcoins and it is your responsibility for keeping this mega code safe.**
-
-
-### /v2/users (verify user)
-
-#### POST
-
-Used to ensure a mega code belongs to a user.
-
-##### Request Body:
-```
+##### Response Body Example
+```.json
 {
-    "megaCode": "qwerrtjhgfdjhi...."
-}
-```
-
-##### Response:
-``` .js
-{        
-    "isValidUser": true | false
+        "statusCode": 200,
+        "body": {
+            "token": "asjfhnsdlkjfhdskljhfskdljfhsdjkfsdkjfhnsdlsdf..."
+        }
 }
 ```
 
 
+#### GET - Get Token Info
+This endpoint gets info associated with a token.
 
-### /v2/addresses (get deposit address)
+##### Authorization 
+General-Token Endpoint
 
-#### POST
-Gets an unused address you can use to deposit bitcoins.
-Will return the same address if called again until the address
-becomes used (receives bitcoins).
-
-May return `null`, if that's the case then no fresh addresses are
-available at the moment and you must try again later.
-
-##### Request Body:
-```
+##### Response Body Example
+```.json
 {
-    "megaCode": "qwerrtjhgfdjhi...."
+    "statusCode": 200,
+    "body": {
+        "tokenIsActivated": false,
+        "tokenIsValid": true,
+        "balanceData": {
+            "amount": 0.0005,
+            "status": "normal"
+        }
+    }
 }
 ```
 
-##### Response:
-``` .js
-{        
-    "address": "3HPxYpriHZSSgT93kMAt67tiLfaEp1oXRr",
-    "timeOfExpiry": 1570976393545
-}
-```
-##### Address Expiry
-If an address is **NOT** used before the `timeOfExpiry` (which is
-now set to 100 days after the address it first gotten),
-the address will be returned to bitcoin-api to be redistributed.
-This is eco friendly - it prevents wasted server space and usage.🌳🌲
-
-Note: Bitcoin-Api.io will never redistribute addresses
-that have received bitcoins.
+* For the balance data (`body.balanceData`) returned in the response,
+there is a `status` value associated with it.
+The value will either be `"normal"` or `"transformation"`.
+If the value is in the `"transformation"` state, that means a
+withdraw is currently being processed.
 
 
-### /v2/fee_data (get fee estimate)
+### /addresses
 
-#### POST
-
-Get a fee estimate for making withdraws.
-
-##### Request Body:
-``` .js
-{}
-```
-##### Response:
-``` .js
-{
-    "fee": 0.00010234
-}
-```
-used to estimate the fee.
-
-the formula for the amount the user pays to make the withdraw is:
-```
-amountUserPays = (amount user inputs) + fee
-```
-> IMPORTANT NOTE: The `amountInBtcWithoutFee` value for the
-`/v2/withdraws` endpoint is the amount the user wants to withdraw
-**without the fee, the fee will be added automatically.**
-
-Part of the fee will go to the environment🌲🌳, with every withdraw you
-make a small amount of satoshis (currently 100 satoshis) will go to an environmental initiative savings wallet.
-The money accumulated in this wallet will go to an environmental
-intiative chosen by Bitcoin-Api.io users.
-
-### /v2/deposits (view deposits)
-
-#### PATCH
-Get the deposits that have been made in the addresses associated with
-a user (i.e. the addresses associated with a mega code).
-
-* order is from recent deposit to the oldest deposit
+#### POST - Create New Bitcoin Address
+This endpoint creates a new bitcoin address that can
+be used to deposit bitcoins. A new address will be generated
+once the old one is has bitcoin sent to it.
+If the address value is `null`,
+there are currently no new addresses available and you
+must try again later.
 
 
-##### Request Body:
-``` .js
-{
-    "megaCode": "qwerrtjhgfdjhi....", // required
-    "startTime": 1559193500000, // required
-    "endTime": 1559798300000, // required
-
-    "keyToGetMoreValues": "uihwejrhihh" // optional, see explanation below
-}
-```
-##### Response:
-``` .js
-{
-    "deposits": [
-        {
-            "amountDeposited": 1.0563,
-            "time": 1234192134,
-            "confirmations": 420,
-            "id": "23823u7283",
-        },
-        ...
-    ],
-    "keyToGetMoreValues": "uihwejrhihh"
-}
-```
-If the `keyToGetMoreValues` property exists,
-then there are more deposits to retrieve within the specified time period.
-Pass that value in the body of the same request you just made to get the
-next values.
-
-The time range between the start and the end dates must be between
-one minute and one month.
-
-
-
-### /v2/balances (get balance)
-
-#### POST
-Get balance associated with a user. If the balance is in the
-`transformation` state,
-that means a withdraw is currently being processed and the
-balance is not yet finalized.
-
-##### Request Body:
-``` .js
-{
-    "megaCode": "qwerrtjhgfdjhi...."
-}
-```
-##### Response:
-``` .js
-{
-    "balance": 42.69420,
-    "state": "normal" | "transformation"
-}
-```
-
-
-### /v2/withdraws (do withdraw)
-
-#### POST
-
-##### Request Body:
-```
-{
-    "megaCode": "qwerrtjhgfdjhi....",
-    "amountInBtcWithoutFee": 0.19,
-    "address": "3HPxYpriHZSSgT93kMAt67tiLfaEp1oXRr"
-}
-```
 **Note:**
-minimum amount: 0.00004 BTC
-maxiumum amount: 69 BTC
+If you don't deposit bitcoin
+to your address before it expires, that address will be
+reclaimed by Bitcoin-Api meaning you will not be
+able to access any bitcoin sent to that address.
+Bitcoin-Api will never expire an address that already has
+bitcoin sent to it.
 
 
-##### Response:
-``` .js
+##### Authorization 
+Activated-Token Endpoint
+
+##### Request Body Example
+```.json
 {}
 ```
 
-
-### /v2/withdraws (view withdraws)
-
-#### PATCH
-
-View withdraws associated with a user.
-* order is from recent withdraw to the oldest withdraw
-
-##### Request Body:
-``` .js
+##### Response Body Example
+```.json
 {
-    "megaCode": "qwerrtjhgfdjhi....",
-    "startTime": 1559193500000,
-    "endTime": 1559798300000,
-    "keyToGetMoreValues": "uihwejrhihh"
+    "statusCode": 200,
+    "body": {
+        "address": "3AfV9QQQTgtCH6YEjBpDTyH5sswgGD5MLp",
+        "timeOfExpiry": 1588611713247
+    }
 }
 ```
 
-##### Response:
-``` .js
+### /fee-data
+
+#### GET - Get Fee Data
+The endpoint gets the current fee that's added to the withdraw
+amount. 000001 BTC goes to the environment🌲🌴🌳! (livenet only)
+
+##### Authorization 
+Public Endpoint
+
+##### Response Body Example
+```.json
 {
-    "withdraws": [
-        {
-            "time": 3483743824231,
-            "status": "loading" | "error" | "good",
-            "address": "3HPxYpriHZSSgT93kMAt67tiLfaEp1oXRr",
-            "amountWithdrew": 0.003,
-            "fee": 0.0000001,
-        },
-        ...
-    ],
-    "keyToGetMoreValues": "wow43r8534"
+    "statusCode": 200,
+    "body": {
+        "fee": 0.000002
+    }
 }
 ```
 
-If the `keyToGetMoreValues` property exists,
-then there are more withdraws to retrieve within the specified time period.
-Pass that value in the body of the same request you just made to get the
-next values.
 
-The time range between the start and the end dates must be between
-one minute and one month.
+### /withdraws
 
+#### POST - Do Withdraw
+This endpoint withdraws bitcoin associated with your token.
 
-## Errors
+##### Authorization 
+Activated-Token Endpoint
 
-#### Standard Format - 200 Response
-``` .js
+##### Request Body Example
+```.json
 {
-    "isError": true,
-    "statusCode": 500,
-    "message": "The error message"
+    amountInBtcWithoutFee: 0.00004, // min withdraw amount
+    address: '3AfV9QQQTgtCH6YEjBpDTyH5sswgGD5MLp'
 }
 ```
 
----
+##### Response Body Example
+```.json
+{
+    "statusCode": 200,
+    "body": {}
+}
+```
 
 
-### Versioning Rules
-if you have version x.y.z:
+## Glossary
+* **API:** an application programming interface (API),
+in the context of Bitcoin-Api,
+refers to a collection of access points (called API endpoints) which are used to
+access and control your bitcoins.
+Check out [this article on bitcoin APIs and regular APIs](#)
+for a more detailed explanation of what bitcoin APIs and regular APIs
+are and how they function.
 
-- x increase means changes to `bitcoin-api` that could potentially break your code
-- y increase means functionality change that won't break your code
-- z increase means safe to update, no functionality changes at all (e.g. security or readme update)
+* **Endpoint (or API Endpoint):** an endpoint is a url with an
+HTTP method (e.g. GET, POST) that can be accessed via HTTPS requests.
+Endpoints are the main communication channel of
+Bitcoin-Api and form the basis for all operations in the API.
 
+* **Public Endpoint:** an API endpoint that is accessible for everyone
+without any token authorization required.
+See the [Public Endpoint Request](#) section for details on how to make
+public endpoint requests.
 
-
-![https://the-watchful-eye.s3.amazonaws.com/images/the-watchful-eye_small.png](https://the-watchful-eye.s3.amazonaws.com/images/the-watchful-eye_small.png)
-
-> 👁**The Watchful Eye of Bitcoin-Api:** "Be bitcoin happy with Bitcoin-Api!"🔻
-
----
-Part of the profits will go to the environment🌲🌳 -- The Bitcoin-Api.io Promise
+* **Activated-Token Endpoint:** an API endpoint that requires an
+Activated-Token set in the request headers
+in order to authorize the request.
+See the [Activated-Token Endpoint](#) request section for details on
+how to make public endpoint requests.
