@@ -8,7 +8,6 @@
     * [Public Endpoints](https://github.com/bitcoin-api/bitcoin-api#public-endpoints)
     * [Tokens](https://github.com/bitcoin-api/bitcoin-api#tokens)
     * [General-Token Endpoints](https://github.com/bitcoin-api/bitcoin-api#general-token-endpoints)
-    
     * [Activated-Token Endpoints](https://github.com/bitcoin-api/bitcoin-api#activated-token-endpoints)
 * [Responses](https://github.com/bitcoin-api/bitcoin-api#responses) 
     * [Successful Responses](https://github.com/bitcoin-api/bitcoin-api#successful-responses)
