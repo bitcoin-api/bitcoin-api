@@ -1,6 +1,24 @@
 # Bitcoin-Api.io 
 ### API v3 Documentation [![npm version](https://badge.fury.io/js/bitcoin-api.svg)](https://badge.fury.io/js/bitcoin-api)
-[Bitcoin-Api.io](https://bitcoin-api.io) - Bitcoin as a service. Be bitcoin happy with Bitcoin-Api!
+[Bitcoin-Api.io](https://bitcoin-api.io) - Bitcoin as a service. #BaaS is #Bitcoin #API. Be bitcoin happy with Bitcoin-Api!
+
+## Table of Contents
+* [Requests](https://github.com/bitcoin-api/bitcoin-api#requests)
+    * [Base Url](https://github.com/bitcoin-api/bitcoin-api#base-url)
+    * [Public Endpoints](https://github.com/bitcoin-api/bitcoin-api#public-endpoints)
+    * [Tokens](https://github.com/bitcoin-api/bitcoin-api#tokens)
+    * [General-Token Endpoints](https://github.com/bitcoin-api/bitcoin-api#general-token-endpoints)
+    
+    * [Activated-Token Endpoints](https://github.com/bitcoin-api/bitcoin-api#activated-token-endpoints)
+* [Responses](https://github.com/bitcoin-api/bitcoin-api#responses) 
+    * [Successful Responses](https://github.com/bitcoin-api/bitcoin-api#successful-responses)
+    * [Error Responses](https://github.com/bitcoin-api/bitcoin-api#error-responses)
+* [Resources](https://github.com/bitcoin-api/bitcoin-api#resources) 
+    * [/tokens](https://github.com/bitcoin-api/bitcoin-api#tokens)
+    * [/addresses](https://github.com/bitcoin-api/bitcoin-api#addresses)
+    * [/fee-data](https://github.com/bitcoin-api/bitcoin-api#fee-data)
+    * [/withdraws](https://github.com/bitcoin-api/bitcoin-api#withdraws)
+* [Glossary](https://github.com/bitcoin-api/bitcoin-api#glossary) 
 
 ## Requests
 
@@ -25,10 +43,23 @@
 }
 ```
 
+### Tokens
+**Tokens** are used to make authorized requests to the Bitcoin-Api.io API.
+These authorized requests allow you to access
+and to control your bitcoin.
+A token is a key that gives you access to your bitcoin,
+bitcoin addresses, withdraws,
+and any other resources associated with that token.
+**It is very important that you keep your token
+secret and secure in order
+to protect your bitcoins
+and any token-associated data.**
+
+
 ### General-Token Endpoints
 **General-Token Endpoints** are endpoints that must be accessed
 using a token in the header.
-You first acquire a token by making a request to the [/tokens POST public endpoint](#).
+You first acquire a token by making a request to the [/tokens POST public endpoint](https://github.com/bitcoin-api/bitcoin-api#post---create-token).
 
 Once you have a token,
 you can add it to your HTTPS request header
@@ -41,19 +72,6 @@ General-Token Endpoints:
     "Token": "YOUR_TOKEN_GOES_HERE_INSTEAD_OF_THIS_TEXT"
 }
 ```
-
-
-#### About Tokens
-Tokens are used to make authorized requests to the Bitcoin-Api.io API.
-These authorized requests allow you to access
-and to control your bitcoin.
-A token is a key that gives you access to your bitcoin,
-bitcoin addresses, withdraws,
-and any other resources associated with that token.
-**It is very important that you keep your token
-secret and secure in order
-to protect your bitcoins
-and any token-associated data.**
 
 
 ### Activated-Token Endpoints
@@ -134,7 +152,7 @@ the contents of that response will be in the following form:
 
 
 
-## Endpoints
+## Resources
 
 
 ### /tokens
@@ -282,7 +300,7 @@ Activated-Token Endpoint
 in the context of Bitcoin-Api,
 refers to a collection of access points (called API endpoints) which are used to
 access and control your bitcoins.
-Check out [this article on bitcoin APIs and regular APIs](#)
+Check out [this article on bitcoin APIs and regular APIs](https://medium.com/@BitcoinApi/whats-an-api-what-s-a-bitcoin-api-6bfdaad40da0)
 for a more detailed explanation of what bitcoin APIs and regular APIs
 are and how they function.
 
@@ -293,11 +311,11 @@ Bitcoin-Api and form the basis for all operations in the API.
 
 * **Public Endpoint:** an API endpoint that is accessible for everyone
 without any token authorization required.
-See the [Public Endpoint Request](#) section for details on how to make
+See the [Public Endpoint Request](https://github.com/bitcoin-api/bitcoin-api#public-endpoints) section for details on how to make
 public endpoint requests.
 
 * **Activated-Token Endpoint:** an API endpoint that requires an
 Activated-Token set in the request headers
 in order to authorize the request.
-See the [Activated-Token Endpoint](#) request section for details on
+See the [Activated-Token Endpoint](https://github.com/bitcoin-api/bitcoin-api#activated-token-endpoints) request section for details on
 how to make public endpoint requests.
