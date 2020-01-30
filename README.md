@@ -1,5 +1,5 @@
 # Bitcoin-Api.io 
-### API v3 Documentation [![npm version](https://badge.fury.io/js/bitcoin-api.svg)](https://badge.fury.io/js/bitcoin-api)
+### API Documentation [![npm version](https://badge.fury.io/js/bitcoin-api.svg)](https://badge.fury.io/js/bitcoin-api)
 
 
 ## Table of Contents
@@ -117,7 +117,7 @@ like below to make authorized requests to token-only endpoints:
 should always respond with a 200 status code
 in the actual HTTPS response.**
 
-This implies that any non 200 status code responses
+This implies that any non-200 status code responses
 should be considered unexpected internal server errors
 or the request itself was invalid
 (e.g. accidentally using the wrong HTTP method).
@@ -335,7 +335,7 @@ how to make public endpoint requests.
 
 ---
 
-[Bitcoin-Api.io](https://bitcoin-api.io) - Bitcoin as a service.
+[Bitcoin-Api.io](https://bitcoin-api.io) - Bitcoin as a service
 
 > "#BaaS is #Bitcoin #API."
 
