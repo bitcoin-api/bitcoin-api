@@ -23,12 +23,13 @@
 
 ## About
 
-The Bitcoin-Api.io simple and quick-to-setup API lets
+The [Bitcoin-Api.io](https://bitcoin-Api.io)
+simple and quick-to-setup API lets
 you easily add bitcoin to
 your websites and apps.
-Using a token, you can
-get addresses to deposit bitcoin to
-and you can also withdraw your bitcoin using that token.
+Using a [token](#tokens), you can effortlessly
+add bitcoin deposit and withdraw functionality to your
+tech.
 
 
 ## Requests
