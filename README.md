@@ -3,8 +3,8 @@
 
 
 ## Table of Contents
+* [About](#about)
 * [Requests](#requests)
-    * [About](#about)
     * [Base Url](#base-url)
     * [Public Endpoints](#public-endpoints)
     * [Tokens](#tokens)
