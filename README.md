@@ -71,7 +71,7 @@ and any token-associated data.**
 ### General-Token Endpoints
 **General-Token Endpoints** are endpoints that must be accessed
 using a token in the header.
-You first acquire a token by making a request to the [/tokens POST public endpoint](https://github.com/bitcoin-api/bitcoin-api#post---create-token).
+You first acquire a token by making a request to the [/tokens POST public endpoint](#post---create-token).
 
 Once you have a token,
 you can add it to your HTTPS request header
@@ -323,13 +323,13 @@ Bitcoin-Api and form the basis for all operations in the API.
 
 * **Public Endpoint:** an API endpoint that is accessible for everyone
 without any token authorization required.
-See the [Public Endpoint Request](https://github.com/bitcoin-api/bitcoin-api#public-endpoints) section for details on how to make
+See the [Public Endpoint Request](#public-endpoints) section for details on how to make
 public endpoint requests.
 
 * **Activated-Token Endpoint:** an API endpoint that requires an
 Activated-Token set in the request headers
 in order to authorize the request.
-See the [Activated-Token Endpoint](https://github.com/bitcoin-api/bitcoin-api#activated-token-endpoints) request section for details on
+See the [Activated-Token Endpoint](#activated-token-endpoints) request section for details on
 how to make public endpoint requests.
 
 
