@@ -1,23 +1,35 @@
 # Bitcoin-Api.io 
 ### API v3 Documentation [![npm version](https://badge.fury.io/js/bitcoin-api.svg)](https://badge.fury.io/js/bitcoin-api)
-[Bitcoin-Api.io](https://bitcoin-api.io) - Bitcoin as a service. #BaaS is #Bitcoin #API. Be bitcoin happy with Bitcoin-Api!
+
 
 ## Table of Contents
-* [Requests](https://github.com/bitcoin-api/bitcoin-api#requests)
-    * [Base Url](https://github.com/bitcoin-api/bitcoin-api#base-url)
-    * [Public Endpoints](https://github.com/bitcoin-api/bitcoin-api#public-endpoints)
-    * [Tokens](https://github.com/bitcoin-api/bitcoin-api#tokens)
-    * [General-Token Endpoints](https://github.com/bitcoin-api/bitcoin-api#general-token-endpoints)
-    * [Activated-Token Endpoints](https://github.com/bitcoin-api/bitcoin-api#activated-token-endpoints)
-* [Responses](https://github.com/bitcoin-api/bitcoin-api#responses) 
-    * [Successful Responses](https://github.com/bitcoin-api/bitcoin-api#successful-responses)
-    * [Error Responses](https://github.com/bitcoin-api/bitcoin-api#error-responses)
-* [Resources](https://github.com/bitcoin-api/bitcoin-api#resources) 
-    * [/tokens](https://github.com/bitcoin-api/bitcoin-api#tokens)
-    * [/addresses](https://github.com/bitcoin-api/bitcoin-api#addresses)
-    * [/fee-data](https://github.com/bitcoin-api/bitcoin-api#fee-data)
-    * [/withdraws](https://github.com/bitcoin-api/bitcoin-api#withdraws)
-* [Glossary](https://github.com/bitcoin-api/bitcoin-api#glossary) 
+* [Requests](#requests)
+    * [About](#about)
+    * [Base Url](#base-url)
+    * [Public Endpoints](#public-endpoints)
+    * [Tokens](#tokens)
+    * [General-Token Endpoints](#general-token-endpoints)
+    * [Activated-Token Endpoints](#activated-token-endpoints)
+* [Responses](#responses) 
+    * [Successful Responses](#successful-responses)
+    * [Error Responses](#error-responses)
+* [Resources](#resources) 
+    * [/tokens](#tokens)
+    * [/addresses](#addresses)
+    * [/fee-data](#fee-data)
+    * [/withdraws](#withdraws)
+* [Glossary](#glossary)
+
+
+## About
+
+The Bitcoin-Api.io simple and quick-to-setup API lets
+you easily add bitcoin to
+your websites and apps.
+Using a token, you can
+get addresses to deposit bitcoin to
+and you can also withdraw your bitcoin using that token.
+
 
 ## Requests
 
@@ -318,3 +330,12 @@ Activated-Token set in the request headers
 in order to authorize the request.
 See the [Activated-Token Endpoint](https://github.com/bitcoin-api/bitcoin-api#activated-token-endpoints) request section for details on
 how to make public endpoint requests.
+
+
+---
+
+[Bitcoin-Api.io](https://bitcoin-api.io) - Bitcoin as a service.
+
+>#BaaS is #Bitcoin #API."
+
+#### Be bitcoin happy with Bitcoin-Api!😄
