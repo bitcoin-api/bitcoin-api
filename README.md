@@ -225,7 +225,7 @@ withdraw is currently being processed.
 
 ### /addresses
 
-#### POST - Create New Bitcoin Address
+#### POST - Create Bitcoin Address
 This endpoint creates a new bitcoin address that can
 be used to deposit bitcoins. A new address will be generated
 once the old one is has bitcoin sent to it.
