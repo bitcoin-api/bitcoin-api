@@ -187,10 +187,10 @@ Public Endpoint
 ##### Response Body Example
 ```.js
 {
-        "statusCode": 200,
-        "body": {
-            "token": "asjfhnsdlkjfhdskljhfskdljfhsdjkfsdkjfhnsdlsdf..."
-        }
+    "statusCode": 200,
+    "body": {
+        "token": "asjfhnsdlkjfhdskljhfskdljfhsdjkfsdkjfhnsdlsdf..."
+    }
 }
 ```
 
@@ -207,7 +207,6 @@ General-Token Endpoint
     "statusCode": 200,
     "body": {
         "tokenIsActivated": false,
-        "tokenIsValid": true,
         "balanceData": {
             "amount": 0.0005,
             "status": "normal"
