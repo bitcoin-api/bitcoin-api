@@ -202,7 +202,7 @@ General-Token Endpoint
 {
     "statusCode": 200,
     "body": {
-        "tokenIsActivated": false,
+        "isActivated": false,
         "balanceData": {
             "amount": 0.0005,
             "status": "normal"
