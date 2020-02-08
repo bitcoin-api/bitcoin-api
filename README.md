@@ -250,10 +250,10 @@ Activated-Token Endpoint
 
 ##### More Info:
 The balance associated with your token
-will be updated after your
+will be automatically updated after your
 bitcoin deposit transaction has
 at least 6 confirmations on the bitcoin network.
-You can retrieve your bitcoin using the
+You can retrieve your bitcoin balance using the
 [/tokens GET General-Token Endpoint](#get---get-token-info).
 
 
