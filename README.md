@@ -1,9 +1,16 @@
 # Bitcoin-Api.io 
 ### API Documentation [![npm version](https://badge.fury.io/js/bitcoin-api.svg)](https://badge.fury.io/js/bitcoin-api)
 
+## About
+
+The [Bitcoin-Api.io](https://bitcoin-Api.io)
+professional-grade API lets
+you easily add bitcoin to
+your websites and apps. Using a [token](#tokens), you can effortlessly
+add bitcoin deposit and withdraw functionality to your tech.
+
 
 ## Table of Contents
-* [About](#about)
 * [Requests](#requests)
     * [Base Url](#base-url)
     * [Public Endpoints](#public-endpoints)
@@ -19,17 +26,6 @@
     * [/fee-data](#fee-data)
     * [/withdraws](#withdraws)
 * [Glossary](#glossary)
-
-
-## About
-
-The [Bitcoin-Api.io](https://bitcoin-Api.io)
-simple and quick-to-setup API lets
-you easily add bitcoin to
-your websites and apps.
-Using a [token](#tokens), you can effortlessly
-add bitcoin deposit and withdraw functionality to your
-tech.
 
 
 ## Requests
@@ -224,22 +220,13 @@ withdraw is currently being processed.
 
 ### /addresses
 
-#### POST - Create Bitcoin Address
+#### POST - Create or Get Bitcoin Address
 This endpoint creates a new bitcoin address that can
 be used to deposit bitcoins. A new address will be generated
-once the old one is has bitcoin sent to it.
+once the old one has bitcoin sent to it.
 If the address value is `null`,
 there are currently no new addresses available and you
 must try again later.
-
-
-**Note:**
-If you don't deposit bitcoin
-to your address before it expires, that address will be
-reclaimed by Bitcoin-Api meaning you will not be
-able to access any bitcoin sent to that address.
-Bitcoin-Api will never expire an address that already has
-bitcoin sent to it.
 
 
 ##### Authorization 
@@ -260,6 +247,23 @@ Activated-Token Endpoint
     }
 }
 ```
+
+##### More Info:
+The balance associated with your token
+will be updated after your
+bitcoin deposit transaction has
+at least 6 confirmations on the bitcoin network.
+You can retrieve your bitcoin using the
+[/tokens GET General-Token Endpoint](#get---get-token-info).
+
+
+If you don't deposit bitcoin
+to your address before it expires, that address will be
+reclaimed by Bitcoin-Api meaning you will not be
+able to access any bitcoin sent to that address.
+Bitcoin-Api will never expire an address that already has
+bitcoin sent to it.
+
 
 ### /fee-data
 
