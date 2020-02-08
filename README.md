@@ -4,7 +4,7 @@
 ## About
 
 The [Bitcoin-Api.io](https://bitcoin-Api.io)
-professional-grade API lets
+professional grade API lets
 you easily add bitcoin to
 your websites and apps. Using a [token](#tokens), you can effortlessly
 add bitcoin deposit and withdraw functionality to your tech.
