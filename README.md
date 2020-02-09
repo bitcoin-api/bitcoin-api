@@ -191,6 +191,10 @@ Public Endpoint
 ```
 
 
+**Upcoming Features:**
+* change token value
+
+
 #### GET - Get Token Info
 This endpoint gets info associated with a token.
 
