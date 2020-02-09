@@ -299,10 +299,11 @@ that will be used by bitcoin network
 to send bitcoin to the desired address.
 
 **Upcoming Features:**
-* refunding for unused fee, if the actual fee used is less
-than the current fee estimate,
-you will be refunded for whatever fee is not used
-while performing a withdraw
+* refunding unused fee: If the actual fee demanded by
+the bitcoin network is less
+than the current fee estimate, whatever fee is not used
+while performing a withdraw will be refunded.
+Currently any "extra" fee is not refunded.
 * the ability to subtract the fee from the withdraw amount 
 
 ### /withdraws
