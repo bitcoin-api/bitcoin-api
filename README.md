@@ -289,8 +289,8 @@ Public Endpoint
 ##### More Info:
 This fee estimate is subject
 to change according to the bitcoin network.
-This fee estimate provides
-an estimate of the maximum amount of bitcoin
+This estimate provides
+an estimation of the maximum amount of bitcoin
 that will be used to send bitcoin to the desired address.
 
 **Upcoming Features:**
