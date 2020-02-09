@@ -268,9 +268,10 @@ bitcoin sent to it.
 ### /fee-data
 
 #### GET - Get Fee Data
-This endpoint gets the current fee that's
+This endpoint gets an estimate of the current fee that's
 added to the withdraw amount.
 **This fee is only used to cover the bitcoin network fees.**
+
 
 ##### Authorization 
 Public Endpoint
@@ -285,6 +286,19 @@ Public Endpoint
 }
 ```
 
+##### More Info:
+This fee estimate is subject
+to change according to the bitcoin network.
+This fee estimate provides
+an estimate of the maximum amount of bitcoin
+that will be used to send bitcoin to the desired address.
+
+**Upcoming Features:**
+* refunding for unused fee, if the actual fee used is less
+than the current fee estimate,
+you will be refunded for whatever fee is not used
+while performed a withdraw
+* the ability to subtract the fee from the withdraw amount 
 
 ### /withdraws
 
