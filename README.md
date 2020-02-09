@@ -302,7 +302,7 @@ to send bitcoin to the desired address.
 * refunding for unused fee, if the actual fee used is less
 than the current fee estimate,
 you will be refunded for whatever fee is not used
-while performed a withdraw
+while performing a withdraw
 * the ability to subtract the fee from the withdraw amount 
 
 ### /withdraws
