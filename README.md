@@ -270,8 +270,7 @@ bitcoin sent to it.
 #### GET - Get Fee Data
 This endpoint gets the current fee that's
 added to the withdraw amount.
-This fee is only used to cover the bitcoin network fees.
-**Bitcoin-Api.io does not take any money from your withdraw fees.**
+**This fee is only used to cover the bitcoin network fees.**
 
 ##### Authorization 
 Public Endpoint
