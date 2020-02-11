@@ -295,7 +295,7 @@ This fee estimate is subject
 to change according to the bitcoin network.
 This fee estimate provides
 an estimation of the maximum amount of bitcoin
-that will be used by bitcoin network
+that will be used by the bitcoin network
 to send bitcoin to the desired address.
 
 **Upcoming Features:**
