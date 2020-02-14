@@ -21,7 +21,7 @@ add bitcoin deposit and withdraw functionality to your tech.
     * [Successful Responses](#successful-responses)
     * [Error Responses](#error-responses)
 * [Resources](#resources) 
-    * [/tokens](#tokens)
+    * [/tokens](#tokens-1)
     * [/addresses](#addresses)
     * [/fee-data](#fee-data)
     * [/withdraws](#withdraws)
@@ -219,8 +219,9 @@ withdraw is currently being processed.
 
 
 #### PUT - Update Token Value
-Use this endpoint to update your token's value.
-Your old token's value becomes invalid when you update its value.
+This endpoint updates your token's value.
+Your old token's value becomes invalid
+when you update that token's value.
 
 
 ##### Authorization
