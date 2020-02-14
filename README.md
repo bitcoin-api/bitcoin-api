@@ -191,10 +191,6 @@ Public Endpoint
 ```
 
 
-**Upcoming Features:**
-* change token value
-
-
 #### GET - Get Token Info
 This endpoint gets info associated with a token.
 
@@ -220,6 +216,31 @@ there is a `status` value associated with it.
 The value will either be `"normal"` or `"transformation"`.
 If the value is in the `"transformation"` state, that means a
 withdraw is currently being processed.
+
+
+#### PUT - Update Token Value
+Use this endpoint to update your token's value.
+Your old token's value becomes invalid when you update its value.
+
+
+##### Authorization
+General-Token Endpoint
+
+
+##### Request Body Example
+```.js
+{}
+```
+
+##### Response Body Example
+```.js
+{
+    "statusCode": 200,
+    "body": {
+        "token": "2asjfhnsdlkjfhdskljhfskdljfhsdjkfsdkjfhnsdlsdf..."
+    }
+}
+```
 
 
 ### /addresses
