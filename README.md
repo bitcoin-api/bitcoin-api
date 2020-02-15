@@ -32,7 +32,7 @@ add bitcoin deposit and withdraw functionality to your tech.
 
 ### Base Url
 
-##### Tesnet:
+##### Testnet:
 `https://api-bitcoin.io/v3`
 
 ##### Livenet:
