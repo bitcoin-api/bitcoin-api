@@ -319,13 +319,13 @@ This fee estimate provides
 an estimation of the maximum amount of bitcoin
 that will be used by the bitcoin network
 to send bitcoin to the desired address.
-
-**Upcoming Features:**
-* refunding unused fee: If the actual fee demanded by
+If the actual fee demanded by
 the bitcoin network is less
 than the current fee estimate, whatever fee is not used
-while performing a withdraw will be refunded.
-Currently any "extra" fee is not refunded.
+while performing a withdraw will be refunded shorty
+after the withdraw has been performed.
+
+**Upcoming Features:**
 * the ability to subtract the fee from the withdraw amount 
 
 ### /withdraws
