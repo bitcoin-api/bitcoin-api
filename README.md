@@ -325,9 +325,6 @@ than the current fee estimate, whatever fee is not used
 while performing a withdraw will be refunded shorty
 after the withdraw has been performed.
 
-**Upcoming Features:**
-* the ability to subtract the fee from the withdraw amount 
-
 ### /withdraws
 
 #### POST - Do Withdraw
@@ -339,8 +336,9 @@ Activated-Token Endpoint
 ##### Request Body Example
 ```.js
 {
-    amountInBtcWithoutFee: 0.00004, // min withdraw amount
-    address: '3AfV9QQQTgtCH6YEjBpDTyH5sswgGD5MLp'
+    amount: 0.00004, // 0.00004 is the min withdraw amount
+    address: '3AfV9QQQTgtCH6YEjBpDTyH5sswgGD5MLp',
+    includeFeeInAmount: false // optional, defaults to false
 }
 ```
 
@@ -354,6 +352,12 @@ Activated-Token Endpoint
 
 
 ## Glossary
+* **Activated-Token Endpoint:** an API endpoint that requires an
+Activated-Token set in the request headers
+in order to authorize the request.
+See the [Activated-Token Endpoint](#activated-token-endpoints) request section for details on
+how to make Activated-Token requests.
+
 * **API:** an application programming interface (API),
 in the context of Bitcoin-Api,
 refers to a collection of access points (called API endpoints) which are used to
@@ -372,11 +376,7 @@ without any token authorization required.
 See the [Public Endpoint Request](#public-endpoints) section for details on how to make
 public endpoint requests.
 
-* **Activated-Token Endpoint:** an API endpoint that requires an
-Activated-Token set in the request headers
-in order to authorize the request.
-See the [Activated-Token Endpoint](#activated-token-endpoints) request section for details on
-how to make public endpoint requests.
+
 
 
 ---
