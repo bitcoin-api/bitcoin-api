@@ -25,143 +25,146 @@ const validateAndGetInitializationValues = require( './validateAndGetInitializat
 const getMakeApiCall = require( './getMakeApiCall' );
 
 
-module.exports = f( initializationValues => {
+class BitcoinApi {
 
-    log( 'initializing bitcoin-api' );
+    constructor( initializationValues ) {
 
-    const {
+        log( 'initializing bitcoin-api' );
 
-        livenetMode,
-        token,
+        const {
+    
+            livenetMode,
+            token,
+    
+        } = validateAndGetInitializationValues( initializationValues );
 
-    } = validateAndGetInitializationValues( initializationValues );
+        this.livenetMode = livenetMode;
 
-    const makeApiCall = getMakeApiCall({
+        this.makeApiCall = getMakeApiCall({
 
-        livenetMode,
-        token
-    });
+            livenetMode,
+            token
+        });
 
-    const bitcoinApiInstance = f({
+        log( 'bitcoin-api successfully initialized' );
+    }
 
-        getTokenInfo: f( async () => {
+    async getTokenInfo() {
 
-            log( 'running getTokenInfo' );
+        log( 'running getTokenInfo' );
 
-            const tokenInfo = await makeApiCall({
+        const tokenInfo = await this.makeApiCall({
 
-                resource: 'tokens',
-                method: 'GET',
-                endpointType: endpointTypes.generalToken,
-            });
+            resource: 'tokens',
+            method: 'GET',
+            endpointType: endpointTypes.generalToken,
+        });
 
-            log(
-                'getTokenInfo executed successfully - token info: ' +
-                stringify( tokenInfo )
+        log(
+            'getTokenInfo executed successfully - token info: ' +
+            stringify( tokenInfo )
+        );
+
+        return tokenInfo;
+    }
+
+    async createOrGetAddress() {
+
+        log( 'running createOrGetAddress' );
+
+        const { address } = await this.makeApiCall({
+
+            resource: 'addresses',
+            method: 'POST',
+            endpointType: endpointTypes.activatedToken,
+            body: {},
+        });
+
+        log(
+            'createOrGetAddress executed successfully - ' +
+            `address (or null): ${ address }`
+        );
+
+        return address;
+    }
+
+    async getFeeData() {
+
+        log( 'running getFeeData' );
+
+        const feeData = await this.makeApiCall({
+
+            resource: 'fee-data',
+            method: 'GET',
+            endpointType: endpointTypes.public,
+        });
+
+        log(
+            'getFeeData executed successfully - ' +
+            JSON.stringify( feeData, null, 4 )
+        );
+
+        return feeData;
+    }
+
+    async withdraw({
+
+        amount,
+        address,
+        includeFeeInAmount = false
+
+    }) {
+
+        log( 'running withdraw' );
+
+        if(
+            !amount ||
+            (typeof amount !== 'number') ||
+            (amount < minimumWithdrawAmount) ||
+            (amount > maximumWithdrawAmount)
+        ) {
+
+            throw new BitcoinApiIoError(
+                'error in .withdraw: invalid withdraw amount'
             );
+        }
+        else if(
+            !address ||
+            (typeof address !== 'string') ||
+            (
+                this.livenetMode &&   
+                !getIsValidBitcoinAddress( address )
+            )
+        ) {
 
-            return tokenInfo;
-        }),
-
-        createOrGetAddress: f( async () => {
-
-            log( 'running createOrGetAddress' );
-
-            const { address } = await makeApiCall({
-
-                resource: 'addresses',
-                method: 'POST',
-                endpointType: endpointTypes.activatedToken,
-                body: {},
-            });
-
-            log(
-                'createOrGetAddress executed successfully - ' +
-                `address (or null): ${ address }`
+            throw new BitcoinApiIoError(
+                'error in .withdraw: invalid address specified'
             );
+        }
+        else if( typeof includeFeeInAmount !== 'boolean' ) {
 
-            return address;
-        }),
-
-        getFeeData: f( async () => {
-
-            log( 'running getFeeData' );
-
-            const feeData = await makeApiCall({
-
-                resource: 'fee-data',
-                method: 'GET',
-                endpointType: endpointTypes.public,
-            });
-
-            log(
-                'getFeeData executed successfully - ' +
-                JSON.stringify( feeData, null, 4 )
+            throw new BitcoinApiIoError(
+                'error in .withdraw: ' +
+                'invalid includeFeeInAmount value specified'
             );
+        }
 
-            return feeData;
-        }),
+        await this.makeApiCall({
 
-        withdraw: f( async ({
+            resource: 'withdraws',
+            method: 'POST',
+            endpointType: endpointTypes.activatedToken,
+            body: {
 
-            amount,
-            address,
-            includeFeeInAmount = false
-
-        }) => {
-
-            log( 'running withdraw' );
-
-            if(
-                !amount ||
-                (typeof amount !== 'number') ||
-                (amount < minimumWithdrawAmount) ||
-                (amount > maximumWithdrawAmount)
-            ) {
-
-                throw new BitcoinApiIoError(
-                    'error in .withdraw: invalid withdraw amount'
-                );
+                amount,
+                address,
+                includeFeeInAmount,
             }
-            else if(
-                !address ||
-                (typeof address !== 'string') ||
-                (
-                    livenetMode &&   
-                    !getIsValidBitcoinAddress( address )
-                )
-            ) {
+        });
 
-                throw new BitcoinApiIoError(
-                    'error in .withdraw: invalid address specified'
-                );
-            }
-            else if( typeof includeFeeInAmount !== 'boolean' ) {
+        log( 'withdraw executed successfully' );
+    }
+}
 
-                throw new BitcoinApiIoError(
-                    'error in .withdraw: ' +
-                    'invalid includeFeeInAmount value specified'
-                );
-            }
 
-            await makeApiCall({
-
-                resource: 'withdraws',
-                method: 'POST',
-                endpointType: endpointTypes.activatedToken,
-                body: {
-
-                    amount,
-                    address,
-                    includeFeeInAmount,
-                }
-            });
-
-            log( 'withdraw executed successfully' );
-        }),
-    });
-
-    log( 'bitcoin-api successfully initialized' );
-
-    return bitcoinApiInstance;
-});
+module.exports = BitcoinApi;
