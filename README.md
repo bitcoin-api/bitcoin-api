@@ -104,11 +104,11 @@ const bitcoinApi = BitcoinApi({
 ```
 
 
-### .getOrCreateBitcoinAddress
+### .getOrCreateAddress
 ```.js
 (async () => {
 
-    const address = await bitcoinApi.getOrCreateBitcoinAddress();
+    const address = await bitcoinApi.getOrCreateAddress();
 
     console.log( 'Bitcoin Address:', address );
     
@@ -121,7 +121,7 @@ const bitcoinApi = BitcoinApi({
 
         note:
 
-            getOrCreateBitcoinAddress will return null
+            getOrCreateAddress will return null
                 when no fresh addresses are available
     */
 }();
