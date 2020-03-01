@@ -3,7 +3,7 @@
 const f = Object.freeze;
 
 const {
-    errors: { BitcoinApiIoError }
+    errors: { BitcoinApiError }
 } = require( './utils' );
 
 const getIfTokenIsValid = f(
@@ -22,7 +22,7 @@ module.exports = f( initializationValues => {
         (typeof initializationValues !== 'object')
     ) {
 
-        throw new BitcoinApiIoError(
+        throw new BitcoinApiError(
             'initialization error: missing initialization values'
         );
     }
@@ -33,25 +33,25 @@ module.exports = f( initializationValues => {
 
     if( typeof rawLivenetMode !== 'boolean' ) {
 
-        throw new BitcoinApiIoError(
+        throw new BitcoinApiError(
             'initialization error: invalid livenetMode'
         );
     }
     else if( !!rawLivenetToken && !getIfTokenIsValid( rawLivenetToken ) ) {
 
-        throw new BitcoinApiIoError(
+        throw new BitcoinApiError(
             'initialization error: invalid livenetToken'
         );
     }
     else if( !!rawTestnetToken && !getIfTokenIsValid( rawTestnetToken ) ) {
 
-        throw new BitcoinApiIoError(
+        throw new BitcoinApiError(
             'initialization error: invalid testnetToken'
         );
     }
     else if( !rawLivenetToken && !rawTestnetToken) {
 
-        throw new BitcoinApiIoError(
+        throw new BitcoinApiError(
             'initialization error: ' +
             'missing testnetToken and/or livenetToken'
         );

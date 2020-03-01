@@ -1,7 +1,5 @@
 'use strict';
 
-const f = Object.freeze;
-
 const {
     endpointTypes,
     withdraws: {
@@ -14,7 +12,7 @@ const {
     log,
     stringify,
     errors: {
-        BitcoinApiIoError
+        BitcoinApiError
     },
     validation: {
         getIsValidBitcoinAddress
@@ -124,7 +122,7 @@ class BitcoinApi {
             (amount > maximumWithdrawAmount)
         ) {
 
-            throw new BitcoinApiIoError(
+            throw new BitcoinApiError(
                 'error in .withdraw: invalid withdraw amount'
             );
         }
@@ -137,13 +135,13 @@ class BitcoinApi {
             )
         ) {
 
-            throw new BitcoinApiIoError(
+            throw new BitcoinApiError(
                 'error in .withdraw: invalid address specified'
             );
         }
         else if( typeof includeFeeInAmount !== 'boolean' ) {
 
-            throw new BitcoinApiIoError(
+            throw new BitcoinApiError(
                 'error in .withdraw: ' +
                 'invalid includeFeeInAmount value specified'
             );

@@ -10,7 +10,7 @@ const {
 
 const {
     errors: {
-        BitcoinApiIoError
+        BitcoinApiError
     },
     log,
     stringify,
@@ -59,7 +59,7 @@ const makeApiCallCore = Object.freeze( async ({
 
         if( !token ) {
 
-            throw new BitcoinApiIoError(
+            throw new BitcoinApiError(
                 
                 `request to ${ endpointType } ` +
                 `${ resource } - ${ method } endpoint requires token ` +
@@ -95,7 +95,7 @@ const makeApiCallCore = Object.freeze( async ({
 
     if( requestFailed ) {
 
-        throw new BitcoinApiIoError(
+        throw new BitcoinApiError(
         
             `${ method } request to ${ resource } failed - ` +
             `invalid API response: ${

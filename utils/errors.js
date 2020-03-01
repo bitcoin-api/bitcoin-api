@@ -1,7 +1,7 @@
 'use strict';
 
 
-class BitcoinApiIoError extends Error {
+class BitcoinApiError extends Error {
 
     constructor( message ) {
 
@@ -14,5 +14,5 @@ class BitcoinApiIoError extends Error {
 
 module.exports = Object.freeze({
 
-    BitcoinApiIoError,
+    BitcoinApiError,
 });
