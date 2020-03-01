@@ -57,7 +57,7 @@ const bitcoinApi = BitcoinApi({
 
 ## Install
 ```
-npm install bitcoin-api --save-dev
+npm install bitcoin-api --save
 ```
 
 
