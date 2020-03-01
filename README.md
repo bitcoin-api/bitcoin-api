@@ -1,4 +1,5 @@
 # Bitcoin-Api.io 
+[![npm version](https://badge.fury.io/js/bitcoin-api.svg)](https://badge.fury.io/js/bitcoin-api)
 
 ## About
 The [Bitcoin-Api.io](https://bitcoin-Api.io)
@@ -104,7 +105,7 @@ const bitcoinApi = BitcoinApi({
 
 
 ### .getOrCreateBitcoinAddress
-#####(to be implemented)
+##### (to be implemented)
 ```
 (async () => {
 
@@ -129,7 +130,7 @@ const bitcoinApi = BitcoinApi({
 
 
 ### .getFeeData
-#####(to be implemented)
+##### (to be implemented)
 ```.js
 (async () => {
 
@@ -150,7 +151,7 @@ const bitcoinApi = BitcoinApi({
 
 
 ### .withdraw
-#####(to be implemented)
+##### (to be implemented)
 ```.js
 (async () => {
 
