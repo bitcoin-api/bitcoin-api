@@ -17,7 +17,7 @@ const getMakeApiCall = require( './getMakeApiCall' );
 
 module.exports = f( initializationValues => {
 
-    log( 'initalizing bitcoin-api' );
+    log( 'initializing bitcoin-api' );
 
     const {
 
@@ -32,7 +32,7 @@ module.exports = f( initializationValues => {
         token
     });
 
-    return f({
+    const bitcoinApiInstance = f({
 
         getTokenInfo: f( async () => {
 
@@ -53,4 +53,8 @@ module.exports = f( initializationValues => {
             return tokenInfo;
         }),
     });
+
+    log( 'bitcoin-api successfully initialized' );
+
+    return bitcoinApiInstance;
 });
