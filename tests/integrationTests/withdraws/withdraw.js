@@ -27,6 +27,6 @@ describe( '.withdraw', function() {
             // includeFeeInAmount: { xxx: 222 }
         });
 
-        expect( withdrawResponse ).to.deep.equal( {} );
+        expect( withdrawResponse ).to.equal( undefined );
     });
 });
