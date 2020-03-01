@@ -22,8 +22,6 @@ describe( '.getTokenInfo', function() {
 
         const tokenInfo = await bitcoinApi.getTokenInfo();
 
-        console.log( 'Token Info:', JSON.stringify( tokenInfo, null, 4  ) );
-
         expect( typeof tokenInfo ).to.equal( 'object' );
         expect( typeof tokenInfo.isActivated ).to.equal( 'boolean' );
         expect( typeof tokenInfo.balanceData ).to.equal( 'object' );

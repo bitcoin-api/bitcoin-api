@@ -52,6 +52,26 @@ module.exports = f( initializationValues => {
 
             return tokenInfo;
         }),
+
+        getOrCreateAddress: f( async () => {
+
+            log( 'running getOrCreateAddress' );
+
+            const { address } = await makeApiCall({
+
+                resource: 'addresses',
+                method: 'POST',
+                endpointType: endpointTypes.generalToken,
+                body: {},
+            });
+
+            log(
+                'getOrCreateAddress executed successfully - ' +
+                `address (or null): ${ address }`
+            );
+
+            return address;
+        }),
     });
 
     log( 'bitcoin-api successfully initialized' );

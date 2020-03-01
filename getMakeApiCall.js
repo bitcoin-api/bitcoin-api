@@ -16,6 +16,12 @@ const {
     stringify,
 } = require( './utils' );
 
+const httpMethodToAxiosMethod = Object.freeze({
+
+    GET: 'get',
+    POST: 'post',
+});
+
 const endpointTypesThatRequireToken = Object.freeze([
         
     endpointTypes.generalToken,
@@ -70,7 +76,9 @@ const makeApiCallCore = Object.freeze( async ({
 
     const instance = axios.create( axiosOptions );
 
-    const response = await instance[ method.toLowerCase() ]( ...axiosArgs );
+    const axiosMethod = httpMethodToAxiosMethod[ method ];
+
+    const response = await instance[ axiosMethod ]( ...axiosArgs );
 
     const requestFailed = !(
 
