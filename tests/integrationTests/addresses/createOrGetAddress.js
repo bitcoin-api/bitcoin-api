@@ -2,14 +2,14 @@
 
 require( 'dotenv' ).config();
 
-const BitcoinApi = require( '../../../' );
+const BitcoinApi = require( '../../..' );
 
 const expect = require( 'chai' ).expect;
 
 const fixtures = require( '../fixtures' );
 
 
-describe( '.getOrCreateAddress', function() {
+describe( '.createOrGetAddress', function() {
 
     this.timeout( 20000 );
 
@@ -20,7 +20,7 @@ describe( '.getOrCreateAddress', function() {
             testnetToken: fixtures.testnetToken,
         });
 
-        const address = await bitcoinApi.getOrCreateAddress();
+        const address = await bitcoinApi.createOrGetAddress();
 
         if( !!address ) {
 

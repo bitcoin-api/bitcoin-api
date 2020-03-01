@@ -63,9 +63,9 @@ module.exports = f( initializationValues => {
             return tokenInfo;
         }),
 
-        getOrCreateAddress: f( async () => {
+        createOrGetAddress: f( async () => {
 
-            log( 'running getOrCreateAddress' );
+            log( 'running createOrGetAddress' );
 
             const { address } = await makeApiCall({
 
@@ -76,7 +76,7 @@ module.exports = f( initializationValues => {
             });
 
             log(
-                'getOrCreateAddress executed successfully - ' +
+                'createOrGetAddress executed successfully - ' +
                 `address (or null): ${ address }`
             );
 
