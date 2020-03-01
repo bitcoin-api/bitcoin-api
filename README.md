@@ -105,7 +105,6 @@ const bitcoinApi = BitcoinApi({
 
 
 ### .getOrCreateBitcoinAddress
-##### (to be implemented)
 ```.js
 (async () => {
 
