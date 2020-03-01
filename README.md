@@ -1,12 +1,12 @@
 # Bitcoin-Api.io 
 
 ## About
-
 The [Bitcoin-Api.io](https://bitcoin-Api.io)
 professional grade API lets
 you easily add bitcoin to
 your websites and apps. Using a [token](#tokens), you can effortlessly
-add bitcoin deposit and withdraw functionality to your tech.
+incorporate bitcoin deposit and withdraw functionality
+into your tech.
 
 ## Main Sections
 * [NodeJs Driver](#nodejs-driver)
@@ -15,8 +15,46 @@ add bitcoin deposit and withdraw functionality to your tech.
 
 # NodeJs Driver
 
-## Install
+## Example
+```.js
+'use strict';
 
+const BitcoinApi = require( 'bitcoin-api' );
+
+const bitcoinApi = new BitcoinApi({
+
+    testnetToken: 'thapntygr8prv'
+});
+
+
+(async () => {
+
+    try {
+
+        const {
+            
+            balanceData: { amount }
+            
+        } = await bitcoinApi.getTokenInfo();
+
+        // logs current balance
+        console.log( 'Balance:', amount ); 
+
+        // withdraws 0.00004 BTC
+        await bitcoinApi.withdraw({
+
+            amount: 0.00004,
+            address: 'mgXi9VCAmwaEGszk5yhqkigptTVQM33uhx',
+        });
+    }
+    catch( err ) {
+
+        console.log( 'err:', err );
+    }
+})();
+```
+
+## Install
 ```
 npm install bitcoin-api --save-dev
 ```
@@ -63,6 +101,77 @@ const bitcoinApi = BitcoinApi({
     */ 
 })();
 ```
+
+
+### .getOrCreateBitcoinAddress
+#####(to be implemented)
+```
+(async () => {
+
+    const address = await bitcoinApi.getOrCreateBitcoinAddress();
+
+    console.log( 'Bitcoin Address:', address );
+    
+    /*
+
+        logs:
+
+            Bitcoin Address: 3AfV9QQQTgtCH6YEjBpDTyH5sswgGD5MLp
+
+
+        note:
+
+            getOrCreateBitcoinAddress will return null
+                when no fresh addresses are available
+    */
+}();
+```
+
+
+### .getFeeData
+#####(to be implemented)
+```.js
+(async () => {
+
+    const feeData = await bitcoinApi.getFeeData();
+
+    console.log( 'Fee Data:', JSON.stringify( feeData, null, 4 ) );
+    
+    /*
+        
+        logs:
+
+            Fee Data: {
+                "fee": 0.0000001
+            }
+    */
+}();
+```
+
+
+### .withdraw
+#####(to be implemented)
+```.js
+(async () => {
+
+    await bitcoinApi.withdraw({
+
+        amount: 0.002,
+        address: '3AfV9QQQTgtCH6YEjBpDTyH5sswgGD5MLp',
+        shouldIncludeFeeInAmount: false
+    });
+    
+    /*
+        withdraws 0.002 BTC to 3AfV9QQQTgtCH6YEjBpDTyH5sswgGD5MLp
+    
+        note:
+            shouldIncludeFeeInAmount is optional
+                when set to true, the fee will automatically
+                be deducted from the amount
+    */
+}();
+```
+
 
 # Raw API Documentation
 
