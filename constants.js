@@ -16,6 +16,7 @@ module.exports = f({
         
         bitcoinApiIo: 'https://bitcoin-api.io/v3',
         apiBitcoinIo: 'https://api-bitcoin.io/v3',
+        github: 'https://github.com/bitcoin-api/bitcoin-api',
     }),
 
     headerKeys: f({
