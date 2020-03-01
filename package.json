@@ -4,7 +4,7 @@
   "description": "Bitcoin-Api.io - Bitcoin as a Service.",
   "main": "index.js",
   "scripts": {
-    "Test__tokens_getTokenInfo": "./node_modules/.bin/_mocha ./test/integrationTests/tokens/getTokenInfo.js"
+    "Test__tokens_getTokenInfo": "./node_modules/.bin/_mocha ./tests/integrationTests/tokens/getTokenInfo.js"
   },
   "repository": {
     "type": "git",
