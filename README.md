@@ -22,7 +22,7 @@ into your tech.
 
 const BitcoinApi = require( 'bitcoin-api' );
 
-const bitcoinApi = new BitcoinApi({
+const bitcoinApi = BitcoinApi({
 
     testnetToken: 'thapntygr8prv'
 });
