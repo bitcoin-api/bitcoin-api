@@ -15,3 +15,5 @@ npm-debug.log
 # Other Files to Npm Ignore
 temp
 .env
+test
+.env-template-for-tests
