@@ -67,7 +67,7 @@ npm install bitcoin-api --save
 
 const BitcoinApi = require( 'bitcoin-api' );
 
-const bitcoinApi = BitcoinApi({
+const bitcoinApi = new BitcoinApi({
 
     livenetMode: false,
     // optional: defaults to false
