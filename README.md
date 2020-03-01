@@ -93,7 +93,7 @@ const bitcoinApi = BitcoinApi({
         Logs:
 
             Token Info: {
-                "isActivated": false,
+                "isActivated": true,
                 "balanceData": {
                     "amount": 0.002,
                     "status": "normal"
