@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "Test__tokens_getTokenInfo": "./node_modules/.bin/_mocha ./tests/integrationTests/tokens/getTokenInfo.js",
-    "Test__addresses_getOrCreateAddress": "./node_modules/.bin/_mocha ./tests/integrationTests/addresses/getOrCreateAddress.js"
+    "Test__addresses_getOrCreateAddress": "./node_modules/.bin/_mocha ./tests/integrationTests/addresses/getOrCreateAddress.js",
+    "Test__fee_data_getFeeData": "./node_modules/.bin/_mocha ./tests/integrationTests/fee_data/getFeeData.js",
+    "Test__withdraws_withdraw": "./node_modules/.bin/_mocha ./tests/integrationTests/withdraws/withdraw.js"
   },
   "repository": {
     "type": "git",

@@ -3,12 +3,22 @@
 const f = Object.freeze;
 
 const {
-    endpointTypes
+    endpointTypes,
+    withdraws: {
+        minimumWithdrawAmount,
+        maximumWithdrawAmount
+    }
 } = require( './constants' );
 
 const {
     log,
-    stringify
+    stringify,
+    errors: {
+        BitcoinApiIoError
+    },
+    validation: {
+        getIsValidBitcoinAddress
+    }
 } = require( './utils' );
 
 const validateAndGetInitializationValues = require( './validateAndGetInitializationValues' );
@@ -61,7 +71,7 @@ module.exports = f( initializationValues => {
 
                 resource: 'addresses',
                 method: 'POST',
-                endpointType: endpointTypes.generalToken,
+                endpointType: endpointTypes.activatedToken,
                 body: {},
             });
 
@@ -71,6 +81,83 @@ module.exports = f( initializationValues => {
             );
 
             return address;
+        }),
+
+        getFeeData: f( async () => {
+
+            log( 'running getFeeData' );
+
+            const feeData = await makeApiCall({
+
+                resource: 'fee-data',
+                method: 'GET',
+                endpointType: endpointTypes.public,
+            });
+
+            log(
+                'getFeeData executed successfully - ' +
+                JSON.stringify( feeData, null, 4 )
+            );
+
+            return feeData;
+        }),
+
+        withdraw: f( async ({
+
+            amount,
+            address,
+            includeFeeInAmount = false
+
+        }) => {
+
+            log( 'running withdraw' );
+
+            if(
+                !amount ||
+                (typeof amount !== 'number') ||
+                (amount < minimumWithdrawAmount) ||
+                (amount > maximumWithdrawAmount)
+            ) {
+
+                throw new BitcoinApiIoError(
+                    'error in .withdraw: invalid withdraw amount'
+                );
+            }
+            else if(
+                !address ||
+                (typeof address !== 'string') ||
+                (
+                    livenetMode &&   
+                    !getIsValidBitcoinAddress( address )
+                )
+            ) {
+
+                throw new BitcoinApiIoError(
+                    'error in .withdraw: invalid address specified'
+                );
+            }
+            else if( typeof includeFeeInAmount !== 'boolean' ) {
+
+                throw new BitcoinApiIoError(
+                    'error in .withdraw: ' +
+                    'invalid includeFeeInAmount value specified'
+                );
+            }
+
+            await makeApiCall({
+
+                resource: 'withdraws',
+                method: 'POST',
+                endpointType: endpointTypes.activatedToken,
+                body: {
+
+                    amount,
+                    address,
+                    includeFeeInAmount,
+                }
+            });
+
+            log( 'withdraw executed successfully' );
         }),
     });
 

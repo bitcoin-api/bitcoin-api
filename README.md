@@ -129,7 +129,6 @@ const bitcoinApi = BitcoinApi({
 
 
 ### .getFeeData
-##### (to be implemented)
 ```.js
 (async () => {
 
@@ -150,7 +149,6 @@ const bitcoinApi = BitcoinApi({
 
 
 ### .withdraw
-##### (to be implemented)
 ```.js
 (async () => {
 
@@ -158,14 +156,14 @@ const bitcoinApi = BitcoinApi({
 
         amount: 0.002,
         address: '3AfV9QQQTgtCH6YEjBpDTyH5sswgGD5MLp',
-        shouldIncludeFeeInAmount: false
+        includeFeeInAmount: false
     });
     
     /*
         withdraws 0.002 BTC to 3AfV9QQQTgtCH6YEjBpDTyH5sswgGD5MLp
     
         note:
-            shouldIncludeFeeInAmount is optional
+            includeFeeInAmount is optional
                 when set to true, the fee will automatically
                 be deducted from the amount
     */

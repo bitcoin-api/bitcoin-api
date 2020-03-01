@@ -22,4 +22,10 @@ module.exports = f({
 
         token: 'Token'
     }),
+
+    withdraws: f({
+
+        minimumWithdrawAmount: 0.0004,
+        maximumWithdrawAmount: 50,
+    }),
 });
