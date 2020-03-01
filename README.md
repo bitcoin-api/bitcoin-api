@@ -82,7 +82,7 @@ const bitcoinApi = BitcoinApi({
 ## Usage
 
 ### .getTokenInfo
-```
+```.js
 (async () => {
 
     const tokenInfo = await bitcoinApi.getTokenInfo();
@@ -106,7 +106,7 @@ const bitcoinApi = BitcoinApi({
 
 ### .getOrCreateBitcoinAddress
 ##### (to be implemented)
-```
+```.js
 (async () => {
 
     const address = await bitcoinApi.getOrCreateBitcoinAddress();
@@ -502,9 +502,9 @@ Activated-Token Endpoint
 ##### Request Body Example
 ```.js
 {
-    amount: 0.00004, // 0.00004 is the min withdraw amount
-    address: '3AfV9QQQTgtCH6YEjBpDTyH5sswgGD5MLp',
-    includeFeeInAmount: false // optional, defaults to false
+    "amount": 0.00004, // 0.00004 is the min withdraw amount
+    "address": "3AfV9QQQTgtCH6YEjBpDTyH5sswgGD5MLp",
+    "includeFeeInAmount": false // optional, defaults to false
 }
 ```
 
