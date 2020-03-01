@@ -162,7 +162,7 @@ class BitcoinApi {
 
         log( 'withdraw executed successfully' );
     }
-}
+};
 
 
 module.exports = BitcoinApi;
