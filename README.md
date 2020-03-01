@@ -1,5 +1,4 @@
 # Bitcoin-Api.io 
-### API Documentation [![npm version](https://badge.fury.io/js/bitcoin-api.svg)](https://badge.fury.io/js/bitcoin-api)
 
 ## About
 
@@ -9,6 +8,63 @@ you easily add bitcoin to
 your websites and apps. Using a [token](#tokens), you can effortlessly
 add bitcoin deposit and withdraw functionality to your tech.
 
+## Main Sections
+* [NodeJs Driver](#nodejs-driver)
+* [Raw API Documentation](#raw-api-documentation)
+
+
+# NodeJs Driver
+
+## Install
+
+```
+npm install bitcoin-api --save-dev
+```
+
+
+## Setup
+```.js
+'use strict';
+
+const BitcoinApi = require( 'bitcoin-api' );
+
+const bitcoinApi = BitcoinApi({
+
+    livenetMode: false,
+    // optional: defaults to false
+    
+    testnetToken: 'xxcsddfksdjaksld', 
+    livenetToken: 'yycsddfksdjaksld'
+    // one of testnetToken or livenetToken is required
+});
+```
+
+
+## Usage
+
+### .getTokenInfo
+```
+(async () => {
+
+    const tokenInfo = await bitcoinApi.getTokenInfo();
+
+    console.log( 'Token Info:', JSON.stringify( tokenInfo, null, 4  ) );
+
+    /*
+        Logs:
+
+            Token Info: {
+                "isActivated": false,
+                "balanceData": {
+                    "amount": 0.002,
+                    "status": "normal"
+                }
+            }
+    */ 
+})();
+```
+
+# Raw API Documentation
 
 ## Table of Contents
 * [Requests](#requests)
