@@ -127,7 +127,7 @@ const bitcoinApi = new BitcoinApi({
             createOrGetAddress will return null for the "address" value
                 when no fresh addresses are available
     */
-}();
+})();
 ```
 
 
@@ -147,7 +147,7 @@ const bitcoinApi = new BitcoinApi({
                 "fee": 0.0000001
             }
     */
-}();
+})();
 ```
 
 
@@ -170,7 +170,7 @@ const bitcoinApi = new BitcoinApi({
                 when set to true, the fee will automatically
                 be deducted from the amount
     */
-}();
+})();
 ```
 
 
