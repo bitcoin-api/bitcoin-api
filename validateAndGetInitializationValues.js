@@ -49,7 +49,7 @@ module.exports = f( initializationValues => {
             'initialization error: invalid testnetToken'
         );
     }
-    else if( !rawLivenetToken && !rawTestnetToken) {
+    else if( !rawLivenetToken && !rawTestnetToken ) {
 
         throw new BitcoinApiError(
             'initialization error: ' +
