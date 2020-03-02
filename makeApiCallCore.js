@@ -12,8 +12,6 @@ const {
     errors: {
         BitcoinApiError
     },
-    log,
-    stringify,
 } = require( './utils' );
 
 const httpMethodToAxiosMethod = Object.freeze({
@@ -29,7 +27,7 @@ const endpointTypesThatRequireToken = Object.freeze([
 ]);
 
 
-const makeApiCallCore = Object.freeze( async ({
+module.exports = Object.freeze( async ({
 
     endpointType,
     token,
@@ -113,76 +111,3 @@ const makeApiCallCore = Object.freeze( async ({
 
     return responseData;
 });
-
-
-module.exports = Object.freeze( ({
-
-    livenetMode,
-    token
-
-}) => Object.freeze( async ({
-
-    resource,
-    method = 'GET',
-    body = null,
-    endpointType = endpointTypes.activatedToken,
-
-}) => {
-
-    log(
-        'running makeApiCall with the following values:',
-        stringify({
-            resource,
-            method,
-            body,
-            endpointType,
-            livenetMode,
-        })
-    );
-
-    try {
-
-        const response = await makeApiCallCore({
-
-            endpointType,
-            token,
-            livenetMode,
-            resource,
-            body,
-            method,
-        });
-
-        log(
-            'makeApiCall with the following values:',
-            stringify({
-                resource,
-                method,
-                body,
-                endpointType,
-                livenetMode,
-            }),
-            'executed successfully, here is the response:',
-            stringify( response ),
-            'returning response body'
-        );
-    
-        return response.body;
-    }
-    catch( err ) {
-
-        log(
-            'error in makeApiCall with the following values:',
-            stringify({
-                resource,
-                method,
-                body,
-                endpointType,
-                livenetMode,
-            }),
-            'here is the error:',
-            err
-        );
-
-        throw err;
-    }
-}));

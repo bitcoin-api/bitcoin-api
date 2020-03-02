@@ -20,7 +20,7 @@ const {
 } = require( './utils' );
 
 const validateAndGetInitializationValues = require( './validateAndGetInitializationValues' );
-const getMakeApiCall = require( './getMakeApiCall' );
+const makeApiCallCore = require( './makeApiCallCore' );
 
 
 class BitcoinApi {
@@ -29,22 +29,87 @@ class BitcoinApi {
 
         log( 'initializing bitcoin-api' );
 
-        const {
-    
-            livenetMode,
-            token,
-    
-        } = validateAndGetInitializationValues( initializationValues );
+        Object.assign(
 
-        this.livenetMode = livenetMode;
-
-        this.makeApiCall = getMakeApiCall({
-
-            livenetMode,
-            token
-        });
+            this,
+            validateAndGetInitializationValues( initializationValues )
+        );
 
         log( 'bitcoin-api successfully initialized' );
+    }
+
+    async makeApiCall({
+
+        resource,
+        method = 'GET',
+        body = null,
+        endpointType = endpointTypes.activatedToken,
+
+    }) {
+
+        const {
+
+            token,
+            livenetMode
+
+        } = this;
+
+        log(
+            'running makeApiCall with the following values:',
+            stringify({
+                resource,
+                method,
+                body,
+                endpointType,
+                livenetMode,
+            })
+        );
+    
+        try {
+    
+            const response = await makeApiCallCore({
+    
+                endpointType,
+                token,
+                livenetMode,
+                resource,
+                body,
+                method,
+            });
+    
+            log(
+                'makeApiCall with the following values:',
+                stringify({
+                    resource,
+                    method,
+                    body,
+                    endpointType,
+                    livenetMode,
+                }),
+                'executed successfully, here is the response:',
+                stringify( response ),
+                'returning response body'
+            );
+        
+            return response.body;
+        }
+        catch( err ) {
+    
+            log(
+                'error in makeApiCall with the following values:',
+                stringify({
+                    resource,
+                    method,
+                    body,
+                    endpointType,
+                    livenetMode,
+                }),
+                'here is the error:',
+                err
+            );
+    
+            throw err;
+        }
     }
 
     async getTokenInfo() {
