@@ -9,7 +9,7 @@ class BitcoinApiError extends Error {
         
         super( formattedMessage );
     }
-}
+};
 
 
 module.exports = Object.freeze({
