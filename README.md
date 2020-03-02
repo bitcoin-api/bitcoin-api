@@ -1,4 +1,4 @@
-# Bitcoin-Api.io 
+# bitcoin-api
 [![npm version](https://badge.fury.io/js/bitcoin-api.svg)](https://badge.fury.io/js/bitcoin-api)
 
 ## About
