@@ -135,7 +135,7 @@ class BitcoinApi {
 
         log( 'running createOrGetAddress' );
 
-        const { address } = await this.makeApiCall({
+        const addressData = await this.makeApiCall({
 
             resource: 'addresses',
             method: 'POST',
@@ -145,10 +145,10 @@ class BitcoinApi {
 
         log(
             'createOrGetAddress executed successfully - ' +
-            `address (or null): ${ address }`
+            `address (or null): ${ stringify( addressData ) }`
         );
 
-        return address;
+        return addressData;
     }
 
     async getFeeData() {

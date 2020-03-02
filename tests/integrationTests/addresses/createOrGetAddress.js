@@ -20,15 +20,19 @@ describe( '.createOrGetAddress', function() {
             testnetToken: fixtures.testnetToken,
         });
 
-        const address = await bitcoinApi.createOrGetAddress();
+        const addressData = await bitcoinApi.createOrGetAddress();
 
-        if( !!address ) {
+        expect( typeof addressData ).to.equal( 'object' );
 
-            expect( typeof address ).to.equal( 'string' );
+        if( !!addressData.address ) {
+
+            expect( typeof addressData.address ).to.equal( 'string' );
         }
         else {
 
-            expect( address ).to.equal( null );
+            expect( addressData.address ).to.equal( null );
         }
+
+        expect( typeof addressData.timeOfExpiry ).to.equal( 'number' );
     });
 });

@@ -108,20 +108,23 @@ const bitcoinApi = new BitcoinApi({
 ```.js
 (async () => {
 
-    const address = await bitcoinApi.createOrGetAddress();
+    const addressData = await bitcoinApi.createOrGetAddress();
 
-    console.log( 'Bitcoin Address:', address );
+    console.log( 'Address Data:', JSON.stringify( addressData, null, 4 ) );
     
     /*
 
         logs:
 
-            Bitcoin Address: 3AfV9QQQTgtCH6YEjBpDTyH5sswgGD5MLp
-
+            Address Data: {
+                
+                "address": "3AfV9QQQTgtCH6YEjBpDTyH5sswgGD5MLp",
+                "timeOfExpiry": 1591741428249
+            }
 
         note:
 
-            createOrGetAddress will return null
+            createOrGetAddress will return null for the "address" value
                 when no fresh addresses are available
     */
 }();
