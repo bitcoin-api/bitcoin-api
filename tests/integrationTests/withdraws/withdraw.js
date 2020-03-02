@@ -24,7 +24,7 @@ describe( '.withdraw', function() {
 
             amount: 0.0008,
             address: 'mgXi9VCAmwaEGszk5yhqkigptTVQM33uhx',
-            // includeFeeInAmount: { xxx: 222 }
+            // includeFeeInAmount: true
         });
 
         expect( withdrawResponse ).to.equal( undefined );
