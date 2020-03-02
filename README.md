@@ -24,7 +24,7 @@ const BitcoinApi = require( 'bitcoin-api' );
 
 const bitcoinApi = new BitcoinApi({
 
-    testnetToken: 'thapntygr8prv'
+    testnetToken: 'YOUR TESTNET TOKEN GOES HERE'
 });
 
 
