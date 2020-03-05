@@ -12,7 +12,7 @@ into your tech.
 ## Main Sections
 * [NodeJs Driver](#nodejs-driver)
 * [Raw API Documentation](#raw-api-documentation)
-
+* [Business](#business)
 
 # NodeJs Driver
 
@@ -204,7 +204,7 @@ const bitcoinApi = new BitcoinApi({
 ##### Livenet:
 `https://bitcoin-api.io/v3`  
 
-(livenet API currently not enabled)
+(private access)
 
 
 ### Public Endpoints
@@ -253,15 +253,11 @@ As the name suggests, an **Activated-Token Endpoint**
 can only be accessed using an **Activated-Token**.
 To activate your token, use the appropriate link below:
 
-Activate your testnet token with the following link:
+Activate your tokens with the following links:
 
 ### [Testnet Token Activator (for Api-Bitcoin.io)](https://api-bitcoin.io/token-activator)  
 
-Activate your livenet token with the following link:
-
-### Livenet Token Activator (for Bitcoin-Api.io)
-
-(not enabled: the livenet site will be active in the future)
+###### [Private Access Livenet Token Activator (for Bitcoin-Api.io)](https://bitcoin-api.io/token-activator)
 
 Once you have an Activated-Token,
 you can add it to your HTTPS request header
@@ -543,7 +539,20 @@ See the [Public Endpoint Request](#public-endpoints) section for details on how 
 public endpoint requests.
 
 
+# Business
 
+### Terms and Privacy Policy
+
+* [Terms of Service](https://bitcoin-api.io/terms-of-service)
+* [Privacy Policy](https://bitcoin-api.io/privacy-policy)
+
+### Livenet Technical Support
+If you have a charity or business you want to use
+the Bitcoin-Api.io livenet API with,
+please contact livenet technical support:
+
+**email:**  support@bitcoin-api.io
+**phone:** +1 866-606-4133 (6pm-11pm EST)
 
 ---
 
