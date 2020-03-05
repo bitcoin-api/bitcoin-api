@@ -542,11 +542,10 @@ public endpoint requests.
 # Business
 
 ### Terms of Service and Privacy Policy
-
 * [Terms of Service](https://bitcoin-api.io/terms-of-service)
 * [Privacy Policy](https://bitcoin-api.io/privacy-policy)
 
-### Technical Support:
+### Technical Support
 **email:** support@bitcoin-api.io  
 **phone:** +1 866-606-4133 (6pm-11pm Monday to Friday EST)
 
