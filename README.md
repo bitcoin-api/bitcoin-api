@@ -547,7 +547,7 @@ public endpoint requests.
 * [Privacy Policy](https://bitcoin-api.io/privacy-policy)
 
 ### Technical Support:
-**email:** support@bitcoin-api.io
+**email:** support@bitcoin-api.io  
 **phone:** +1 866-606-4133 (6pm-11pm Monday to Friday EST)
 
 ### Livenet Usage
