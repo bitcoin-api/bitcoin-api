@@ -541,18 +541,19 @@ public endpoint requests.
 
 # Business
 
-### Terms and Privacy Policy
+### Terms of Service and Privacy Policy
 
 * [Terms of Service](https://bitcoin-api.io/terms-of-service)
 * [Privacy Policy](https://bitcoin-api.io/privacy-policy)
 
-### Livenet Technical Support
-If you have a charity or business you want to use
-the Bitcoin-Api.io livenet API with,
-please contact livenet technical support:
+### Technical Support:
+**email:** support@bitcoin-api.io
+**phone:** +1 866-606-4133 (6pm-11pm Monday to Friday EST)
 
-**email:**  support@bitcoin-api.io
-**phone:** +1 866-606-4133 (6pm-11pm EST)
+### Livenet Usage
+If you have a charity or business you want to use
+the Bitcoin-Api.io API with in the livenet mode,
+please contact technical support.
 
 ---
 
