@@ -549,8 +549,8 @@ public endpoint requests.
 
 ### Livenet Usage
 If you have a charity or business you want to use
-the Bitcoin-Api.io API with in its livenet mode
-(currently in private Alpha testing),
+the Bitcoin-Api.io API with in its livenet mode,
+currently in private Alpha testing,
 please contact technical support.
 
 ---
