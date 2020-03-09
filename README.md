@@ -202,7 +202,7 @@ const bitcoinApi = new BitcoinApi({
 `https://api-bitcoin.io/v3`
 
 ##### Livenet:
-`https://bitcoin-api.io/v3` (private access)
+`https://bitcoin-api.io/v3` (private access - Alpha testing)
 
 
 ### Public Endpoints
@@ -549,7 +549,8 @@ public endpoint requests.
 
 ### Livenet Usage
 If you have a charity or business you want to use
-the Bitcoin-Api.io API with in its livenet mode,
+the Bitcoin-Api.io API with in its livenet mode
+(currently in private Alpha testing),
 please contact technical support.
 
 ---
