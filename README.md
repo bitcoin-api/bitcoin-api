@@ -511,6 +511,14 @@ Activated-Token Endpoint
 ```
 
 
+##### Upcoming Feature
+
+EnviroWithdraw - an option that allows you to contribute
+some bitcoin to our environment🌲🌳🌎. This donation
+will be added to other the bitcoin network withdraw fee.
+More info on this in the future as this concept evolves.
+
+
 ## Glossary
 * **Activated-Token Endpoint:** an API endpoint that requires an
 Activated-Token set in the request headers

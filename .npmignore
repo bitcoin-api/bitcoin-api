@@ -13,7 +13,6 @@ CVS
 npm-debug.log
 
 # Other Files to Npm Ignore
-temp
 .env
-test
+tests
 .env-template-for-tests
