@@ -530,7 +530,7 @@ how to make Activated-Token requests.
 in the context of Bitcoin-Api,
 refers to a collection of access points (called API endpoints) which are used to
 access and control your bitcoins.
-Check out [this article on bitcoin APIs and regular APIs](https://medium.com/@BitcoinApi/whats-an-api-what-s-a-bitcoin-api-6bfdaad40da0)
+Check out [this article on bitcoin APIs and regular APIs](https://www.linkedin.com/pulse/whats-api-bitcoin-michael-stecky-efantis)
 for a more detailed explanation of what bitcoin APIs and regular APIs
 are and how they function.
 
