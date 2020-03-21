@@ -202,7 +202,7 @@ const bitcoinApi = new BitcoinApi({
 `https://api-bitcoin.io/v3`
 
 ##### Livenet:
-`https://bitcoin-api.io/v3` (private access - Alpha testing)
+`https://bitcoin-api.io/v3` (not active - testnet mode only)
 
 
 ### Public Endpoints
@@ -251,11 +251,9 @@ As the name suggests, an **Activated-Token Endpoint**
 can only be accessed using an **Activated-Token**.
 To activate your token, use the appropriate link below:
 
-Activate your tokens with the following links:
+Activate your tokens with the following link:
 
 ### [Testnet Token Activator (for Api-Bitcoin.io)](https://api-bitcoin.io/token-activator)  
-
-###### [Private Access Livenet Token Activator (for Bitcoin-Api.io)](https://bitcoin-api.io/token-activator)
 
 Once you have an Activated-Token,
 you can add it to your HTTPS request header
@@ -556,10 +554,7 @@ public endpoint requests.
 **phone:** +1 866-606-4133 (6pm-11pm Monday to Friday EST)
 
 ### Livenet Usage
-If you have a charity or business you want to use
-the Bitcoin-Api.io API with in its livenet mode,
-currently in private Alpha testing,
-please contact technical support.
+Currently not active. Testnet mode only.
 
 ---
 
