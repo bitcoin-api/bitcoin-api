@@ -497,6 +497,7 @@ Activated-Token Endpoint
     "amount": 0.00004, // 0.00004 is the min withdraw amount
     "address": "3AfV9QQQTgtCH6YEjBpDTyH5sswgGD5MLp",
     "includeFeeInAmount": false // optional, defaults to false
+    "enviroWithdrawAmount: 0.00001 // optional, makes the withdraw an EnviroWithdraw!
 }
 ```
 
@@ -508,13 +509,21 @@ Activated-Token Endpoint
 }
 ```
 
+**EnviroWithdraw** - an option that allows you to contribute
+bitcoin to our environment🌲🌳🌎!
+This donation is added to your withdraw fee
+(which is only the bitcoin network fee).
+More info on this in the future in terms of how the bitcoin will
+be used specifically.  
 
-##### Upcoming Feature
 
-EnviroWithdraw - an option that allows you to contribute
-some bitcoin to our environment🌲🌳🌎. This donation
-will be added to other the bitcoin network withdraw fee.
-More info on this in the future as this concept evolves.
+
+Bitcoin-Api is open to suggestions for good ways to
+help the environment using the bitcoin collected from
+EnviroWithdraws.
+Leave a note in an a Github Issue, or email us at
+support@bitcoin-api.io
+☮️✌🏿✌🏾✌🏽✌🏼✌🏻🕊
 
 
 ## Glossary
