@@ -497,7 +497,7 @@ Activated-Token Endpoint
     "amount": 0.00004, // 0.00004 is the min withdraw amount
     "address": "3AfV9QQQTgtCH6YEjBpDTyH5sswgGD5MLp",
     "includeFeeInAmount": false // optional, defaults to false
-    "enviroWithdrawAmount: 0.00001 // optional, makes the withdraw an EnviroWithdraw!
+    "enviroWithdrawAmount": 0.00001 // optional, makes the withdraw an EnviroWithdraw!
 }
 ```
 
