@@ -1,6 +1,11 @@
 # bitcoin-api
 [![npm version](https://badge.fury.io/js/bitcoin-api.svg)](https://badge.fury.io/js/bitcoin-api)
 
+## Main Sections
+* [NodeJs Driver](#nodejs-driver)
+* [Raw API Documentation](#raw-api-documentation)
+* [Business](#business)
+
 ## About
 The [Bitcoin-Api.io](https://bitcoin-Api.io)
 professional grade API lets
@@ -8,11 +13,6 @@ you easily add bitcoin to
 your websites and apps. Using a [token](#tokens), you can effortlessly
 incorporate bitcoin deposit and withdraw functionality
 into your tech.
-
-## Main Sections
-* [NodeJs Driver](#nodejs-driver)
-* [Raw API Documentation](#raw-api-documentation)
-* [Business](#business)
 
 # NodeJs Driver
 
@@ -521,7 +521,7 @@ be used specifically.
 Bitcoin-Api is open to suggestions for good ways to
 help the environment using the bitcoin collected from
 EnviroWithdraws.
-Leave a note in an a Github Issue, or email us at
+Leave a note in a Github Issue, or email us at
 support@bitcoin-api.io
 ☮️✌🏿✌🏾✌🏽✌🏼✌🏻🕊
 
