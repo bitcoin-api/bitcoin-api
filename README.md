@@ -1,9 +1,9 @@
 # bitcoin-api
 [![npm version](https://badge.fury.io/js/bitcoin-api.svg)](https://badge.fury.io/js/bitcoin-api)
 
-## Main Sections
+## Contents
 * [NodeJs Driver](#nodejs-driver)
-* [Raw API Documentation](#raw-api-documentation)
+* [API Documentation](#api-documentation)
 * [Business](#business)
 
 ## About
@@ -174,7 +174,7 @@ const bitcoinApi = new BitcoinApi({
 ```
 
 
-# Raw API Documentation
+# API Documentation
 
 ## Table of Contents
 * [Requests](#requests)
