@@ -3,7 +3,7 @@
 
 ## Contents
 * [NodeJs Driver](#nodejs-driver)
-* [API Documentation](#api-documentation)
+* [API](#api)
 * [Business](#business)
 
 ## About
@@ -174,7 +174,7 @@ const bitcoinApi = new BitcoinApi({
 ```
 
 
-# API Documentation
+# API
 
 ## Table of Contents
 * [Requests](#requests)
