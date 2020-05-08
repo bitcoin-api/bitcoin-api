@@ -16,3 +16,4 @@ npm-debug.log
 .env
 tests
 .env-template-for-tests
+.jshintrc

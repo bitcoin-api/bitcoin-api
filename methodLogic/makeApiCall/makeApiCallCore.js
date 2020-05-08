@@ -6,13 +6,13 @@ const {
     endpointTypes,
     urls,
     headerKeys
-} = require( './constants' );
+} = require( '../../constants' );
 
 const {
     errors: {
         BitcoinApiError
     },
-} = require( './utils' );
+} = require( '../../utils' );
 
 const httpMethodToAxiosMethod = Object.freeze({
 
@@ -38,9 +38,7 @@ module.exports = Object.freeze( async ({
 
 }) => {
     
-    const baseUrl = livenetMode ? (
-        urls.bitcoinApiIo
-    ) : urls.apiBitcoinIo;
+    const baseUrl = livenetMode ? urls.bitcoinApiIo : urls.apiBitcoinIo;
 
     const url = `${ baseUrl }/${ resource }`;
 

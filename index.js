@@ -2,25 +2,31 @@
 
 const {
     endpointTypes,
-    withdraws: {
-        minimumWithdrawAmount,
-        maximumWithdrawAmount
-    }
+    // withdraws: {
+    //     minimumWithdrawAmount,
+    //     maximumWithdrawAmount
+    // }
 } = require( './constants' );
 
 const {
     log,
     stringify,
-    errors: {
-        BitcoinApiError
-    },
-    validation: {
-        getIsValidBitcoinAddress
-    }
+    // errors: {
+    //     BitcoinApiError
+    // },
+    // validation: {
+    //     getIsValidBitcoinAddress
+    // }
 } = require( './utils' );
 
 const validateAndGetInitializationValues = require( './validateAndGetInitializationValues' );
-const makeApiCallCore = require( './makeApiCallCore' );
+
+const {
+
+    makeApiCall,
+    withdraw
+
+} = require( './methodLogic' );
 
 
 class BitcoinApi {
@@ -54,62 +60,15 @@ class BitcoinApi {
 
         } = this;
 
-        log(
-            'running makeApiCall with the following values:',
-            stringify({
-                resource,
-                method,
-                body,
-                endpointType,
-                livenetMode,
-            })
-        );
-    
-        try {
-    
-            const response = await makeApiCallCore({
-    
-                endpointType,
-                token,
-                livenetMode,
-                resource,
-                body,
-                method,
-            });
-    
-            log(
-                'makeApiCall with the following values:',
-                stringify({
-                    resource,
-                    method,
-                    body,
-                    endpointType,
-                    livenetMode,
-                }),
-                'executed successfully, here is the response:',
-                stringify( response ),
-                'returning response body'
-            );
-        
-            return response.body;
-        }
-        catch( err ) {
-    
-            log(
-                'error in makeApiCall with the following values:',
-                stringify({
-                    resource,
-                    method,
-                    body,
-                    endpointType,
-                    livenetMode,
-                }),
-                'here is the error:',
-                err
-            );
-    
-            throw err;
-        }
+        return await makeApiCall({
+
+            token,
+            livenetMode,
+            resource,
+            method,
+            body,
+            endpointType,
+        });
     }
 
     async getTokenInfo() {
@@ -177,57 +136,16 @@ class BitcoinApi {
         includeFeeInAmount = false
 
     }) {
+        
+        await withdraw({
 
-        log( 'running withdraw' );
-
-        if(
-            !amount ||
-            (typeof amount !== 'number') ||
-            (amount < minimumWithdrawAmount) ||
-            (amount > maximumWithdrawAmount)
-        ) {
-
-            throw new BitcoinApiError(
-                'error in .withdraw: invalid withdraw amount'
-            );
-        }
-        else if(
-            !address ||
-            (typeof address !== 'string') ||
-            (
-                this.livenetMode &&   
-                !getIsValidBitcoinAddress( address )
-            )
-        ) {
-
-            throw new BitcoinApiError(
-                'error in .withdraw: invalid address specified'
-            );
-        }
-        else if( typeof includeFeeInAmount !== 'boolean' ) {
-
-            throw new BitcoinApiError(
-                'error in .withdraw: ' +
-                'invalid includeFeeInAmount value specified'
-            );
-        }
-
-        await this.makeApiCall({
-
-            resource: 'withdraws',
-            method: 'POST',
-            endpointType: endpointTypes.activatedToken,
-            body: {
-
-                amount,
-                address,
-                includeFeeInAmount,
-            }
+            amount,
+            address,
+            includeFeeInAmount,
+            selfie: this,
         });
-
-        log( 'withdraw executed successfully' );
     }
-};
+}
 
 
 module.exports = BitcoinApi;
