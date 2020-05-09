@@ -10,7 +10,7 @@ const {
 
 const {
     log,
-    stringify,
+    // stringify,
     // errors: {
     //     BitcoinApiError
     // },
@@ -24,7 +24,10 @@ const validateAndGetInitializationValues = require( './validateAndGetInitializat
 const {
 
     makeApiCall,
-    withdraw
+    withdraw,
+    getTokenInfo,
+    createOrGetAddress,
+    getFeeData,
 
 } = require( './methodLogic' );
 
@@ -73,60 +76,26 @@ class BitcoinApi {
 
     async getTokenInfo() {
 
-        log( 'running getTokenInfo' );
+        return await getTokenInfo({
 
-        const tokenInfo = await this.makeApiCall({
-
-            resource: 'tokens',
-            method: 'GET',
-            endpointType: endpointTypes.generalToken,
+            selfie: this,
         });
-
-        log(
-            'getTokenInfo executed successfully - token info: ' +
-            stringify( tokenInfo )
-        );
-
-        return tokenInfo;
     }
 
     async createOrGetAddress() {
 
-        log( 'running createOrGetAddress' );
+        return await createOrGetAddress({
 
-        const addressData = await this.makeApiCall({
-
-            resource: 'addresses',
-            method: 'POST',
-            endpointType: endpointTypes.activatedToken,
-            body: {},
+            selfie: this,
         });
-
-        log(
-            'createOrGetAddress executed successfully - ' +
-            `address (or null): ${ stringify( addressData ) }`
-        );
-
-        return addressData;
     }
 
     async getFeeData() {
 
-        log( 'running getFeeData' );
+        return await getFeeData({
 
-        const feeData = await this.makeApiCall({
-
-            resource: 'fee-data',
-            method: 'GET',
-            endpointType: endpointTypes.public,
+            selfie: this,
         });
-
-        log(
-            'getFeeData executed successfully - ' +
-            JSON.stringify( feeData, null, 4 )
-        );
-
-        return feeData;
     }
 
     async withdraw({
@@ -137,7 +106,7 @@ class BitcoinApi {
 
     }) {
         
-        await withdraw({
+        return await withdraw({
 
             amount,
             address,
