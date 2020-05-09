@@ -155,7 +155,7 @@ const bitcoinApi = new BitcoinApi({
     
     /*
 
-        logs:
+        Logs:
 
             Address Data: {
                 
@@ -163,7 +163,7 @@ const bitcoinApi = new BitcoinApi({
                 "timeOfExpiry": 1591741428249
             }
 
-        note:
+        Note:
 
             createOrGetAddress will return null for the "address" value
                 when no fresh addresses are available
@@ -182,7 +182,7 @@ const bitcoinApi = new BitcoinApi({
     
     /*
         
-        logs:
+        Logs:
 
             Fee Data: {
                 "fee": 0.0000001
@@ -204,9 +204,10 @@ const bitcoinApi = new BitcoinApi({
     });
     
     /*
-        withdraws 0.002 BTC to 3AfV9QQQTgtCH6YEjBpDTyH5sswgGD5MLp
-    
-        note:
+        This operation withdraws 0.002 BTC to 3AfV9QQQTgtCH6YEjBpDTyH5sswgGD5MLp
+
+        Note:
+        
             includeFeeInAmount is optional
                 when set to true, the fee will automatically
                 be deducted from the amount
