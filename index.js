@@ -17,6 +17,7 @@ const {
     getTokenInfo,
     createOrGetAddress,
     getFeeData,
+    createToken,
 
 } = require( './methodLogic' );
 
@@ -60,6 +61,35 @@ module.exports = class BitcoinApi {
             method,
             body,
             endpointType,
+        });
+    }
+
+    static async createToken({
+
+        livenetMode = false
+
+    } = {
+
+        livenetMode: false
+
+    }) {
+        
+        const createTokenApiCall = Object.freeze( async () => {
+
+            return await makeApiCall({
+
+                token: null,
+                livenetMode,
+                resource: 'tokens',
+                method: 'POST',
+                endpointType: endpointTypes.public,
+                body: {},
+            });
+        });
+
+        return await createToken({
+
+            createTokenApiCall
         });
     }
 

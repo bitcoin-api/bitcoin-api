@@ -16,6 +16,18 @@ into your tech.
 
 # NodeJs Driver
 
+## Table of Contents
+* [Example](#Example)
+* [Install](#Install)
+* [Setup](#Setup)
+* [Usage](#Usage)
+    * [.createToken](#-createToken)
+    * [.getTokenInfo](#-getTokenInfo)
+    * [.createOrGetAddress](#-createOrGetAddress)
+    * [.getFeeData](#-getFeeData)
+    * [.withdraw](#-withdraw)
+
+
 ## Example
 ```.js
 'use strict';
@@ -80,6 +92,35 @@ const bitcoinApi = new BitcoinApi({
 
 
 ## Usage
+### .createToken
+```.js
+(async () => {
+
+    const createTokenResults = await BitcoinApi.createToken();
+
+    console.log(
+        'Create token results:',
+        JSON.stringify( createTokenResults, null, 4  )
+    );
+
+    /*
+        Logs:
+
+            Create token results: {
+                "token": "6bda5fe7949b470fa4e11e..."
+            }
+
+        ---
+
+        Note:
+
+            unlike the other methods of BitcoinApi
+            .createToken is accessed through the BitcoinApi class itself,
+            not a bitcoinApi instance of the class
+            which requires a token to be instantiated
+    */
+})();
+```
 
 ### .getTokenInfo
 ```.js

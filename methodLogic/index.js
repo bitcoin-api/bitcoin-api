@@ -8,4 +8,5 @@ module.exports = Object.freeze({
     getTokenInfo: require( './getTokenInfo' ),
     createOrGetAddress: require( './createOrGetAddress' ),
     getFeeData: require( './getFeeData' ),
+    createToken: require( './createToken' ),
 });
