@@ -2,21 +2,10 @@
 
 const {
     endpointTypes,
-    // withdraws: {
-    //     minimumWithdrawAmount,
-    //     maximumWithdrawAmount
-    // }
 } = require( './constants' );
 
 const {
     log,
-    // stringify,
-    // errors: {
-    //     BitcoinApiError
-    // },
-    // validation: {
-    //     getIsValidBitcoinAddress
-    // }
 } = require( './utils' );
 
 const validateAndGetInitializationValues = require( './validateAndGetInitializationValues' );
@@ -32,7 +21,7 @@ const {
 } = require( './methodLogic' );
 
 
-class BitcoinApi {
+module.exports = class BitcoinApi {
 
     constructor( initializationValues ) {
 
@@ -114,7 +103,4 @@ class BitcoinApi {
             selfie: this,
         });
     }
-}
-
-
-module.exports = BitcoinApi;
+};
