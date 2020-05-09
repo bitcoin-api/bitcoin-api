@@ -17,10 +17,10 @@ into your tech.
 # NodeJs Driver
 
 ## Table of Contents
-* [Example](#Example)
-* [Install](#Install)
-* [Setup](#Setup)
-* [Usage](#Usage)
+* [Example](#example)
+* [Install](#install)
+* [Setup](#setup)
+* [Usage](#usage)
     * [.createToken](#createtoken)
     * [.getTokenInfo](#gettokeninfo)
     * [.createOrGetAddress](#createorgetaddress)
