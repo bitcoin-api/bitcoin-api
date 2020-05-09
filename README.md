@@ -21,11 +21,11 @@ into your tech.
 * [Install](#Install)
 * [Setup](#Setup)
 * [Usage](#Usage)
-    * [.createToken](#-createToken)
-    * [.getTokenInfo](#-getTokenInfo)
-    * [.createOrGetAddress](#-createOrGetAddress)
-    * [.getFeeData](#-getFeeData)
-    * [.withdraw](#-withdraw)
+    * [.createToken](#createtoken)
+    * [.getTokenInfo](#gettokeninfo)
+    * [.createOrGetAddress](#createorgetaddress)
+    * [.getFeeData](#getfeedata)
+    * [.withdraw](#withdraw)
 
 
 ## Example
