@@ -34,8 +34,8 @@ module.exports = Object.freeze( async ({
     if(
         !amount ||
         (typeof amount !== 'number') ||
-        (amount <= minimumWithdrawAmount) ||
-        (amount >= maximumWithdrawAmount)
+        (amount < minimumWithdrawAmount) ||
+        (amount > maximumWithdrawAmount)
     ) {
 
         throw new BitcoinApiError(
