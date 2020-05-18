@@ -26,7 +26,7 @@ module.exports = f({
 
     withdraws: f({
 
-        minimumWithdrawAmount: 0.0004,
+        minimumWithdrawAmount: 0.00004,
         maximumWithdrawAmount: 50,
     }),
 });
