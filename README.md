@@ -159,8 +159,7 @@ const bitcoinApi = new BitcoinApi({
 
             Address Data: {
                 
-                "address": "3AfV9QQQTgtCH6YEjBpDTyH5sswgGD5MLp",
-                "timeOfExpiry": 1591741428249
+                "address": "3AfV9QQQTgtCH6YEjBpDTyH5sswgGD5MLp"
             }
 
         Note:
