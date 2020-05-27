@@ -468,8 +468,7 @@ Activated-Token Endpoint
 {
     "statusCode": 200,
     "body": {
-        "address": "3AfV9QQQTgtCH6YEjBpDTyH5sswgGD5MLp",
-        "timeOfExpiry": 1588611713247
+        "address": "3AfV9QQQTgtCH6YEjBpDTyH5sswgGD5MLp"
     }
 }
 ```
@@ -481,14 +480,6 @@ bitcoin deposit transaction has
 at least 6 confirmations on the bitcoin network.
 You can retrieve your bitcoin balance using the
 [/tokens GET General-Token Endpoint](#get---get-token-info).
-
-
-If you don't deposit bitcoin
-to your address before it expires, that address will be
-reclaimed by Bitcoin-Api meaning you will not be
-able to access any bitcoin sent to that address.
-Bitcoin-Api will never expire an address that already has
-bitcoin sent to it.
 
 
 ### /fee-data
