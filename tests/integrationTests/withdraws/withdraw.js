@@ -22,9 +22,10 @@ describe( '.withdraw', function() {
 
         const withdrawResponse = await bitcoinApi.withdraw({
 
-            amount: 0.0008,
+            amount: 0.0001,
             address: 'mgXi9VCAmwaEGszk5yhqkigptTVQM33uhx',
-            // includeFeeInAmount: true
+            includeFeeInAmount: true,
+            // enviroWithdrawAmount: 0.00007
         });
 
         expect( withdrawResponse ).to.equal( undefined );

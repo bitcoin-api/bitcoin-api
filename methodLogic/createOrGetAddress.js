@@ -10,11 +10,12 @@ const {
 } = require( '../utils' );
 
 
-module.exports = Object.freeze( async ({
-
-    selfie
-
-}) => {
+module.exports = Object.freeze( async (
+    
+    selfie,
+    values = {}
+    
+) => {
 
     log( 'running createOrGetAddress' );
 
@@ -23,7 +24,7 @@ module.exports = Object.freeze( async ({
         resource: 'addresses',
         method: 'POST',
         endpointType: endpointTypes.activatedToken,
-        body: {},
+        body: values,
     });
 
     log(

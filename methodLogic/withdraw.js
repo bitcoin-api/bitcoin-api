@@ -25,6 +25,7 @@ module.exports = Object.freeze( async ({
     amount,
     address,
     includeFeeInAmount = false,
+    enviroWithdrawAmount,
     selfie
 
 }) => {
@@ -62,18 +63,38 @@ module.exports = Object.freeze( async ({
             'invalid includeFeeInAmount value specified'
         );
     }
+    else if(
+        !!enviroWithdrawAmount &&
+        !(
+            (typeof enviroWithdrawAmount === 'number') &&
+            (enviroWithdrawAmount > 0) &&
+            (enviroWithdrawAmount < 50)
+        )
+    ) {
+
+        throw new BitcoinApiError(
+            'error in .withdraw: invalid enviroWithdrawAmount'
+        );
+    }
+
+    const body = {
+
+        amount,
+        address,
+        includeFeeInAmount,
+    };
+
+    if( !!enviroWithdrawAmount ) {
+
+        body.enviroWithdrawAmount = enviroWithdrawAmount;
+    }    
 
     await selfie.makeApiCall({
 
         resource: 'withdraws',
         method: 'POST',
         endpointType: endpointTypes.activatedToken,
-        body: {
-
-            amount,
-            address,
-            includeFeeInAmount,
-        }
+        body
     });
 
     log( 'withdraw executed successfully' );

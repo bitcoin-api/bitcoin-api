@@ -199,7 +199,7 @@ const bitcoinApi = new BitcoinApi({
 
         amount: 0.002,
         address: '3AfV9QQQTgtCH6YEjBpDTyH5sswgGD5MLp',
-        includeFeeInAmount: false
+        includeFeeInAmount: false,
     });
     
     /*
@@ -210,6 +210,10 @@ const bitcoinApi = new BitcoinApi({
             includeFeeInAmount is optional
                 when set to true, the fee will automatically
                 be deducted from the amount
+
+            enviroWithdrawAmount is optional
+                the amount specified will be donated to
+                help protect our environment🌲🌳☮️
     */
 })();
 ```
@@ -569,7 +573,7 @@ how to make Activated-Token requests.
 in the context of Bitcoin-Api,
 refers to a collection of access points (called API endpoints) which are used to
 access and control your bitcoins.
-Check out [this article on bitcoin APIs and regular APIs](https://www.linkedin.com/pulse/whats-api-bitcoin-michael-stecky-efantis)
+Check out [this article on bitcoin APIs and regular APIs](https://bitcoin-api.io/articles/bitcoin-api)
 for a more detailed explanation of what bitcoin APIs and regular APIs
 are and how they function.
 

@@ -101,12 +101,9 @@ module.exports = class BitcoinApi {
         });
     }
 
-    async createOrGetAddress() {
+    async createOrGetAddress( values ) {
 
-        return await createOrGetAddress({
-
-            selfie: this,
-        });
+        return await createOrGetAddress( this, values );
     }
 
     async getFeeData() {
@@ -121,7 +118,8 @@ module.exports = class BitcoinApi {
 
         amount,
         address,
-        includeFeeInAmount = false
+        includeFeeInAmount = false,
+        enviroWithdrawAmount,
 
     }) {
         
@@ -130,6 +128,7 @@ module.exports = class BitcoinApi {
             amount,
             address,
             includeFeeInAmount,
+            enviroWithdrawAmount,
             selfie: this,
         });
     }

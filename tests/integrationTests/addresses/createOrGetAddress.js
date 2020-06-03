@@ -33,6 +33,6 @@ describe( '.createOrGetAddress', function() {
             expect( addressData.address ).to.equal( null );
         }
 
-        expect( typeof addressData.timeOfExpiry ).to.equal( 'number' );
+        // expect( typeof addressData.timeOfExpiry ).to.equal( 'number' );
     });
 });
