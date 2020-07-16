@@ -24,9 +24,7 @@ PRODUCTS CURRENTLY AVAILABLE:
 * advertise small image, text, and link on Github Repo Readme -> `0.0009 BTC / month`
 * advertise large image, text, and link on Github Repo Readme -> `0.0011 BTC / month`
 
-Contact support@bitcoin-api.io to purchase a product!😃❤️
-
-For more information contact support@bitcoin-api.io!😃❤️
+For more information or to purchase one of the available products, please don't hesitate to contact support@bitcoin-api.io!😃❤️
 
 ## Contents
 * [NodeJs Driver](#nodejs-driver)
