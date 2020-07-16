@@ -21,7 +21,7 @@ contact the support email at support@bitcoin-api.io.
 PRODUCTS CURRENTLY AVAILABLE:
 
 * advertise text and link on Github Repo Readme -> `0.0005 BTC / month`
-* advertise small image, text, and link on Github Repo Readme -> `0.009 BTC / month`
+* advertise small image, text, and link on Github Repo Readme -> `0.0009 BTC / month`
 * advertise large image, text, and link on Github Repo Readme -> `0.0011 BTC / month`
 
 Contact support@bitcoin-api.io to purchase a product!😃❤️
