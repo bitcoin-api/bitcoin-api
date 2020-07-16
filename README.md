@@ -13,7 +13,7 @@
 🧐That's right, you will be able to have your own robust, secure, scalable, and cheap to maintain - Bitcoin API, exchange, and casino for free!😲
 
 If you want to contribute,
-have your name/company advertized on this Github repo,
+have your name/company advertised on this Github repo,
 or be more deeply integrated in the development of this project, 
 contact the support email at support@bitcoin-api.io.
 
