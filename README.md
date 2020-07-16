@@ -6,7 +6,7 @@
 
 #### Full-stack code and instructions for the following sites will be made available soon:
 
-- [Bitcoin-Api.io](https://bitcoin-api.io) - API for bitcoin
+- [Bitcoin-Api.io](https://bitcoin-api.io) - API for Bitcoin
 - [atExchange.io](https://atExchange.io) - Bitcoin Exchange
 - [ProbablyCrypto.com](https://probablycrypto.com) - Bitcoin Gambling Site
 
@@ -20,9 +20,9 @@ contact the support email at support@bitcoin-api.io.
 
 PRODUCTS CURRENTLY AVAILABLE:
 
-* advertise text and link on Github Repo Readme -> `0.001 BTC / month`
-* advertise small image, text, and link on Github Repo Readme -> `0.0015 BTC / month`
-* advertise large image, text, and link on Github Repo Readme -> `0.0017 BTC / month`
+* advertise text and link on Github Repo Readme -> `0.0005 BTC / month`
+* advertise small image, text, and link on Github Repo Readme -> `0.009 BTC / month`
+* advertise large image, text, and link on Github Repo Readme -> `0.0011 BTC / month`
 
 Contact support@bitcoin-api.io to purchase a product!😃❤️
 
