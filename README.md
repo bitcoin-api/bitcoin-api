@@ -10,21 +10,9 @@
 - [atExchange.io](https://atExchange.io) - Bitcoin Exchange
 - [ProbablyCrypto.com](https://probablycrypto.com) - Bitcoin Gambling Site
 
-🧐That's right, you will be able to have your own robust, secure, scalable, and cheap to maintain - Bitcoin API, exchange, and casino for free!😲
+🧐That's right, you will be able to have your own robust, secure, instant full-stack deployment, scalable, and cheap to maintain - Bitcoin API, exchange, and casino for free!😲
 
-If you want to contribute,
-have your name/company advertised on this Github repo,
-or be more deeply integrated in the development of this project, 
-contact the support email at support@bitcoin-api.io.
-
-
-PRODUCTS CURRENTLY AVAILABLE:
-
-* advertise text and link on Github Repo Readme -> `0.0005 BTC / month`
-* advertise small image, text, and link on Github Repo Readme -> `0.0009 BTC / month`
-* advertise large image, text, and link on Github Repo Readme -> `0.0011 BTC / month`
-
-Contact support@bitcoin-api.io to purchase a product!😃❤️
+For more information contact support@bitcoin-api.io!😃❤️
 
 ## Contents
 * [NodeJs Driver](#nodejs-driver)
