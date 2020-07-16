@@ -1,6 +1,31 @@
 # bitcoin-api
 [![npm version](https://badge.fury.io/js/bitcoin-api.svg)](https://badge.fury.io/js/bitcoin-api)
 
+
+## News
+
+#### Full-stack code and instructions for the following sites will be made available soon:
+
+- [Bitcoin-Api.io](https://bitcoin-api.io) - API for bitcoin
+- [atExchange.io](https://atExchange.io) - Bitcoin Exchange
+- [ProbablyCrypto.com](https://probablycrypto.com) - Bitcoin Gambling Site
+
+🧐That's right, you will be able to have your own robust, secure, scalable, and cheap to maintain - Bitcoin API, exchange, and casino for free!😲
+
+If you want to contribute,
+have your name/company advertized on this Github repo,
+or be more deeply integrated in the development of this project, 
+contact the support email at support@bitcoin-api.io.
+
+
+PRODUCTS CURRENTLY AVAILABLE:
+
+* advertise text and link on Github Repo Readme -> `0.001 BTC / month`
+* advertise small image, text, and link on Github Repo Readme -> `0.0015 BTC / month`
+* advertise large image, text, and link on Github Repo Readme -> `0.0017 BTC / month`
+
+Contact support@bitcoin-api.io to purchase a product!😃❤️
+
 ## Contents
 * [NodeJs Driver](#nodejs-driver)
 * [API](#api)
