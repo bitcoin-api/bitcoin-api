@@ -10,7 +10,7 @@
 - [atExchange.io](https://atExchange.io) - Bitcoin Exchange
 - [ProbablyCrypto.com](https://probablycrypto.com) - Bitcoin Gambling Site
 
-🧐That's right, you will be able to have your own robust, secure, instant full-stack deployment, scalable, and cheap to maintain - Bitcoin API, exchange, and casino for free!😲
+🧐That's right, you can now have your own robust, secure, instant full-stack deployment, scalable, and cheap to maintain - Bitcoin API, exchange, and casino for free!😲
 
 ### ➡️ [Bitcoin-Api-Full-Stack on GitHub](https://github.com/bitcoin-api/bitcoin-api-full-stack)
 
