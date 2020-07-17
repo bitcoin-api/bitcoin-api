@@ -4,7 +4,7 @@
 
 ## News
 
-#### Full-stack code and instructions for the following sites will be made available soon:
+#### Full-stack code and instructions for the following sites are available now!:
 
 - [Bitcoin-Api.io](https://bitcoin-api.io) - API for Bitcoin
 - [atExchange.io](https://atExchange.io) - Bitcoin Exchange
@@ -12,19 +12,8 @@
 
 🧐That's right, you will be able to have your own robust, secure, instant full-stack deployment, scalable, and cheap to maintain - Bitcoin API, exchange, and casino for free!😲
 
-If you want to contribute,
-have your name/company advertised on this Github repo,
-or be more deeply integrated in the development of this project, 
-contact the support email at support@bitcoin-api.io.
+### ➡️ [Bitcoin-Api-Full-Stack on GitHub](https://github.com/bitcoin-api/bitcoin-api-full-stack)
 
-
-PRODUCTS CURRENTLY AVAILABLE:
-
-* advertise text and link on Github Repo Readme -> `0.0005 BTC / month`
-* advertise small image, text, and link on Github Repo Readme -> `0.0009 BTC / month`
-* advertise large image, text, and link on Github Repo Readme -> `0.0011 BTC / month`
-
-For more information or to purchase one of the available products, please don't hesitate to contact support@bitcoin-api.io!😃❤️
 
 ## Contents
 * [NodeJs Driver](#nodejs-driver)
