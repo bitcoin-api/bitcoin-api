@@ -7,8 +7,8 @@
 #### Full-stack code and instructions for the following sites are available now!:
 
 - [Bitcoin-Api.io](https://bitcoin-api.io) - API for Bitcoin
-- [atExchange.io](https://atExchange.io) - Bitcoin Exchange
-- [ProbablyCrypto.com](https://probablycrypto.com) - Bitcoin Gambling Site
+- [atExchange.io](https://atExchange.io) - Bitcoin Exchange [LOCKED]
+- [ProbablyCrypto.com](https://probablycrypto.com) - Bitcoin Gambling Site [LOCKED]
 
 🧐That's right, you can now have your own robust, secure, instant full-stack deployment, scalable, and cheap to maintain - Bitcoin API, exchange, and casino for free!😲
 
