@@ -1,7 +1,7 @@
 # bitcoin-api
 [![npm version](https://badge.fury.io/js/bitcoin-api.svg)](https://badge.fury.io/js/bitcoin-api)
 
-### NodeJS Client for the Bitcoin-Api.io API for Bitcoin - Currently Testnet Only
+### NodeJS Driver and Documentation for the Bitcoin-Api.io API for Bitcoin - Currently Testnet Only
 
 <br>
 
