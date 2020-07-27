@@ -3,7 +3,7 @@
 
 ### Testnet NodeJs Client for Bitcoin-Api.io API
 
-### ➡️➡️➡️ [Click This Link to Go to Full Stack Version of API, Exchange, and Casino on GitHub](https://github.com/bitcoin-api/bitcoin-api-full-stack) 😎🧐🤠😁✌️
+### ➡️➡️➡️ [Click This Link to Go to Full Stack Versions of the Bitcoin-Api Bitcoin API, Exchange, and Casino on GitHub](https://github.com/bitcoin-api/bitcoin-api-full-stack) 😎🧐🤠😁✌️
 
 
 
