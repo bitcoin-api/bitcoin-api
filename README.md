@@ -1,15 +1,15 @@
 # bitcoin-api
 [![npm version](https://badge.fury.io/js/bitcoin-api.svg)](https://badge.fury.io/js/bitcoin-api)
 
-### NodeJs Client for the Bitcoin-Api.io API - Currently Testnet Only
+### NodeJS Client for the Bitcoin-Api.io API - Currently Testnet Only
 
 <br>
 
-## [➡️➡️➡️ Click This Link to Go to the Open Source Full Stack Livenet Versions of the Bitcoin-Api.io Bitcoin API, Exchange, and Casino Code on GitHub](https://github.com/bitcoin-api/bitcoin-api-full-stack) 😎🧐🤠😃✌️☮️🕊💘
+## [➡️➡️➡️ Click This Link to Go to the Open Source Full Stack Livenet Versions of the Bitcoin-Api.io Bitcoin API, Exchange, and Casino Code on GitHub 😎🧐🤠😃✌️☮️🕊💘](https://github.com/bitcoin-api/bitcoin-api-full-stack) 
 
 
 ## Contents
-* [NodeJs Driver](#nodejs-driver)
+* [NodeJS Driver](#nodejs-driver)
 * [API](#api)
 * [Business](#business)
 
@@ -21,7 +21,7 @@ your websites and apps. Using a [token](#tokens), you can effortlessly
 incorporate bitcoin deposit and withdraw functionality
 into your tech.
 
-# NodeJs Driver
+# NodeJS Driver
 
 ## Table of Contents
 * [Example](#example)
