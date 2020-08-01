@@ -5,7 +5,7 @@
 
 <br>
 
-**Also check out:**
+**Also, check out:**
 
 # [Bitcoin-Api-Full-Stack](https://github.com/bitcoin-api/bitcoin-api-full-stack)
 
