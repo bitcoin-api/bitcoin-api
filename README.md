@@ -9,7 +9,7 @@
 
 # [Bitcoin-Api-Full-Stack](https://github.com/bitcoin-api/bitcoin-api-full-stack)
 
-## [➡️➡️➡️ Click This Link to Go to the Open Source Full Stack Livenet Versions of the Bitcoin-Api.io Bitcoin API, Exchange, and Casino Code on GitHub 😎🧐🤠😃✌️☮️🕊💘👁](https://github.com/bitcoin-api/bitcoin-api-full-stack) 
+## [➡️➡️➡️ Click This Link to Go to the Open Source Full Stack Livenet Versions of the Bitcoin-Api.io Bitcoin API, Exchange, and Gaming Platform Code on GitHub 😎🧐🤠😃✌️☮️🕊💘👁](https://github.com/bitcoin-api/bitcoin-api-full-stack) 
 
 
 ## Contents
