@@ -628,8 +628,16 @@ Currently not active. Testnet mode only.
 
 ---
 
-[Bitcoin-Api.io](https://bitcoin-api.io) - Bitcoin as a service
+### Credits:
+
+**Coding:** [Michael Stecky-Efantis](https://www.linkedin.com/in/bitcoin-api) - contact for enterprise Bitcoin-Api Bitcoin and crypto services - add crypto to your business!
+
+**Art Design:** [Azubuike Nwadike](https://www.facebook.com/xbilldn) - contact to hire for excellent quality design and art work
+
+---
+
+> [Bitcoin-Api.io](https://bitcoin-api.io) - Bitcoin as a service
 
 > "#BaaS is #Bitcoin #API."
 
-#### Be bitcoin happy with Bitcoin-Api!😄
+> Be bitcoin happy with Bitcoin-Api!😄
