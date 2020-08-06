@@ -2,10 +2,12 @@
 
 [![npm version](https://badge.fury.io/js/bitcoin-api.svg)](https://badge.fury.io/js/bitcoin-api)
 
-<img
-    src="https://bitcoin-api.s3.amazonaws.com/images/visual_art/azubuike-metallic-eye.jpeg"
-    width="620"
-/>
+<a href="#">
+    <img
+        src="https://bitcoin-api.s3.amazonaws.com/images/visual_art/azubuike-metallic-eye.jpeg"
+        width="620"
+    />
+</a>
 
 ### NodeJS Driver and Documentation for the Bitcoin-Api API for Bitcoin - Currently Testnet Only
 
