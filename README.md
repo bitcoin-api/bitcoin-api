@@ -626,4 +626,4 @@ Currently not active. Testnet mode only.
 
 ---
 
-> Be bitcoin happy with Bitcoin-Api!😄
+> Be bitcoin happy with Bitcoin-Api!😃
