@@ -626,8 +626,4 @@ Currently not active. Testnet mode only.
 
 ---
 
-> [Bitcoin-Api.io](https://bitcoin-api.io) - Bitcoin as a service
-
-> "#BaaS is #Bitcoin #API."
-
 > Be bitcoin happy with Bitcoin-Api!😄
