@@ -7,7 +7,7 @@
     width="620"
 />
 
-### NodeJS Driver and Documentation for the Bitcoin-Api.io API for Bitcoin - Currently Testnet Only
+### NodeJS Driver and Documentation for the Bitcoin-Api API for Bitcoin - Currently Testnet Only
 
 <br>
 
