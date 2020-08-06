@@ -4,7 +4,7 @@
 
 <img
     src="https://bitcoin-api.s3.amazonaws.com/images/visual_art/azubuike-metallic-eye.jpeg"
-    width="420"
+    width="620"
 />
 
 ### NodeJS Driver and Documentation for the Bitcoin-Api.io API for Bitcoin - Currently Testnet Only
