@@ -2,12 +2,10 @@
 
 [![npm version](https://badge.fury.io/js/bitcoin-api.svg)](https://badge.fury.io/js/bitcoin-api)
 
-<a href="https://github.com/bitcoin-api/bitcoin-api-full-stack">
-    <img
-        src="https://bitcoin-api.s3.amazonaws.com/images/visual_art/azubuike-metallic-eye.jpeg"
-        width="350"
-    />
-</a>
+<img
+    src="https://bitcoin-api.s3.amazonaws.com/images/visual_art/azubuike-metallic-eye.jpeg"
+    width="420"
+/>
 
 ### NodeJS Driver and Documentation for the Bitcoin-Api.io API for Bitcoin - Currently Testnet Only
 
@@ -18,7 +16,7 @@
 <a href="https://github.com/bitcoin-api/bitcoin-api-full-stack">
     <img
         src="https://bitcoin-api.s3.amazonaws.com/images/visual_art/azubuike-bitcoin-api-full-stack-2.png"
-        width="150"
+        width="220"
     />
 </a>
 
