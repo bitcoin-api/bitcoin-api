@@ -574,17 +574,7 @@ Activated-Token Endpoint
 bitcoin to our environment🌲🌳🌎!
 This donation is added to your withdraw fee
 (which is only the bitcoin network fee).
-More info on this in the future in terms of how the bitcoin will
-be used specifically.  
 
-
-
-Bitcoin-Api is open to suggestions for good ways to
-help the environment using the bitcoin collected from
-EnviroWithdraws.
-Leave a note in a Github Issue, or email us at
-support@bitcoin-api.io
-☮️✌🏿✌🏾✌🏽✌🏼✌🏻🕊
 
 
 ## Glossary
