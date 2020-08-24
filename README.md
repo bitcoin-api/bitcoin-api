@@ -112,8 +112,8 @@ const bitcoinApi = new BitcoinApi({
     livenetToken: 'yycsddfksdjaksld',
     // one of testnetToken or livenetToken is required
 
-    testnetBaseUrl: 'https://my-testnet-bitcoin-api-instance-url.com',
-    livenetBaseUrl: 'https://my-bitcoin-api-instance-url.com',
+    testnetBaseUrl: 'https://my-testnet-bitcoin-api-full-stack-instance-url.com',
+    livenetBaseUrl: 'https://my-bitcoin-api-full-stack-instance-url.com',
     /*
         optional: provide your custom base url,
             to be used in combination with
@@ -149,8 +149,8 @@ const bitcoinApi = new BitcoinApi({
             await BitcoinApi.createToken({
                
                 livenetMode: true || false,
-                testnetBaseUrl: 'https://my-testnet-bitcoin-api-instance.com',
-                livenetBaseUrl: 'https://my-bitcoint-api-instance.com'
+                testnetBaseUrl: 'https://my-testnet-bitcoin-api-full-stack-instance.com',
+                livenetBaseUrl: 'https://my-bitcoint-api-full-stack-instance.com'
             });
 
         Note:
