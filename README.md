@@ -112,8 +112,7 @@ const bitcoinApi = new BitcoinApi({
     livenetToken: 'yycsddfksdjaksld',
     // one of testnetToken or livenetToken is required
 
-    testnetBaseUrl: 'https://
-    my-testnet-bitcoin-api-instance-url.com',
+    testnetBaseUrl: 'https://my-testnet-bitcoin-api-instance-url.com',
     livenetBaseUrl: 'https://my-bitcoin-api-instance-url.com',
     /*
         optional: provide your custom base url,
