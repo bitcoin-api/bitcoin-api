@@ -144,7 +144,7 @@ const bitcoinApi = new BitcoinApi({
 
         ---
 
-        Optional Parameter:
+        Optional Parameters:
         
             await BitcoinApi.createToken({
                
