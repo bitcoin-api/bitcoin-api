@@ -109,7 +109,7 @@ const bitcoinApi = new BitcoinApi({
     // optional: defaults to false
     
     testnetToken: 'xxcsddfksdjaksld', 
-    livenetToken: 'yycsddfksdjaksld'
+    livenetToken: 'yycsddfksdjaksld',
     // one of testnetToken or livenetToken is required
 
     testnetBaseUrl: 'https://
