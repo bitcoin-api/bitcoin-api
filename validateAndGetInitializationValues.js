@@ -3,8 +3,15 @@
 const f = Object.freeze;
 
 const {
-    errors: { BitcoinApiError }
+    errors: { BitcoinApiError },
+    validation: {
+        getIsValidUrl,
+    }
 } = require( './utils' );
+
+const {
+    urls,
+} = require( './constants' );
 
 const getIfTokenIsValid = f(
     token => (
@@ -30,6 +37,8 @@ module.exports = f( initializationValues => {
     const rawLivenetMode = initializationValues.livenetMode || false;
     const rawLivenetToken = initializationValues.livenetToken;
     const rawTestnetToken = initializationValues.testnetToken;
+    const rawLivenetBaseUrl = initializationValues.livenetBaseUrl;
+    const rawTestnetBaseUrl = initializationValues.testnetBaseUrl;
 
     if( typeof rawLivenetMode !== 'boolean' ) {
 
@@ -56,19 +65,53 @@ module.exports = f( initializationValues => {
             'missing testnetToken and/or livenetToken'
         );
     }
-
+    
     const values = {
 
-        livenetMode: rawLivenetMode,
+        // livenetMode: rawLivenetMode,
     };
 
-    if( values.livenetMode ) {
+    if( rawLivenetMode ) {
 
         values.token = rawLivenetToken;
+
+        if( !!rawLivenetBaseUrl ) {
+            
+            if( !getIsValidUrl( rawLivenetBaseUrl ) ) {
+
+                throw new BitcoinApiError(
+                    'initialization error: ' +
+                    'invalid livenetBaseUrl provided'
+                );
+            }
+
+            values.baseUrl = rawLivenetBaseUrl;
+        }
+        else {
+
+            values.baseUrl = urls.bitcoinApiIo;
+        }
     }
     else {
 
         values.token = rawTestnetToken;
+
+        if( !!rawTestnetBaseUrl ) {
+            
+            if( !getIsValidUrl( rawTestnetBaseUrl ) ) {
+
+                throw new BitcoinApiError(
+                    'initialization error: ' +
+                    'invalid testnetBaseUrl provided'
+                );
+            }
+
+            values.baseUrl = rawTestnetBaseUrl;
+        }
+        else {
+
+            values.baseUrl = urls.apiBitcoinIo;
+        }
     }
 
     return f( values );

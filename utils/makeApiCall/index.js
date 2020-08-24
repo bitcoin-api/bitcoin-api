@@ -4,18 +4,15 @@ const {
     endpointTypes,
 } = require( '../../constants' );
 
-const {
-    log,
-    stringify,
-} = require( '../../utils' );
-
+const log = require( '../log' );
+const stringify = require( '../stringify' );
 const makeApiCallCore = require( './makeApiCallCore' );
 
 
 module.exports = Object.freeze( async ({
 
     token,
-    livenetMode,
+    baseUrl,
     resource,
     method = 'GET',
     body = null,
@@ -30,7 +27,7 @@ module.exports = Object.freeze( async ({
             method,
             body,
             endpointType,
-            livenetMode,
+            baseUrl,
         })
     );
 
@@ -40,7 +37,7 @@ module.exports = Object.freeze( async ({
 
             endpointType,
             token,
-            livenetMode,
+            baseUrl,
             resource,
             body,
             method,
@@ -53,7 +50,7 @@ module.exports = Object.freeze( async ({
                 method,
                 body,
                 endpointType,
-                livenetMode,
+                baseUrl,
             }),
             'executed successfully, here is the response:',
             stringify( response ),
@@ -71,7 +68,7 @@ module.exports = Object.freeze( async ({
                 method,
                 body,
                 endpointType,
-                livenetMode,
+                baseUrl,
             }),
             'here is the error:',
             err

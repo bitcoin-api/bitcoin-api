@@ -4,8 +4,7 @@
 
 <a href="#">
     <img
-        src="https://bitcoin-api.s3.amazonaws.com/images/visual_art/azubuike-metallic-eye.jpeg"
-        width="620"
+        src="https://bitcoin-api.s3.amazonaws.com/images/visual_art/so-splush-bee-and-lamby-build-your-own-world-banner-1.png"
     />
 </a>
 
@@ -112,6 +111,15 @@ const bitcoinApi = new BitcoinApi({
     testnetToken: 'xxcsddfksdjaksld', 
     livenetToken: 'yycsddfksdjaksld'
     // one of testnetToken or livenetToken is required
+
+    testnetBaseUrl: 'https://
+    my-testnet-bitcoin-api-instance-url.com',
+    livenetBaseUrl: 'https://my-bitcoin-api-instance-url.com',
+    /*
+        optional: provide your custom base url,
+            to be used in combination with
+            https://github.com/bitcoin-api/bitcoin-api-full-stack
+    */            
 });
 ```
 
@@ -136,6 +144,15 @@ const bitcoinApi = new BitcoinApi({
             }
 
         ---
+
+        Optional Parameter:
+        
+            await BitcoinApi.createToken({
+               
+                livenetMode: true || false,
+                testnetBaseUrl: 'https://my-testnet-bitcoin-api-instance.com',
+                livenetBaseUrl: 'https://my-bitcoint-api-instance.com'
+            });
 
         Note:
 

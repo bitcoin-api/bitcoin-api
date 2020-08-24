@@ -7,4 +7,5 @@ module.exports = Object.freeze({
     log: require( './log' ),
     stringify: require( './stringify' ),
     validation: require( './validation' ),
+    makeApiCall: require( './makeApiCall' ),
 });

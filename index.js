@@ -6,13 +6,13 @@ const {
 
 const {
     log,
+    makeApiCall,
 } = require( './utils' );
 
 const validateAndGetInitializationValues = require( './validateAndGetInitializationValues' );
 
 const {
 
-    makeApiCall,
     withdraw,
     getTokenInfo,
     createOrGetAddress,
@@ -49,14 +49,14 @@ module.exports = class BitcoinApi {
         const {
 
             token,
-            livenetMode
+            baseUrl
 
         } = this;
 
         return await makeApiCall({
 
             token,
-            livenetMode,
+            baseUrl,
             resource,
             method,
             body,
@@ -66,30 +66,23 @@ module.exports = class BitcoinApi {
 
     static async createToken({
 
-        livenetMode = false
+        livenetMode = false,
+        testnetBaseUrl,
+        livenetBaseUrl
 
     } = {
 
-        livenetMode: false
+        livenetMode: false,
+        testnetBaseUrl: undefined,
+        livenetBaseUrl: undefined,
 
     }) {
-        
-        const createTokenApiCall = Object.freeze( async () => {
-
-            return await makeApiCall({
-
-                token: null,
-                livenetMode,
-                resource: 'tokens',
-                method: 'POST',
-                endpointType: endpointTypes.public,
-                body: {},
-            });
-        });
 
         return await createToken({
 
-            createTokenApiCall
+            livenetMode,
+            testnetBaseUrl,
+            livenetBaseUrl
         });
     }
 

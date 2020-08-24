@@ -9,10 +9,8 @@ const {
 } = require( '../../constants' );
 
 const {
-    errors: {
-        BitcoinApiError
-    },
-} = require( '../../utils' );
+    BitcoinApiError
+} = require( '../errors' );
 
 const httpMethodToAxiosMethod = Object.freeze({
 
@@ -31,14 +29,12 @@ module.exports = Object.freeze( async ({
 
     endpointType,
     token,
-    livenetMode,
     resource,
     body,
     method,
+    baseUrl
 
 }) => {
-    
-    const baseUrl = livenetMode ? urls.bitcoinApiIo : urls.apiBitcoinIo;
 
     const url = `${ baseUrl }/${ resource }`;
 
