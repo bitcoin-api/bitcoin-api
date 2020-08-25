@@ -83,6 +83,8 @@ module.exports = Object.freeze( async ({
 
         const requestFailed = !(
             !!response &&
+            !!response.status &&
+            (typeof response.status === 'number') &&
             (response.status >= 200) &&
             (response.status < 300) &&
             !!response.data &&
