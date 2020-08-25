@@ -24,8 +24,6 @@ const endpointTypesThatRequireToken = Object.freeze([
     endpointTypes.activatedToken
 ]);
 
-const OK = 'OK';
-
 
 module.exports = Object.freeze( async ({
 
