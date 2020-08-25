@@ -33,7 +33,7 @@ module.exports = Object.freeze( async ({
 
     try {
 
-        const response = await makeApiCallCore({
+        const apiCallResults = await makeApiCallCore({
 
             endpointType,
             token,
@@ -53,11 +53,11 @@ module.exports = Object.freeze( async ({
                 baseUrl,
             }),
             'executed successfully, here is the response:',
-            stringify( response ),
+            stringify( apiCallResults ),
             'returning response body'
         );
     
-        return response.body;
+        return apiCallResults;
     }
     catch( err ) {
 

@@ -24,6 +24,8 @@ const endpointTypesThatRequireToken = Object.freeze([
     endpointTypes.activatedToken
 ]);
 
+const OK = 'OK';
+
 
 module.exports = Object.freeze( async ({
 
@@ -72,6 +74,42 @@ module.exports = Object.freeze( async ({
 
     const response = await instance[ axiosMethod ]( ...axiosArgs );
 
+    const isContemporaryStyleRequest = ![
+
+        urls.bitcoinApiIo,
+        urls.apiBitcoinIo
+
+    ].includes( baseUrl );
+
+    if( isContemporaryStyleRequest ) {
+
+        const requestFailed = !(
+            !!response &&
+            (response.status >= 200) &&
+            (response.status < 300) &&
+            !!response.data &&
+            (typeof response.data === 'object')
+        );
+    
+        if( requestFailed ) {
+    
+            throw new BitcoinApiError(
+            
+                `${ method } request to ${ resource } failed - ` +
+                `invalid API response: ${
+                    JSON.stringify(
+                        (
+                            !!response &&
+                            response.data
+                        ) || 'N/A'
+                    )
+                }`
+            );
+        }
+    
+        return response.data;
+    }
+
     const requestFailed = !(
 
         !!response &&
@@ -101,7 +139,5 @@ module.exports = Object.freeze( async ({
         );
     }
 
-    const responseData = response.data; 
-
-    return responseData;
+    return response.data.body; 
 });
