@@ -58,6 +58,7 @@ into your tech.
 
 const BitcoinApi = require( 'bitcoin-api' );
 
+
 const bitcoinApi = new BitcoinApi({
 
     token: 'token goes here'
@@ -102,6 +103,7 @@ npm install bitcoin-api --save
 'use strict';
 
 const BitcoinApi = require( 'bitcoin-api' );
+
 
 const bitcoinApi = new BitcoinApi({
 
