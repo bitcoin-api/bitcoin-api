@@ -17,7 +17,8 @@ describe( '.withdraw', function() {
 
         const bitcoinApi = new BitcoinApi({
 
-            testnetToken: fixtures.testnetToken,
+            token: fixtures.token,
+            baseUrl: fixtures.baseUrl
         });
 
         const withdrawResponse = await bitcoinApi.withdraw({

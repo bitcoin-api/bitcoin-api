@@ -1,14 +1,15 @@
 'use strict';
 
-const testnetToken = process.env.TESTNET_TOKEN;
+const token = process.env.TOKEN;
 
-if( !testnetToken ) {
+if( !token ) {
 
-    throw new Error( 'missing TESTNET_TOKEN environment variable' );
+    throw new Error( 'missing TOKEN environment variable' );
 }
 
 
 module.exports = Object.freeze({
 
-    testnetToken,
+    token,
+    baseUrl: process.env.BASE_URL,
 });

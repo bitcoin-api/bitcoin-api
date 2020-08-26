@@ -17,7 +17,7 @@ describe( '.getFeeData', function() {
 
         const bitcoinApi = new BitcoinApi({
 
-            testnetToken: fixtures.testnetToken,
+            baseUrl: fixtures.baseUrl,
         });
 
         const feeData = await bitcoinApi.getFeeData();

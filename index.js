@@ -67,22 +67,19 @@ module.exports = class BitcoinApi {
     static async createToken({
 
         livenetMode = false,
-        testnetBaseUrl,
-        livenetBaseUrl
+        baseUrl,
 
     } = {
 
         livenetMode: false,
-        testnetBaseUrl: undefined,
-        livenetBaseUrl: undefined,
+        baseUrl: undefined,
 
     }) {
 
         return await createToken({
 
             livenetMode,
-            testnetBaseUrl,
-            livenetBaseUrl
+            rawBaseUrl: baseUrl,
         });
     }
 

@@ -17,7 +17,8 @@ describe( '.getTokenInfo', function() {
 
         const bitcoinApi = new BitcoinApi({
 
-            testnetToken: fixtures.testnetToken,
+            token: fixtures.token,
+            baseUrl: fixtures.baseUrl
         });
 
         const tokenInfo = await bitcoinApi.getTokenInfo();

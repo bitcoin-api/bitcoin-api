@@ -22,12 +22,9 @@ const getIfTokenIsValid = f(
 );
 
 
-module.exports = f( initializationValues => {
+module.exports = f( ( initializationValues = {} ) => {
 
-    if(
-        !initializationValues ||
-        (typeof initializationValues !== 'object')
-    ) {
+    if( !initializationValues ) {
 
         throw new BitcoinApiError(
             'initialization error: missing initialization values'
@@ -35,10 +32,8 @@ module.exports = f( initializationValues => {
     }
 
     const rawLivenetMode = initializationValues.livenetMode || false;
-    const rawLivenetToken = initializationValues.livenetToken;
-    const rawTestnetToken = initializationValues.testnetToken;
-    const rawLivenetBaseUrl = initializationValues.livenetBaseUrl;
-    const rawTestnetBaseUrl = initializationValues.testnetBaseUrl;
+    const rawToken = initializationValues.token;
+    const rawBaseUrl = initializationValues.baseUrl;
 
     if( typeof rawLivenetMode !== 'boolean' ) {
 
@@ -46,72 +41,44 @@ module.exports = f( initializationValues => {
             'initialization error: invalid livenetMode'
         );
     }
-    else if( !!rawLivenetToken && !getIfTokenIsValid( rawLivenetToken ) ) {
+    else if( !!rawToken && !getIfTokenIsValid( rawToken ) ) {
 
         throw new BitcoinApiError(
-            'initialization error: invalid livenetToken'
+            'initialization error: invalid token'
         );
     }
-    else if( !!rawTestnetToken && !getIfTokenIsValid( rawTestnetToken ) ) {
+    // else if( !rawToken ) {
 
-        throw new BitcoinApiError(
-            'initialization error: invalid testnetToken'
-        );
-    }
-    else if( !rawLivenetToken && !rawTestnetToken ) {
-
-        throw new BitcoinApiError(
-            'initialization error: ' +
-            'missing testnetToken and/or livenetToken'
-        );
-    }
+    //     throw new BitcoinApiError(
+    //         'initialization error: ' +
+    //         'missing testnetToken and/or livenetToken'
+    //     );
+    // }
     
     const values = {
 
         // livenetMode: rawLivenetMode,
     };
 
-    if( rawLivenetMode ) {
+    values.token = rawToken;
 
-        values.token = rawLivenetToken;
+    if( !!rawBaseUrl ) {
+        
+        if( !getIsValidUrl( rawBaseUrl ) ) {
 
-        if( !!rawLivenetBaseUrl ) {
-            
-            if( !getIsValidUrl( rawLivenetBaseUrl ) ) {
-
-                throw new BitcoinApiError(
-                    'initialization error: ' +
-                    'invalid livenetBaseUrl provided'
-                );
-            }
-
-            values.baseUrl = rawLivenetBaseUrl;
+            throw new BitcoinApiError(
+                'initialization error: ' +
+                'invalid baseUrl provided'
+            );
         }
-        else {
 
-            values.baseUrl = urls.bitcoinApiIo;
-        }
+        values.baseUrl = rawBaseUrl;
     }
     else {
 
-        values.token = rawTestnetToken;
-
-        if( !!rawTestnetBaseUrl ) {
-            
-            if( !getIsValidUrl( rawTestnetBaseUrl ) ) {
-
-                throw new BitcoinApiError(
-                    'initialization error: ' +
-                    'invalid testnetBaseUrl provided'
-                );
-            }
-
-            values.baseUrl = rawTestnetBaseUrl;
-        }
-        else {
-
-            values.baseUrl = urls.apiBitcoinIo;
-        }
+        values.baseUrl = rawLivenetMode ? (
+            urls.bitcoinApiIo
+        ) : urls.apiBitcoinIo;
     }
 
     return f( values );

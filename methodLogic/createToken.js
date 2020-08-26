@@ -19,49 +19,30 @@ const {
 const getBaseUrl = Object.freeze( ({
 
     livenetMode,
-    livenetBaseUrl,
-    testnetBaseUrl,
+    rawBaseUrl,
 
 }) => {
 
-    if( livenetMode ) {
-
-        if( !!livenetBaseUrl ) {
-            
-            if( !validation.getIsValidUrl( livenetBaseUrl ) ) {
-
-                throw new BitcoinApiError(
-                    'createToken error: invalid livenetBaseUrl'
-                );
-            }
-
-            return livenetBaseUrl;
-        }
-
-        return urls.bitcoinApiIo;
-    }
-
-    if( !!testnetBaseUrl ) {
-            
-        if( !validation.getIsValidUrl( testnetBaseUrl ) ) {
+    if( !!rawBaseUrl ) {
+        
+        if( !validation.getIsValidUrl( rawBaseUrl ) ) {
 
             throw new BitcoinApiError(
-                'createToken error: invalid testnetBaseUrl'
+                'createToken error: invalid baseUrl'
             );
         }
 
-        return testnetBaseUrl;
+        return rawBaseUrl;
     }
 
-    return urls.apiBitcoinIo;
+    return livenetMode ? urls.bitcoinApiIo : urls.apiBitcoinIo;
 });
 
 
 module.exports = Object.freeze( async ({
 
     livenetMode,
-    testnetBaseUrl,
-    livenetBaseUrl
+    rawBaseUrl,
 
 }) => {
 
@@ -69,15 +50,13 @@ module.exports = Object.freeze( async ({
         'running createToken with the following values: ' +
         stringify({
             livenetMode,
-            testnetBaseUrl,
-            livenetBaseUrl
+            rawBaseUrl,
         })
     );
 
     const baseUrl = getBaseUrl({
         livenetMode,
-        testnetBaseUrl,
-        livenetBaseUrl
+        rawBaseUrl,
     });
 
     const createTokenResults = await makeApiCall({
