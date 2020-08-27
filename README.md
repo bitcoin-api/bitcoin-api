@@ -157,7 +157,6 @@ const bitcoinApi = new BitcoinApi({
             unlike the other methods of BitcoinApi
             .createToken is accessed through the BitcoinApi class itself,
             not a bitcoinApi instance of the class
-            which requires a token to be instantiated
     */
 })();
 ```
@@ -227,6 +226,10 @@ const bitcoinApi = new BitcoinApi({
             Fee Data: {
                 "fee": 0.0000001
             }
+
+        Note:
+            This is a public method so it does not
+            require a token to be activated
     */
 })();
 ```
