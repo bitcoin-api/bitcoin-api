@@ -395,7 +395,7 @@ General-Token Endpoint
 {
     "statusCode": 200,
     "body": {
-        "isActivated": false,
+        "isActivated": true,
         "balanceData": {
             "amount": 0.0005,
             "status": "normal"
@@ -418,7 +418,7 @@ when you update that token's value.
 
 
 ##### Authorization
-General-Token Endpoint
+Token Endpoint
 
 
 ##### Request Body Example
@@ -449,7 +449,7 @@ must try again later.
 
 
 ##### Authorization 
-Activated-Token Endpoint
+Token Endpoint
 
 ##### Request Body Example
 ```.js
@@ -515,7 +515,7 @@ after the withdraw has been performed.
 This endpoint withdraws bitcoin associated with your token.
 
 ##### Authorization 
-Activated-Token Endpoint
+Token Endpoint
 
 ##### Request Body Example
 ```.js
@@ -543,11 +543,7 @@ This donation is added to your withdraw fee
 
 
 ## Glossary
-* **Activated-Token Endpoint:** an API endpoint that requires an
-Activated-Token set in the request headers
-in order to authorize the request.
-See the [Activated-Token Endpoint](#activated-token-endpoints) request section for details on
-how to make Activated-Token requests.
+* **Token Endpoint:** an API endpoint that requires a token set in the request headers in order to authorize the request.
 
 * **API:** an application programming interface (API),
 in the context of Bitcoin-Api,
