@@ -125,7 +125,10 @@ const bitcoinApi = new BitcoinApi({
 ```.js
 (async () => {
 
-    const createTokenResults = await BitcoinApi.createToken();
+    const createTokenResults = await BitcoinApi.createToken({
+               
+        baseUrl: 'https://my--bitcoin-api-full-stack-instance.com',
+    });
 
     console.log(
         'Create token results:',
@@ -138,16 +141,6 @@ const bitcoinApi = new BitcoinApi({
             Create token results: {
                 "token": "6bda5fe7949b470fa4e11e..."
             }
-
-        ---
-
-        Optional Parameters:
-        
-            await BitcoinApi.createToken({
-               
-                livenetMode: true || false,
-                baseUrl: 'https://my--bitcoin-api-full-stack-instance.com',
-            });
 
         Note:
 
