@@ -543,7 +543,7 @@ This donation is added to your withdraw fee
 
 
 ## Glossary
-* **Token Endpoint:** an API endpoint that requires a token set in the request headers in order to authorize the request.
+* **Token Endpoint:** an API endpoint that requires a token set in the request header in order to authorize the request.
 
 * **API:** an application programming interface (API),
 in the context of Bitcoin-Api,
