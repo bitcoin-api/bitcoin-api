@@ -4,7 +4,7 @@
 
 <a href="#">
     <img
-        src="https://bitcoin-api.s3.amazonaws.com/images/visual_art/so-splush-bee-and-lamby-build-your-own-world-banner-21.png"
+        src="https://bitcoin-api.s3.amazonaws.com/images/visual_art/so-splush-bee-and-lamby-build-your-own-world-banner-22.png"
     />
 </a>
 
