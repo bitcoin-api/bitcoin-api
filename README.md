@@ -279,10 +279,10 @@ Use the GitHub code repository [Bitcoin-Api-Full-Stack](https://github.com/bitco
 
 
 ### Public Endpoints
-**Public Endpoints** can be accessed using HTTPS requests with the following headers:
+**Public Endpoints** can be accessed using HTTPS requests with the following header:
 
 ```.js
-// HTTP headers to add to make requests to Public Endpoints
+// HTTP header to add to make requests to Public Endpoints
 {
     "Content-Type": "application/json"
 }
