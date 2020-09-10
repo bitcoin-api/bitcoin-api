@@ -8,7 +8,7 @@
     />
 </a>
 
-### NodeJS Driver and Documentation for the Bitcoin-Api API for Bitcoin - Currently Testnet Only
+### NodeJS Driver and Documentation for Bitcoin-Api
 
 <br>
 
@@ -107,15 +107,12 @@ const BitcoinApi = require( 'bitcoin-api' );
 
 const bitcoinApi = new BitcoinApi({
 
-    livenetMode: false,
-    // optional: defaults to false
-    
     token: 'xxcsddfksdjaksld', 
     // required
 
     baseUrl: 'https://my-bitcoin-api-full-stack-instance-url.com',
     /*
-        optional: provide your custom base url,
+        required: provide your custom base url,
             to be used in combination with
             https://github.com/bitcoin-api/bitcoin-api-full-stack
     */            
@@ -267,11 +264,9 @@ const bitcoinApi = new BitcoinApi({
 
 ## Table of Contents
 * [Requests](#requests)
-    * [Base Url](#base-url)
+    * [Base Url](#api-url)
     * [Public Endpoints](#public-endpoints)
     * [Tokens](#tokens)
-    * [General-Token Endpoints](#general-token-endpoints)
-    * [Activated-Token Endpoints](#activated-token-endpoints)
 * [Responses](#responses) 
     * [Successful Responses](#successful-responses)
     * [Error Responses](#error-responses)
@@ -285,13 +280,9 @@ const bitcoinApi = new BitcoinApi({
 
 ## Requests
 
-### Base Url
+### API Url
 
-##### Testnet:
-`https://api-bitcoin.io/v3`
-
-##### Livenet:
-`https://bitcoin-api.io/v3` (not active - testnet mode only)
+Use the GitHub code repository [Bitcoin-Api-Full-Stack](https://github.com/bitcoin-api/bitcoin-api-full-stack) to create your own Bitcoin API!👩🏽‍🔬
 
 
 ### Public Endpoints
@@ -315,44 +306,6 @@ and any other resources associated with that token.
 secret and secure in order
 to protect your bitcoins
 and any token-associated data.**
-
-
-### General-Token Endpoints
-**General-Token Endpoints** are endpoints that must be accessed
-using a token in the header.
-You first acquire a token by making a request to the [/tokens POST public endpoint](#post---create-token).
-
-Once you have a token,
-you can add it to your HTTPS request header
-like below to make authorized requests to
-General-Token Endpoints:
-```.js
-// HTTP headers to add to make requests to General-Token Endpoints
-{
-    "Content-Type": "application/json",
-    "Token": "YOUR_TOKEN_GOES_HERE_INSTEAD_OF_THIS_TEXT"
-}
-```
-
-
-### Activated-Token Endpoints
-As the name suggests, an **Activated-Token Endpoint**
-can only be accessed using an **Activated-Token**.
-To activate your token, use the appropriate link below:
-
-Activate your tokens with the following link:
-
-### [Testnet Token Activator (for Api-Bitcoin.io)](https://api-bitcoin.io/token-activator)  
-
-Once you have an Activated-Token,
-you can add it to your HTTPS request header
-like below to make authorized requests to token-only endpoints:
-```.js
-{
-    "Content-Type": "application/json",
-    "Token": "YOUR_ACTIVATED-TOKEN_GOES_HERE_INSTEAD_OF_THIS_TEXT"
-}
-```
 
 
 ## Responses
@@ -630,10 +583,6 @@ public endpoint requests.
 
 ### Technical Support
 **email:** support@bitcoin-api.io
-
-
-### Livenet Usage
-Currently not active. Testnet mode only.
 
 ---
 
