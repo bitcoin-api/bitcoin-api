@@ -303,7 +303,7 @@ Tokens are used as follows:
 // HTTP header to add to make requests to Token Endpoints
 {
     "Content-Type": "application/json",
-    "token": "asidasidsdssdfjlkghnkrwthwuyietsahduyrrtjkertg"
+    "Token": "asidasidsdssdfjlkghnkrwthwuyietsahduyrrtjkertg"
 }
 ```
 
