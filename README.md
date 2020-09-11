@@ -260,9 +260,6 @@ const bitcoinApi = new BitcoinApi({
     * [Base Url](#api-url)
     * [Public Endpoints](#public-endpoints)
     * [Tokens](#tokens)
-* [Responses](#responses) 
-    * [Successful Responses](#successful-responses)
-    * [Error Responses](#error-responses)
 * [Resources](#resources) 
     * [/tokens](#tokens-1)
     * [/addresses](#addresses)
@@ -301,60 +298,7 @@ to protect your bitcoins
 and any token-associated data.**
 
 
-## Responses
-**All responses, success or error,
-should always respond with a 200 status code
-in the actual HTTPS response.**
-
-This implies that any non-200 status code responses
-should be considered unexpected internal server errors
-or the request itself was invalid
-(e.g. accidentally using the wrong HTTP method).
-
-
-### Successful Responses
-Requests that executed successfully will return a
-response in the following form:
-```.js
-{
-    
-    "statusCode": 200, // number (200-299)
-    
-    "body": { 
-
-        "key_1": "value_1",
-        "key_2": "value_2",
-        "key_3": "value_3",
-        ...,
-        "key_i": "value_i",
-        ...,
-        "key_n": "value_n"
-
-    }, // object
-}
-```
-
-### Error Responses
-Assuming the request was properly formed
-and there were no internal server errors,
-as explained above,
-the HTTPS request itself will respond with a 200 status code although
-the contents of that response will be in the following form:
-```.js
-{
-
-    "statusCode": 400 || 500, // number (400-599)
-
-    "isError": true,
-    
-    "message": "the error message will be here instead of this text", // string
-}
-```
-
-
-
 ## Resources
-
 
 ### /tokens
 
@@ -376,10 +320,7 @@ Public Endpoint
 ##### Response Body Example
 ```.js
 {
-    "statusCode": 200,
-    "body": {
-        "token": "asjfhnsdlkjfhdskljhfskdljfhsdjkfsdkjfhnsdlsdf..."
-    }
+    "token": "asjfhnsdlkjfhdskljhfskdljfhsdjkfsdkjfhnsdlsdf..."
 }
 ```
 
@@ -393,13 +334,9 @@ General-Token Endpoint
 ##### Response Body Example
 ```.js
 {
-    "statusCode": 200,
-    "body": {
-        "isActivated": true,
-        "balanceData": {
-            "amount": 0.0005,
-            "status": "normal"
-        }
+    "balanceData": {
+        "amount": 0.0005,
+        "status": "normal"
     }
 }
 ```
@@ -429,10 +366,7 @@ Token Endpoint
 ##### Response Body Example
 ```.js
 {
-    "statusCode": 200,
-    "body": {
-        "token": "2asjfhnsdlkjfhdskljhfskdljfhsdjkfsdkjfhnsdlsdf..."
-    }
+    "token": "2asjfhnsdlkjfhdskljhfskdljfhsdjkfsdkjfhnsdlsdf..."
 }
 ```
 
@@ -459,10 +393,7 @@ Token Endpoint
 ##### Response Body Example
 ```.js
 {
-    "statusCode": 200,
-    "body": {
-        "address": "3AfV9QQQTgtCH6YEjBpDTyH5sswgGD5MLp"
-    }
+    "address": "3AfV9QQQTgtCH6YEjBpDTyH5sswgGD5MLp"
 }
 ```
 
@@ -489,10 +420,7 @@ Public Endpoint
 ##### Response Body Example
 ```.js
 {
-    "statusCode": 200,
-    "body": {
-        "fee": 0.000002
-    }
+    "fee": 0.000002
 }
 ```
 
@@ -529,10 +457,7 @@ Token Endpoint
 
 ##### Response Body Example
 ```.js
-{
-    "statusCode": 200,
-    "body": {}
-}
+{}
 ```
 
 **EnviroWithdraw** - an option that allows you to contribute
