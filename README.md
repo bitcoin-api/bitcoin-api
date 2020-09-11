@@ -257,7 +257,7 @@ const bitcoinApi = new BitcoinApi({
 
 ## Table of Contents
 * [Requests](#requests)
-    * [Base Url](#api-url)
+    * [API Url](#api-url)
     * [Public Endpoints](#public-endpoints)
     * [Tokens](#tokens)
 * [Resources](#resources) 
