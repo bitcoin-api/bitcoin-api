@@ -298,6 +298,16 @@ to protect your bitcoins
 and any token-associated data.**
 
 
+Tokens are used as follows:
+```.js
+// HTTP header to add to make requests to Token Endpoints
+{
+    "Content-Type": "application/json",
+    "token": "asidasidsdssdfjlkghnkrwthwuyietsahduyrrtjkertg"
+}
+```
+
+
 ## Resources
 
 ### /tokens
@@ -329,7 +339,7 @@ Public Endpoint
 This endpoint gets info associated with a token.
 
 ##### Authorization 
-General-Token Endpoint
+Token Endpoint
 
 ##### Response Body Example
 ```.js
