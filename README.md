@@ -472,8 +472,7 @@ Token Endpoint
 
 **EnviroWithdraw** - an option that allows you to contribute
 bitcoin to our environment🌲🌳🌎!
-This donation is added to your withdraw fee
-(which is only the bitcoin network fee).
+This donation is added to your withdraw fee.
 
 
 
