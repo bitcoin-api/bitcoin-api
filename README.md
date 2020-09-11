@@ -577,7 +577,7 @@ public endpoint requests.
 
 ### Credits:
 
-**Coding:** [Michael Stecky-Efantis](https://www.linkedin.com/in/michael-se) - contact for enterprise Bitcoin-Api Bitcoin and crypto services - add crypto to your business!
+**Coding:** [Michael Stecky-Efantis](https://www.linkedin.com/in/michael-se)
 
 **Art Design:** [Azubuike Nwadike](https://www.facebook.com/xbilldn) - contact to hire for excellent quality design and art work
 
