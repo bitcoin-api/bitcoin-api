@@ -4,11 +4,11 @@
 
 <a href="#">
     <img
-        src="https://bitcoin-api.s3.amazonaws.com/images/visual_art/so-splush-bee-and-lamby-build-your-own-world-banner-22.png"
+        src="https://bitcoin-api.s3.amazonaws.com/images/visual_art/so-splush-bee-and-lamby-build-your-own-world-banner-24.png"
     />
 </a>
 
-### NodeJS Driver and Documentation for Bitcoin-Api
+### NodeJS Driver and Documentation for Bitcoin-API
 
 <br>
 
@@ -22,7 +22,7 @@
 </a>
 
 
-**[`bitcoin-api-full-stack` - open source full stack Livenet versions of the Bitcoin-Api API, exchange, and game platform code on GitHub](https://github.com/bitcoin-api/bitcoin-api-full-stack)**
+**[`bitcoin-api-full-stack` - open source full stack Livenet versions of the Bitcoin-API API, exchange, and game platform code on GitHub](https://github.com/bitcoin-api/bitcoin-api-full-stack)**
 
 
 ## Contents
@@ -31,7 +31,7 @@
 * [Business](#business)
 
 ## About
-The [Bitcoin-Api.io](https://bitcoin-Api.io)
+The [Bitcoin-API.io](https://bitcoin-api.io)
 professional grade API lets
 you easily add bitcoin to
 your websites and apps. Using a [token](#tokens), you can effortlessly
@@ -56,10 +56,10 @@ into your tech.
 ```.js
 'use strict';
 
-const BitcoinApi = require( 'bitcoin-api' );
+const BitcoinAPI = require( 'bitcoin-api' );
 
 
-const bitcoinApi = new BitcoinApi({
+const bitcoinAPI = new BitcoinAPI({
 
     token: 'token goes here'
 });
@@ -73,13 +73,13 @@ const bitcoinApi = new BitcoinApi({
             
             balanceData: { amount }
             
-        } = await bitcoinApi.getTokenInfo();
+        } = await bitcoinAPI.getTokenInfo();
 
         // logs current balance
         console.log( 'Balance:', amount ); 
 
         // withdraws 0.00004 BTC
-        await bitcoinApi.withdraw({
+        await bitcoinAPI.withdraw({
 
             amount: 0.00004,
             address: 'mgXi9VCAmwaEGszk5yhqkigptTVQM33uhx',
@@ -102,10 +102,10 @@ npm install bitcoin-api --save
 ```.js
 'use strict';
 
-const BitcoinApi = require( 'bitcoin-api' );
+const BitcoinAPI = require( 'bitcoin-api' );
 
 
-const bitcoinApi = new BitcoinApi({
+const bitcoinAPI = new BitcoinAPI({
 
     token: 'xxcsddfksdjaksld', 
     // required
@@ -125,7 +125,7 @@ const bitcoinApi = new BitcoinApi({
 ```.js
 (async () => {
 
-    const createTokenResults = await BitcoinApi.createToken({
+    const createTokenResults = await BitcoinAPI.createToken({
                
         baseUrl: 'https://my--bitcoin-api-full-stack-instance.com',
     });
@@ -144,9 +144,9 @@ const bitcoinApi = new BitcoinApi({
 
         Note:
 
-            unlike the other methods of BitcoinApi
-            .createToken is accessed through the BitcoinApi class itself,
-            not a bitcoinApi instance of the class
+            unlike the other methods of BitcoinAPI
+            .createToken is accessed through the BitcoinAPI class itself,
+            not a bitcoinAPI instance of the class
     */
 })();
 ```
@@ -156,7 +156,7 @@ const bitcoinApi = new BitcoinApi({
 ```.js
 (async () => {
 
-    const tokenInfo = await bitcoinApi.getTokenInfo();
+    const tokenInfo = await bitcoinAPI.getTokenInfo();
 
     console.log( 'Token Info:', JSON.stringify( tokenInfo, null, 4  ) );
 
@@ -179,7 +179,7 @@ const bitcoinApi = new BitcoinApi({
 ```.js
 (async () => {
 
-    const addressData = await bitcoinApi.createOrGetAddress();
+    const addressData = await bitcoinAPI.createOrGetAddress();
 
     console.log( 'Address Data:', JSON.stringify( addressData, null, 4 ) );
     
@@ -205,7 +205,7 @@ const bitcoinApi = new BitcoinApi({
 ```.js
 (async () => {
 
-    const feeData = await bitcoinApi.getFeeData();
+    const feeData = await bitcoinAPI.getFeeData();
 
     console.log( 'Fee Data:', JSON.stringify( feeData, null, 4 ) );
     
@@ -229,7 +229,7 @@ const bitcoinApi = new BitcoinApi({
 ```.js
 (async () => {
 
-    await bitcoinApi.withdraw({
+    await bitcoinAPI.withdraw({
 
         amount: 0.002,
         address: '3AfV9QQQTgtCH6YEjBpDTyH5sswgGD5MLp',
@@ -272,7 +272,7 @@ const bitcoinApi = new BitcoinApi({
 
 ### API Url
 
-Use the GitHub code repository [Bitcoin-Api-Full-Stack](https://github.com/bitcoin-api/bitcoin-api-full-stack) to create your own Bitcoin API!👩🏽‍🔬
+Use the GitHub code repository [Bitcoin-API-Full-Stack](https://github.com/bitcoin-api/bitcoin-api-full-stack) to create your own Bitcoin API!👩🏽‍🔬
 
 
 ### Public Endpoints
@@ -286,7 +286,7 @@ Use the GitHub code repository [Bitcoin-Api-Full-Stack](https://github.com/bitco
 ```
 
 ### Tokens
-**Tokens** are used to make authorized requests to the Bitcoin-Api.io API.
+**Tokens** are used to make authorized requests to the Bitcoin-API.io API.
 These authorized requests allow you to access
 and to control your bitcoin.
 A token is a key that gives you access to your bitcoin,
@@ -480,7 +480,7 @@ This donation is added to your withdraw fee.
 * **Token Endpoint:** an API endpoint that requires a token set in the request header in order to authorize the request.
 
 * **API:** an application programming interface (API),
-in the context of Bitcoin-Api,
+in the context of Bitcoin-API,
 refers to a collection of access points (called API endpoints) which are used to
 access and control your bitcoins.
 Check out [this article on bitcoin APIs and regular APIs](https://bitcoin-api.io/articles/bitcoin-api)
@@ -490,7 +490,7 @@ are and how they function.
 * **Endpoint (or API Endpoint):** an endpoint is a url with an
 HTTP method (e.g. GET, POST) that can be accessed via HTTPS requests.
 Endpoints are the main communication channel of
-Bitcoin-Api and form the basis for all operations in the API.
+Bitcoin-API and form the basis for all operations in the API.
 
 * **Public Endpoint:** an API endpoint that is accessible for everyone
 without any token authorization required.
@@ -517,4 +517,4 @@ public endpoint requests.
 
 ---
 
-> Be bitcoin happy with Bitcoin-Api!😃
+> Be bitcoin happy with Bitcoin-API!😃
