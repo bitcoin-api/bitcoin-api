@@ -499,4 +499,4 @@ public endpoint requests.
 
 ---
 
-> Be Bitcoin happy with Bitcoin-API!😃
+> Be Bitcoin happy with Bitcoin-API!🤠🚀✨
