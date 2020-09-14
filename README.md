@@ -497,4 +497,4 @@ public endpoint requests.
 
 ### Contributing
 
-Bitcoin-API is open source. Pull requests, GitHub issues, or any other types of feedback or suggestions are welcome and are greatly appreciated.
+Bitcoin-API is open source. Pull requests, GitHub issues, or any other feedback or suggestions are welcome and are greatly appreciated.
