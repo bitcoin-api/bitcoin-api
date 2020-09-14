@@ -30,7 +30,7 @@
 * [API](#api)
 
 ## About
-Bitcoin-API lets you add bitcoin to your websites and apps. Using a [token](#tokens), you can incorporate bitcoin deposit and withdraw functionality into your tech.
+The NPM module `bitcoin-api` lets you add bitcoin to your websites and apps. Using a [token](#tokens), you can incorporate bitcoin deposit and withdraw functionality into your tech.
 
 # NodeJS Driver
 
