@@ -416,7 +416,6 @@ You can retrieve your Bitcoin balance using the
 #### GET - Get Fee Data
 This endpoint gets an estimate of the current fee that's
 added to the withdraw amount.
-**This fee is only used to cover the Bitcoin network fees.**
 
 
 ##### Authorization 
@@ -428,19 +427,6 @@ Public Endpoint
     "fee": 0.000002
 }
 ```
-
-##### More Info:
-This fee estimate is subject
-to change according to the Bitcoin network.
-This fee estimate provides
-an estimation of the maximum amount of Bitcoin
-that will be used by the Bitcoin network
-to send Bitcoin to the desired address.
-If the actual fee demanded by
-the Bitcoin network is less
-than the current fee estimate, whatever fee is not used
-while performing a withdraw will be refunded shorty
-after the withdraw has been performed.
 
 ### /withdraws
 
