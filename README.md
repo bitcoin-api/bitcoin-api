@@ -455,30 +455,6 @@ Token Endpoint
 Bitcoin to our environment🌲🌳🌎!
 This donation is added to your withdraw fee.
 
-
-
-## Glossary
-* **Token Endpoint:** an API endpoint that requires a token set in the request header in order to authorize the request.
-
-* **API:** an application programming interface (API),
-in the context of Bitcoin-API,
-refers to a collection of access points (called API endpoints) which are used to
-access and control your Bitcoins.
-Check out [this article on Bitcoin APIs and regular APIs](https://bitcoin-api.io/articles/bitcoin-api)
-for a more detailed explanation of what Bitcoin APIs and regular APIs
-are and how they function.
-
-* **Endpoint (or API Endpoint):** an endpoint is a url with an
-HTTP method (e.g. GET, POST) that can be accessed via HTTPS requests.
-Endpoints are the main communication channel of
-Bitcoin-API and form the basis for all operations in the API.
-
-* **Public Endpoint:** an API endpoint that is accessible for everyone
-without any token authorization required.
-See the [Public Endpoint Request](#public-endpoints) section for details on how to make
-public endpoint requests.
-
-
 ---
 
 ### Contribute
