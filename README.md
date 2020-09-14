@@ -30,7 +30,7 @@
 * [API](#api)
 
 ## About
-The NPM module `bitcoin-api` lets you add Bitcoin to your websites and apps. Using a [token](#tokens), you can incorporate bitcoin deposit and withdraw functionality into your tech.
+The NPM module `bitcoin-api` lets you add Bitcoin functionality to your websites and apps. Using a [token](#tokens), you can incorporate Bitcoin deposit and withdraw functionality into your tech.
 
 # NodeJS Driver
 
@@ -283,13 +283,13 @@ Use the GitHub code repository [Bitcoin-API-Full-Stack](https://github.com/bitco
 ### Tokens
 **Tokens** are used to make authorized requests to the Bitcoin-API.io API.
 These authorized requests allow you to access
-and to control your bitcoin.
-A token is a key that gives you access to your bitcoin,
-bitcoin addresses, withdraws,
+and to control your Bitcoin.
+A token is a key that gives you access to your Bitcoin,
+Bitcoin addresses, withdraws,
 and any other resources associated with that token.
 **It is very important that you keep your token
 secret and secure in order
-to protect your bitcoins
+to protect your Bitcoins
 and any token-associated data.**
 
 
@@ -309,7 +309,7 @@ Tokens are used as follows:
 
 #### POST - Create Token
 Create a new token.
-Tokens provide access to your bitcoins and associated resources
+Tokens provide access to your Bitcoins and associated resources
 by authorizing token-only requests.
 
 
@@ -379,9 +379,9 @@ Token Endpoint
 ### /addresses
 
 #### POST - Create or Get Bitcoin Address
-This endpoint creates a new bitcoin address that can
-be used to deposit bitcoins. A new address will be generated
-once the old one has bitcoin sent to it.
+This endpoint creates a new Bitcoin address that can
+be used to deposit Bitcoins. A new address will be generated
+once the old one has Bitcoin sent to it.
 If the address value is `null`,
 there are currently no new addresses available and you
 must try again later.
@@ -405,9 +405,9 @@ Token Endpoint
 ##### More Info:
 The balance associated with your token
 will be automatically updated after your
-bitcoin deposit transaction has
-at least 6 confirmations on the bitcoin network.
-You can retrieve your bitcoin balance using the
+Bitcoin deposit transaction has
+at least 6 confirmations on the Bitcoin network.
+You can retrieve your Bitcoin balance using the
 [/tokens GET General-Token Endpoint](#get---get-token-info).
 
 
@@ -416,7 +416,7 @@ You can retrieve your bitcoin balance using the
 #### GET - Get Fee Data
 This endpoint gets an estimate of the current fee that's
 added to the withdraw amount.
-**This fee is only used to cover the bitcoin network fees.**
+**This fee is only used to cover the Bitcoin network fees.**
 
 
 ##### Authorization 
@@ -431,13 +431,13 @@ Public Endpoint
 
 ##### More Info:
 This fee estimate is subject
-to change according to the bitcoin network.
+to change according to the Bitcoin network.
 This fee estimate provides
-an estimation of the maximum amount of bitcoin
-that will be used by the bitcoin network
-to send bitcoin to the desired address.
+an estimation of the maximum amount of Bitcoin
+that will be used by the Bitcoin network
+to send Bitcoin to the desired address.
 If the actual fee demanded by
-the bitcoin network is less
+the Bitcoin network is less
 than the current fee estimate, whatever fee is not used
 while performing a withdraw will be refunded shorty
 after the withdraw has been performed.
@@ -445,7 +445,7 @@ after the withdraw has been performed.
 ### /withdraws
 
 #### POST - Do Withdraw
-This endpoint withdraws bitcoin associated with your token.
+This endpoint withdraws Bitcoin associated with your token.
 
 ##### Authorization 
 Token Endpoint
@@ -466,7 +466,7 @@ Token Endpoint
 ```
 
 **EnviroWithdraw** - an option that allows you to contribute
-bitcoin to our environment🌲🌳🌎!
+Bitcoin to our environment🌲🌳🌎!
 This donation is added to your withdraw fee.
 
 
@@ -477,9 +477,9 @@ This donation is added to your withdraw fee.
 * **API:** an application programming interface (API),
 in the context of Bitcoin-API,
 refers to a collection of access points (called API endpoints) which are used to
-access and control your bitcoins.
-Check out [this article on bitcoin APIs and regular APIs](https://bitcoin-api.io/articles/bitcoin-api)
-for a more detailed explanation of what bitcoin APIs and regular APIs
+access and control your Bitcoins.
+Check out [this article on Bitcoin APIs and regular APIs](https://bitcoin-api.io/articles/bitcoin-api)
+for a more detailed explanation of what Bitcoin APIs and regular APIs
 are and how they function.
 
 * **Endpoint (or API Endpoint):** an endpoint is a url with an
