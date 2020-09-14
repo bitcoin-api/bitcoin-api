@@ -496,3 +496,7 @@ without any token authorization required.
 See the [Public Endpoint Request](#public-endpoints) section for details on how to make
 public endpoint requests.
 
+
+---
+
+> Be Bitcoin happy with Bitcoin-API!😃
