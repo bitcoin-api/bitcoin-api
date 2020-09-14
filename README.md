@@ -260,7 +260,6 @@ const bitcoinAPI = new BitcoinAPI({
     * [/addresses](#addresses)
     * [/fee-data](#fee-data)
     * [/withdraws](#withdraws)
-* [Glossary](#glossary)
 
 
 ## Requests
