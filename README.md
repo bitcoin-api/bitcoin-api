@@ -17,7 +17,7 @@
 <a href="https://github.com/bitcoin-api/bitcoin-api-full-stack">
     <img
         src="https://bitcoin-api.s3.amazonaws.com/images/visual_art/so-splush-bee-and-lamby-full-stack-banner-37.png"
-        width="250"
+        width="310"
     />
 </a>
 
@@ -30,7 +30,7 @@
 * [API](#api)
 
 ## About
-The [Bitcoin-API.io](https://bitcoin-api.io)
+The [bitcoin-api.io](https://bitcoin-api.io)
 professional grade API lets
 you easily add bitcoin to
 your websites and apps. Using a [token](#tokens), you can effortlessly
