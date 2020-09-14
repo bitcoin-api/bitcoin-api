@@ -30,12 +30,7 @@
 * [API](#api)
 
 ## About
-The [bitcoin-api.io](https://bitcoin-api.io)
-professional grade API lets
-you easily add bitcoin to
-your websites and apps. Using a [token](#tokens), you can effortlessly
-incorporate bitcoin deposit and withdraw functionality
-into your tech.
+Bitcoin-API lets you add bitcoin to your websites and apps. Using a [token](#tokens), you can incorporate bitcoin deposit and withdraw functionality into your tech.
 
 # NodeJS Driver
 
