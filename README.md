@@ -281,7 +281,7 @@ Use the GitHub code repository [Bitcoin-API-Full-Stack](https://github.com/bitco
 ```
 
 ### Tokens
-**Tokens** are used to make authorized requests to the Bitcoin-API.io API.
+**Tokens** are used to make authorized requests to your Bitcoin-API API.
 These authorized requests allow you to access
 and to control your Bitcoin.
 A token is a key that gives you access to your Bitcoin,
