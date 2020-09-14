@@ -28,7 +28,6 @@
 ## Contents
 * [NodeJS Driver](#nodejs-driver)
 * [API](#api)
-* [Business](#business)
 
 ## About
 The [Bitcoin-API.io](https://bitcoin-api.io)
@@ -497,15 +496,6 @@ without any token authorization required.
 See the [Public Endpoint Request](#public-endpoints) section for details on how to make
 public endpoint requests.
 
-
-# Business
-
-### Terms of Service and Privacy Policy
-* [Terms of Service](https://bitcoin-api.io/terms-of-service)
-* [Privacy Policy](https://bitcoin-api.io/privacy-policy)
-
-### Technical Support
-**email:** support@bitcoin-api.io
 
 ---
 
