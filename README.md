@@ -56,7 +56,7 @@ const BitcoinAPI = require( 'bitcoin-api' );
 const bitcoinAPI = new BitcoinAPI({
 
     token: 'token goes here',
-    baseUrl: 'https://my-bitcoin-api-full-stack-instance-url.com',
+    baseUrl: 'https://my-bitcoin-api-full-stack-instance-url.com'
 });
 
 
