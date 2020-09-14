@@ -495,8 +495,6 @@ public endpoint requests.
 
 ---
 
-> Be Bitcoin happy with Bitcoin-API!🤠🚀✨
-
 ### Contributing
 
 Bitcoin-API is open source. Pull requests, GitHub issues, or any other types of feedback or suggestions are welcome and are greatly appreciated.
