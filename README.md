@@ -382,8 +382,7 @@ This endpoint creates a new Bitcoin address that can
 be used to deposit Bitcoins. A new address will be generated
 once the old one has Bitcoin sent to it.
 If the address value is `null`,
-there are currently no new addresses available and you
-must try again later.
+there are currently no new addresses available.
 
 
 ##### Authorization 
