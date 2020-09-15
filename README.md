@@ -22,7 +22,7 @@
 </a>
 
 
-**[`Bitcoin-API-Full-Stack` - open source full stack Livenet Bitcoin API, exchange, and game platform code on GitHub](https://github.com/bitcoin-api/bitcoin-api-full-stack)**
+**[`Bitcoin-API-Full-Stack` - open source full stack Livenet Bitcoin and digital currency API, exchange, and game platform code on GitHub](https://github.com/bitcoin-api/bitcoin-api-full-stack)**
 
 
 ## Contents
