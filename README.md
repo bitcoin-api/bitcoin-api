@@ -8,7 +8,7 @@
     />
 </a>
 
-### NodeJS Driver and Documentation for Bitcoin-API
+### Bitcoin API NodeJS Driver and Documentation 
 
 <br>
 
@@ -22,7 +22,7 @@
 </a>
 
 
-**[`Bitcoin-API-Full-Stack` - open source full stack Livenet versions of the Bitcoin-API API, exchange, and game platform code on GitHub](https://github.com/bitcoin-api/bitcoin-api-full-stack)**
+**[`Bitcoin-API-Full-Stack` - open source full stack Livenet Bitcoin API, exchange, and game platform code on GitHub](https://github.com/bitcoin-api/bitcoin-api-full-stack)**
 
 
 ## Contents
@@ -288,7 +288,7 @@ Bitcoin addresses, withdraws,
 and any other resources associated with that token.
 **It is very important that you keep your token
 secret and secure in order
-to protect your Bitcoins
+to protect your Bitcoin
 and any token-associated data.**
 
 
@@ -308,7 +308,7 @@ Tokens are used as follows:
 
 #### POST - Create Token
 Create a new token.
-Tokens provide access to your Bitcoins and associated resources
+Tokens provide access to your Bitcoin and associated resources
 by authorizing token-only requests.
 
 
@@ -379,7 +379,7 @@ Token Endpoint
 
 #### POST - Create or Get Bitcoin Address
 This endpoint creates a new Bitcoin address that can
-be used to deposit Bitcoins. A new address will be generated
+be used to deposit Bitcoin. A new address will be generated
 once the old one has Bitcoin sent to it.
 If the address value is `null`,
 there are currently no new addresses available.
