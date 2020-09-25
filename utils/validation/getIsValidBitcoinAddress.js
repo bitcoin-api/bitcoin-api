@@ -1,11 +1,11 @@
 'use strict';
 
+const bitcoinAddressValidation = require( '@bitcoin-api/bitcoin-address-validation' );
+
 
 module.exports = Object.freeze( value => {
 
-    const regex = new RegExp( '^[13][a-km-zA-HJ-NP-Z1-9]{25,34}$' );
-
-    const isValidAddress = !!value && !!value.match( regex );
+    const isValidAddress = !!bitcoinAddressValidation( value );
 
     return isValidAddress;
 });

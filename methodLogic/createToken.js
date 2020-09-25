@@ -18,7 +18,6 @@ const {
 
 const getBaseUrl = Object.freeze( ({
 
-    livenetMode,
     rawBaseUrl,
 
 }) => {
@@ -35,13 +34,14 @@ const getBaseUrl = Object.freeze( ({
         return rawBaseUrl;
     }
 
-    return livenetMode ? urls.bitcoinApiIo : urls.apiBitcoinIo;
+    throw new BitcoinApiError(
+        'createToken error: missing baseUrl'
+    );
 });
 
 
 module.exports = Object.freeze( async ({
 
-    livenetMode,
     rawBaseUrl,
 
 }) => {
@@ -49,13 +49,11 @@ module.exports = Object.freeze( async ({
     log(
         'running createToken with the following values: ' +
         stringify({
-            livenetMode,
             rawBaseUrl,
         })
     );
 
     const baseUrl = getBaseUrl({
-        livenetMode,
         rawBaseUrl,
     });
 

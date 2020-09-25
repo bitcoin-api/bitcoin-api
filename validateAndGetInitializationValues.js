@@ -9,10 +9,6 @@ const {
     }
 } = require( './utils' );
 
-const {
-    urls,
-} = require( './constants' );
-
 const getIfTokenIsValid = f(
     token => (
         (typeof token === 'string') &&
@@ -31,36 +27,15 @@ module.exports = f( ( initializationValues = {} ) => {
         );
     }
 
-    const rawLivenetMode = initializationValues.livenetMode || false;
     const rawToken = initializationValues.token;
     const rawBaseUrl = initializationValues.baseUrl;
 
-    if( typeof rawLivenetMode !== 'boolean' ) {
-
-        throw new BitcoinApiError(
-            'initialization error: invalid livenetMode'
-        );
-    }
-    else if( !!rawToken && !getIfTokenIsValid( rawToken ) ) {
+    if( !!rawToken && !getIfTokenIsValid( rawToken ) ) {
 
         throw new BitcoinApiError(
             'initialization error: invalid token'
         );
     }
-    // else if( !rawToken ) {
-
-    //     throw new BitcoinApiError(
-    //         'initialization error: ' +
-    //         'missing testnetToken and/or livenetToken'
-    //     );
-    // }
-    
-    const values = {
-
-        // livenetMode: rawLivenetMode,
-    };
-
-    values.token = rawToken;
 
     if( !!rawBaseUrl ) {
         
@@ -71,15 +46,19 @@ module.exports = f( ( initializationValues = {} ) => {
                 'invalid baseUrl provided'
             );
         }
-
-        values.baseUrl = rawBaseUrl;
     }
     else {
 
-        values.baseUrl = rawLivenetMode ? (
-            urls.bitcoinApiIo
-        ) : urls.apiBitcoinIo;
+        throw new BitcoinApiError(
+            'initialization error: missing baseUrl'
+        );
     }
+
+    const values = {
+        
+        token: rawToken,
+        baseUrl: rawBaseUrl,
+    };
 
     return f( values );
 });

@@ -46,10 +46,7 @@ module.exports = Object.freeze( async ({
     else if(
         !address ||
         (typeof address !== 'string') ||
-        (
-            selfie.livenetMode &&   
-            !getIsValidBitcoinAddress( address )
-        )
+        !getIsValidBitcoinAddress( address )
     ) {
 
         throw new BitcoinApiError(
