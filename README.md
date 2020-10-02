@@ -16,7 +16,7 @@
 
 <a href="https://github.com/bitcoin-api/bitcoin-api-full-stack">
     <img
-        src="https://bitcoin-api.s3.amazonaws.com/images/visual_art/so-splush-bee-and-lamby-full-stack-banner-42.png"
+        src="https://bitcoin-api.s3.amazonaws.com/images/visual_art/so-splush-bee-and-lamby-full-stack-banner-45.png"
         width="320"
     />
 </a>
