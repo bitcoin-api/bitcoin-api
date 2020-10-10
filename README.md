@@ -2,7 +2,7 @@
 
 <a href="#">
     <img
-        src="https://bitcoin-api.s3.amazonaws.com/images/visual_art/altso-splush-bee-and-lamby-build-your-own-world-banner-26.png"
+        src="https://bitcoin-api.s3.amazonaws.com/images/visual_art/altso-splush-bee-and-lamby-build-your-own-world-banner-27.png"
     />
 </a>
 
