@@ -6,6 +6,8 @@
     />
 </a>
 
+<br>
+
 <a href="https://xapo.com">
     <img
         src="https://bitcoin-api.s3.amazonaws.com/images/documentation/xapo-1.png"
