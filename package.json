@@ -29,5 +29,23 @@
     "@bitcoin-api/bitcoin-address-validation": "^1.0.0",
     "axios": "^0.19.2"
   },
-  "keywords": []
+  "keywords": [
+    "bitcoin",
+    "api",
+    "happy",
+    "realdeal",
+    "bitcoin-api",
+    "api-bitcoin",
+    "quick",
+    "lightweight",
+    "small",
+    "fast",
+    "easy",
+    "light",
+    "btc",
+    "baas",
+    "bitcoin-as-a-service",
+    "baas-is-bitcoin-api",
+    "service"
+  ]
 }
