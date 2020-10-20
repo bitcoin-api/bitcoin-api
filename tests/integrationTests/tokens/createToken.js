@@ -6,7 +6,7 @@ const BitcoinApi = require( '../../..' );
 
 const expect = require( 'chai' ).expect;
 
-const fixtures = require( '../fixtures' );
+// const fixtures = require( '../fixtures' );
 
 
 describe( '.createToken', function() {
@@ -15,10 +15,12 @@ describe( '.createToken', function() {
 
     it( 'normal operation', async function() {
 
-        const createTokenResults = await BitcoinApi.createToken({
+        // const createTokenResults = await BitcoinApi.createToken({
 
-            baseUrl: fixtures.baseUrl,
-        });
+        //     baseUrl: fixtures.baseUrl,
+        // });
+
+        const createTokenResults = await BitcoinApi.createToken();
 
         expect( typeof createTokenResults ).to.equal( 'object' );
         expect( typeof createTokenResults.token ).to.equal( 'string' );

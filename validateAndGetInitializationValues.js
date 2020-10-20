@@ -9,6 +9,10 @@ const {
     }
 } = require( './utils' );
 
+const {
+    urls
+} = require( './constants' );
+
 const getIfTokenIsValid = f(
     token => (
         (typeof token === 'string') &&
@@ -28,7 +32,7 @@ module.exports = f( ( initializationValues = {} ) => {
     }
 
     const rawToken = initializationValues.token;
-    const rawBaseUrl = initializationValues.baseUrl;
+    const rawBaseUrl = initializationValues.baseUrl || urls.defaultBaseUrl;
 
     if( !!rawToken && !getIfTokenIsValid( rawToken ) ) {
 

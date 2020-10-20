@@ -1,7 +1,7 @@
 {
   "name": "bitcoin-api",
-  "version": "3.10.9",
-  "description": "Bitcoin-Api.io - Bitcoin as a Service.",
+  "version": "5.0.0",
+  "description": "Bitcoin-API.io - Bitcoin as a Service.",
   "main": "index.js",
   "scripts": {
     "Test__tokens_getTokenInfo": "./node_modules/.bin/_mocha ./tests/integrationTests/tokens/getTokenInfo.js",

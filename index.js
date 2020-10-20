@@ -2,6 +2,7 @@
 
 const {
     endpointTypes,
+    urls
 } = require( './constants' );
 
 const {
@@ -20,6 +21,8 @@ const {
     createToken,
 
 } = require( './methodLogic' );
+
+const defaultBaseUrl = urls.defaultBaseUrl;
 
 
 module.exports = class BitcoinApi {
@@ -66,11 +69,11 @@ module.exports = class BitcoinApi {
 
     static async createToken({
 
-        baseUrl,
+        baseUrl = defaultBaseUrl,
 
     } = {
 
-        baseUrl: undefined,
+        baseUrl: defaultBaseUrl,
 
     }) {
 

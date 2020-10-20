@@ -4,26 +4,11 @@
 
 <a href="#">
     <img
-        src="https://bitcoin-api.s3.amazonaws.com/images/visual_art/so-splush-bee-and-lamby-build-your-own-world-banner-25.png"
+        src="https://bitcoin-api.s3.amazonaws.com/images/visual_art/altso-splush-bee-and-lamby-build-your-own-world-banner-30.png"
     />
 </a>
 
 ### Bitcoin API NodeJS Driver and Documentation 
-
-<br>
-
-**Also, check out:**
-
-<a href="https://github.com/bitcoin-api/bitcoin-api-full-stack">
-    <img
-        src="https://bitcoin-api.s3.amazonaws.com/images/visual_art/so-splush-bee-and-lamby-full-stack-banner-55.png"
-        width="320"
-    />
-</a>
-
-
-**[`Bitcoin-API-Full-Stack` - full stack Bitcoin and digital currency API, exchange, and game platform code on GitHub](https://github.com/bitcoin-api/bitcoin-api-full-stack)**
-
 
 ## Contents
 * [NodeJS Driver](#nodejs-driver)
@@ -56,7 +41,6 @@ const BitcoinAPI = require( 'bitcoin-api' );
 const bitcoinAPI = new BitcoinAPI({
 
     token: 'token goes here',
-    baseUrl: 'https://my-bitcoin-api-full-stack-instance-url.com'
 });
 
 
@@ -104,13 +88,6 @@ const bitcoinAPI = new BitcoinAPI({
 
     token: 'xxcsddfksdjaksld', 
     // required
-
-    baseUrl: 'https://my-bitcoin-api-full-stack-instance-url.com',
-    /*
-        required: provide your custom base url,
-            to be used in combination with
-            https://github.com/bitcoin-api/bitcoin-api-full-stack
-    */            
 });
 ```
 
@@ -120,10 +97,7 @@ const bitcoinAPI = new BitcoinAPI({
 ```.js
 (async () => {
 
-    const createTokenResults = await BitcoinAPI.createToken({
-               
-        baseUrl: 'https://my--bitcoin-api-full-stack-instance.com',
-    });
+    const createTokenResults = await BitcoinAPI.createToken();
 
     console.log(
         'Create token results:',
@@ -241,9 +215,9 @@ const bitcoinAPI = new BitcoinAPI({
                 be deducted from the amount
 
             enviroWithdrawAmount is optional
-                This is an option that can be used to allow
-                users to contribute Bitcoin to the environment🌲🌎!
                 The contribution is added to the withdraw fee.
+                This is an option that is used to allow
+                users to contribute Bitcoin to the environment🌲🌎!
     */
 })();
 ```
@@ -267,7 +241,7 @@ const bitcoinAPI = new BitcoinAPI({
 
 ### API Url
 
-Use the GitHub code repository [Bitcoin-API-Full-Stack](https://github.com/bitcoin-api/bitcoin-api-full-stack) to create your own Bitcoin API!👩🏽‍🔬
+`https://bitcoin-api.io`
 
 
 ### Public Endpoints
@@ -450,9 +424,18 @@ Token Endpoint
 {}
 ```
 
-**EnviroWithdraw** - an optional Bitcoin amount that can be set and that can be used to allow users to contribute Bitcoin to the environment🌲🌎! This contribution is added to the withdraw fee.
+**EnviroWithdraw** - an optional Bitcoin amount is used to allow users to contribute Bitcoin to the environment🌲🌎! This contribution is added to the withdraw fee.
 
 ---
+
+### More Information
+
+[Terms of Service](/TERMS_OF_SERVICE.md)
+
+[Privacy Policy](/PRIVACY_POLICY.md)
+
+**Support Email:** `bitcoin-api.io@gmail.com`
+
 
 ### Contribute
 

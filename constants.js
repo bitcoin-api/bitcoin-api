@@ -14,8 +14,7 @@ module.exports = f({
 
     urls: f({
         
-        bitcoinApiIo: 'https://bitcoin-api.io/v3',
-        apiBitcoinIo: 'https://api-bitcoin.io/v3',
+        defaultBaseUrl: process.env.BITCOIN_API_BASE_URL || 'https://bitcoin-api.io',
         github: 'https://github.com/bitcoin-api/bitcoin-api',
     }),
 
