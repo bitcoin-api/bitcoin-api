@@ -2,20 +2,21 @@
 
 const f = Object.freeze;
 
+const customBaseUrl = process.env.BITCOIN_API_BASE_URL;
 const testnetDefaultBaseUrl = 'https://testnet.bitcoin-api.io';
 const defaultBaseUrl = 'https://bitcoin-api.io';
-const isTestnetMode = process.env.BITCOIN_API_TESTNET_MODE === 'true';
+const isTestnetMode = process.env.BITCOIN_API_MAINNET_MODE !== 'true';
 
 
 const getDefaultBaseUrl = f( () => {
 
-    if( isTestnetMode ) {
+    if( !!customBaseUrl ) {
+
+        return customBaseUrl;
+    }
+    else if( isTestnetMode ) {
 
         return testnetDefaultBaseUrl;
-    }
-    else if( !!process.env.BITCOIN_API_BASE_URL ) {
-
-        return process.env.BITCOIN_API_BASE_URL;
     }
 
     return defaultBaseUrl;
