@@ -191,7 +191,7 @@ const bitcoinAPI = new BitcoinAPI({
 ```
 
 
-### bitcoinApi.withdraw
+### bitcoinAPI.withdraw
 ```.js
 (async () => {
 
@@ -244,7 +244,7 @@ This is the base URL:
 
 Here's example usage:
 
-A GET request to the `https://bitcoin-api.io/fee-data` endpoint gets the current fee data associated with doing withdraws. See more on the `/fee-data` endpoint [here](#fee-data).
+A GET request to the `https://bitcoin-api.io/fee-data` endpoint gets the current fee data associated with doing withdraws. Learn more about the `/fee-data` endpoint [here](#fee-data).
 
 
 ### Public Endpoints
