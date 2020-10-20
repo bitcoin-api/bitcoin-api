@@ -24,11 +24,10 @@ The NPM module `bitcoin-api` lets you add Bitcoin functionality to your websites
 * [Install](#install)
 * [Setup](#setup)
 * [Usage](#usage)
-    * [.createToken](#createtoken)
-    * [.getTokenInfo](#gettokeninfo)
-    * [.createOrGetAddress](#createorgetaddress)
-    * [.getFeeData](#getfeedata)
-    * [.withdraw](#withdraw)
+    * [.getTokenInfo](#bitcoinApigettokeninfo)
+    * [.createOrGetAddress](#bitcoinApicreateorgetaddress)
+    * [.getFeeData](#bitcoinApigetfeedata)
+    * [.withdraw](#bitcoinApiwithdraw)
 
 
 ## Example
@@ -76,25 +75,14 @@ const bitcoinAPI = new BitcoinAPI({
 npm install bitcoin-api --save
 ```
 
-
 ## Setup
+
+### BitcoinAPI.createToken
 ```.js
 'use strict';
 
 const BitcoinAPI = require( 'bitcoin-api' );
 
-
-const bitcoinAPI = new BitcoinAPI({
-
-    token: 'xxcsddfksdjaksld', 
-    // required
-});
-```
-
-
-## Usage
-### .createToken
-```.js
 (async () => {
 
     const createTokenResults = await BitcoinAPI.createToken();
@@ -110,18 +98,27 @@ const bitcoinAPI = new BitcoinAPI({
             Create token results: {
                 "token": "6bda5fe7949b470fa4e11e..."
             }
-
-        Note:
-
-            unlike the other methods of BitcoinAPI
-            .createToken is accessed through the BitcoinAPI class itself,
-            not a bitcoinAPI instance of the class
     */
 })();
 ```
 
+### Initialize Instance
+```.js
+'use strict';
 
-### .getTokenInfo
+const BitcoinAPI = require( 'bitcoin-api' );
+
+const bitcoinAPI = new BitcoinAPI({
+
+    token: 'xxcsddfksdjaksld', 
+    // required
+});
+```
+
+
+## Usage
+
+### bitcoinApi.getTokenInfo
 ```.js
 (async () => {
 
@@ -144,7 +141,7 @@ const bitcoinAPI = new BitcoinAPI({
 ```
 
 
-### .createOrGetAddress
+### bitcoinApi.createOrGetAddress
 ```.js
 (async () => {
 
@@ -170,7 +167,7 @@ const bitcoinAPI = new BitcoinAPI({
 ```
 
 
-### .getFeeData
+### bitcoinApi.getFeeData
 ```.js
 (async () => {
 
@@ -194,7 +191,7 @@ const bitcoinAPI = new BitcoinAPI({
 ```
 
 
-### .withdraw
+### bitcoinApi.withdraw
 ```.js
 (async () => {
 
