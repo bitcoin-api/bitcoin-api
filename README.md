@@ -244,15 +244,15 @@ const bitcoinAPI = new BitcoinAPI({
 
 ### API URL
 
-Testnet base URL:
+Testnet Base URL:
 
 `https://testnet.bitcoin-api.io`
 
-Mainnet base URL:
+Mainnet Base URL:
 
 `https://bitcoin-api.io`
 
-Example usage:
+Example Usage:
 
 A GET request to the `https://bitcoin-api.io/fee-data` endpoint gets the current fee data associated with doing withdraws. Learn more about the `/fee-data` endpoint [here](#fee-data).
 
