@@ -15,7 +15,7 @@
 * [API](#api)
 
 ## About
-The NPM module and GitHub repo `bitcoin-api` lets you add Bitcoin functionality to your websites and apps. Using a [token](#tokens), you can incorporate Bitcoin deposit and withdraw functionality into your tech.
+The NPM module and GitHub repo *bitcoin-api* lets you add Bitcoin functionality to your websites and apps. Using a [token](#tokens), you can incorporate Bitcoin deposit and withdraw functionality into your tech.
 
 # NodeJS Driver
 
