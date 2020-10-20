@@ -15,7 +15,7 @@
 * [API](#api)
 
 ## About
-The NPM module `bitcoin-api` lets you add Bitcoin functionality to your websites and apps. Using a [token](#tokens), you can incorporate Bitcoin deposit and withdraw functionality into your tech.
+The NPM module and GitHub repo `bitcoin-api` lets you add Bitcoin functionality to your websites and apps. Using a [token](#tokens), you can incorporate Bitcoin deposit and withdraw functionality into your tech.
 
 # NodeJS Driver
 
@@ -118,7 +118,7 @@ const bitcoinAPI = new BitcoinAPI({
 
 ## Usage
 
-### bitcoinApi.getTokenInfo
+### bitcoinAPI.getTokenInfo
 ```.js
 (async () => {
 
@@ -141,7 +141,7 @@ const bitcoinAPI = new BitcoinAPI({
 ```
 
 
-### bitcoinApi.createOrGetAddress
+### bitcoinAPI.createOrGetAddress
 ```.js
 (async () => {
 
@@ -167,7 +167,7 @@ const bitcoinAPI = new BitcoinAPI({
 ```
 
 
-### bitcoinApi.getFeeData
+### bitcoinAPI.getFeeData
 ```.js
 (async () => {
 
@@ -224,7 +224,7 @@ const bitcoinAPI = new BitcoinAPI({
 
 ## Table of Contents
 * [Requests](#requests)
-    * [API Url](#api-url)
+    * [API URL](#api-url)
     * [Public Endpoints](#public-endpoints)
     * [Tokens](#tokens)
 * [Resources](#resources) 
@@ -236,15 +236,15 @@ const bitcoinAPI = new BitcoinAPI({
 
 ## Requests
 
-### API Url
+### API URL
 
-This is the base url:
+This is the base URL:
 
 `https://bitcoin-api.io`
 
 Here's example usage:
 
-A GET request to `https://bitcoin-api.io/fee-data` gets the current fee data associated with doing withdraws.
+A GET request to the `https://bitcoin-api.io/fee-data` endpoint gets the current fee data associated with doing withdraws. See more on the `/fee-data` endpoint [here](#fee-data).
 
 
 ### Public Endpoints
@@ -258,7 +258,7 @@ A GET request to `https://bitcoin-api.io/fee-data` gets the current fee data ass
 ```
 
 ### Tokens
-**Tokens** are used to make authorized requests to your Bitcoin-API API.
+**Tokens** are used to make authorized requests to the Bitcoin-API API.
 These authorized requests allow you to access
 and to control your Bitcoin.
 A token is a key that gives you access to your Bitcoin,
