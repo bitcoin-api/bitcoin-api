@@ -116,7 +116,7 @@ const BitcoinAPI = require( 'bitcoin-api' );
 
 const bitcoinAPI = new BitcoinAPI({
 
-    token: 'asjfhnsdlkjfhdskljhfskdljfhsdjkfsdkjfhnsdlsdf...'
+    token: 'asjfhnsdlkjfdf...'
 });
 ```
 
