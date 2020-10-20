@@ -241,7 +241,13 @@ const bitcoinAPI = new BitcoinAPI({
 
 ### API Url
 
+This is the base url:
+
 `https://bitcoin-api.io`
+
+Here's example usage:
+
+A GET request to `https://bitcoin-api.io/fee-data` gets the current fee data associated with doing withdraws.
 
 
 ### Public Endpoints
