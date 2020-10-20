@@ -244,17 +244,17 @@ const bitcoinAPI = new BitcoinAPI({
 
 ### API URL
 
-This is the base URL:
+Testnet base URL:
+
+`https://testnet.bitcoin-api.io`
+
+Mainnet base URL:
 
 `https://bitcoin-api.io`
 
-Here's example usage:
+Example usage:
 
 A GET request to the `https://bitcoin-api.io/fee-data` endpoint gets the current fee data associated with doing withdraws. Learn more about the `/fee-data` endpoint [here](#fee-data).
-
-This is the testnet base URL:
-
-`https://testnet.bitcoin-api.io`
 
 ### Public Endpoints
 **Public Endpoints** can be accessed using HTTPS requests with the following header:
