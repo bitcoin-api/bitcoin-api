@@ -6,8 +6,6 @@
     />
 </a>
 
-### [Xapo](https://xapo.com)
-
 ### [Bitcoin Core](https://bitcoin.org/en/bitcoin-core/)
 
 ### [Bitcore](https://github.com/bitpay/bitcore)
