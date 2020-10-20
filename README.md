@@ -392,7 +392,7 @@ Token Endpoint
 The balance associated with your token
 will be automatically updated after your
 Bitcoin deposit transaction has
-at least 6 confirmations on the Bitcoin network.
+6 confirmations on the Bitcoin network.
 You can retrieve your Bitcoin balance using the
 [/tokens GET General-Token Endpoint](#get---get-token-info).
 
