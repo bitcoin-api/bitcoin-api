@@ -83,7 +83,8 @@ npm install bitcoin-api --save
 
 const BitcoinAPI = require( 'bitcoin-api' );
 
-// set: process.env.BITCOIN_API_TESTNET_MODE = 'true'; for testnet mode
+// process.env.BITCOIN_API_TESTNET_MODE = 'true'; // uncomment to enable testnet mode
+
 
 (async () => {
 
@@ -108,7 +109,8 @@ const BitcoinAPI = require( 'bitcoin-api' );
 ```.js
 'use strict';
 
-// set: process.env.BITCOIN_API_TESTNET_MODE = 'true'; for testnet mode
+// process.env.BITCOIN_API_TESTNET_MODE = 'true'; // uncomment to enable testnet mode
+
 
 const BitcoinAPI = require( 'bitcoin-api' );
 
