@@ -431,7 +431,7 @@ Token Endpoint
 
 **Upcoming Feature**
 
-A counter that shows the sum of all EnviroWithdrawAmounts
+Counter that shows the sum of all EnviroWithdrawAmounts
 
 Estimated Completion Date: late 2020, early 2021
 
