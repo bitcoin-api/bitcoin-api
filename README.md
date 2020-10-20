@@ -433,11 +433,11 @@ Token Endpoint
 
 ### More Information
 
+**Technical Support Email:** support@bitcoin-api.io
+
 [Terms of Service](/TERMS_OF_SERVICE.md)
 
 [Privacy Policy](/PRIVACY_POLICY.md)
-
-**Technical Support Email:** support@bitcoin-api.io
 
 
 ### Contribute
