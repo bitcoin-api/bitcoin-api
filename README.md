@@ -83,6 +83,8 @@ npm install bitcoin-api --save
 
 const BitcoinAPI = require( 'bitcoin-api' );
 
+// set: process.env.BITCOIN_API_TESTNET_MODE = 'true'; for testnet mode
+
 (async () => {
 
     const createTokenResults = await BitcoinAPI.createToken();
@@ -105,6 +107,8 @@ const BitcoinAPI = require( 'bitcoin-api' );
 ### Initialize Instance
 ```.js
 'use strict';
+
+// set: process.env.BITCOIN_API_TESTNET_MODE = 'true'; for testnet mode
 
 const BitcoinAPI = require( 'bitcoin-api' );
 
@@ -246,6 +250,9 @@ Here's example usage:
 
 A GET request to the `https://bitcoin-api.io/fee-data` endpoint gets the current fee data associated with doing withdraws. Learn more about the `/fee-data` endpoint [here](#fee-data).
 
+This is the testnet base URL:
+
+`https://testnet.bitcoin-api.io`
 
 ### Public Endpoints
 **Public Endpoints** can be accessed using HTTPS requests with the following header:
