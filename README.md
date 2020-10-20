@@ -433,7 +433,7 @@ Token Endpoint
 
 A counter that shows the sum of all EnviroWithdrawAmounts.
 
-Estimated completion date: late 2020, early 2021
+Estimated Completion Date: late 2020, early 2021
 
 ---
 
