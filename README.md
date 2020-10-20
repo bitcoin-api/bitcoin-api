@@ -437,7 +437,7 @@ Token Endpoint
 
 [Privacy Policy](/PRIVACY_POLICY.md)
 
-**Support Email:** `support@bitcoin-api.io`
+**Support Email:** support@bitcoin-api.io
 
 
 ### Contribute
