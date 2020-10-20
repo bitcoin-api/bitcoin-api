@@ -6,7 +6,7 @@
     />
 </a>
 
-# [Xapo](https://xapo.com)
+### [Xapo](https://xapo.com)
 
 ### [Bitcoin Core](https://bitcoin.org/en/bitcoin-core/)
 
