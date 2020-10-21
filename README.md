@@ -454,8 +454,3 @@ Estimated Completion Date: late 2020, early 2021
 [Terms of Service](/TERMS_OF_SERVICE.md)
 
 [Privacy Policy](/PRIVACY_POLICY.md)
-
-
-### Contribute
-
-Bitcoin-API is open source. Pull requests, GitHub issues, or any other feedback or suggestions are welcome and are greatly appreciated.
