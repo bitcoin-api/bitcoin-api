@@ -165,6 +165,7 @@ const bitcoinAPI = new BitcoinAPI({
             }
 
         Note:
+        
             A new address will be created and returned after
             the currently returned address has Bitcoin deposited to it
             with 6 confirmations.
@@ -190,6 +191,7 @@ const bitcoinAPI = new BitcoinAPI({
             }
 
         Note:
+
             This is a public method so it does not
             require a token to be activated.
     */
@@ -212,6 +214,7 @@ const bitcoinAPI = new BitcoinAPI({
         This operation withdraws 0.002 BTC to 3AfV9QQQTgtCH6YEjBpDTyH5sswgGD5MLp
 
         Note:
+        
             includeFeeInAmount is optional
                 When set to true, the fee will automatically
                 be deducted from the amount.
