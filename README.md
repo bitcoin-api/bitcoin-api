@@ -137,7 +137,6 @@ const bitcoinAPI = new BitcoinAPI({
         Logs:
 
             Token Info: {
-                "isActivated": true,
                 "balanceData": {
                     "amount": 0.002,
                     "status": "normal"
@@ -164,6 +163,11 @@ const bitcoinAPI = new BitcoinAPI({
                 
                 "address": "3AfV9QQQTgtCH6YEjBpDTyH5sswgGD5MLp"
             }
+
+        Note:
+            a new address will be created and returned after
+            the currently returned address has Bitcoin deposited to it
+            with 6 confirmations
     */
 })();
 ```
