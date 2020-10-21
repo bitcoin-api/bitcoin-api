@@ -25,14 +25,14 @@ describe( '.createOrGetAddress', function() {
 
         expect( typeof addressData ).to.equal( 'object' );
 
-        if( !!addressData.address ) {
+        // if( !!addressData.address ) {
 
             expect( typeof addressData.address ).to.equal( 'string' );
-        }
-        else {
+        // }
+        // else {
 
-            expect( addressData.address ).to.equal( null );
-        }
+        //     expect( addressData.address ).to.equal( null );
+        // }
 
         // expect( typeof addressData.timeOfExpiry ).to.equal( 'number' );
     });

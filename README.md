@@ -164,11 +164,6 @@ const bitcoinAPI = new BitcoinAPI({
                 
                 "address": "3AfV9QQQTgtCH6YEjBpDTyH5sswgGD5MLp"
             }
-
-        Note:
-
-            createOrGetAddress will return null for the "address" value
-                when no fresh addresses are available
     */
 })();
 ```
@@ -366,12 +361,7 @@ Token Endpoint
 ### /addresses
 
 #### POST - Create or Get Bitcoin Address
-This endpoint creates a new Bitcoin address that can
-be used to deposit Bitcoin. A new address will be generated
-once the old one has Bitcoin sent to it.
-If the address value is `null`,
-there are currently no new addresses available.
-
+This endpoint creates or gets a Bitcoin address that can be used to deposit Bitcoin. After using this endpoint to create and return an address, a new address will be created and returned from this endpoint once the currently returned address has Bitcoin sent to it with 6 confirmations. Addresses will always remain associated with a token, even after a new address is retrieved.
 
 ##### Authorization 
 Token Endpoint
