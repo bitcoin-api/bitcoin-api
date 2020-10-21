@@ -296,7 +296,7 @@ Tokens are used as follows:
 #### POST - Create Token
 Create a new token.
 Tokens provide access to your Bitcoin and associated resources
-by authorizing token-only requests (i.e. authorizing requests to endpoints that require "Token Endpoint" authorization).
+by authorizing token-only requests (i.e. by authorizing requests to endpoints that require "Token Endpoint" authorization).
 
 
 ##### Authorization
