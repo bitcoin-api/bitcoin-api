@@ -165,9 +165,9 @@ const bitcoinAPI = new BitcoinAPI({
             }
 
         Note:
-            a new address will be created and returned after
+            A new address will be created and returned after
             the currently returned address has Bitcoin deposited to it
-            with 6 confirmations
+            with 6 confirmations.
     */
 })();
 ```
@@ -191,7 +191,7 @@ const bitcoinAPI = new BitcoinAPI({
 
         Note:
             This is a public method so it does not
-            require a token to be activated
+            require a token to be activated.
     */
 })();
 ```
@@ -214,8 +214,8 @@ const bitcoinAPI = new BitcoinAPI({
         Note:
         
             includeFeeInAmount is optional
-                when set to true, the fee will automatically
-                be deducted from the amount
+                When set to true, the fee will automatically
+                be deducted from the amount.
 
             enviroWithdrawAmount is optional
                 The contribution is added to the withdraw fee.
@@ -284,7 +284,7 @@ Tokens are used as follows:
 // HTTP header to add to make requests to Token Endpoints
 {
     "Content-Type": "application/json",
-    "Token": "asidasidsdssdfjlkghnkrwthwuyietsahduyrrtjkertg"
+    "Token": "6bda5fe7949b470fa4e11e..."
 }
 ```
 
@@ -311,7 +311,7 @@ Public Endpoint
 ##### Response Body Example
 ```.js
 {
-    "token": "asjfhnsdlkjfhdskljhfskdljfhsdjkfsdkjfhnsdlsdf..."
+    "token": "asjfhnsdlkjhnsdlsdf..."
 }
 ```
 
@@ -357,7 +357,7 @@ Token Endpoint
 ##### Response Body Example
 ```.js
 {
-    "token": "2asjfhnsdlkjfhdskljhfskdljfhsdjkfsdkjfhnsdlsdf..."
+    "token": "2asjfhnsfsdkjfhnsdlsdf..."
 }
 ```
 
