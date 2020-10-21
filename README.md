@@ -361,7 +361,7 @@ Token Endpoint
 ### /addresses
 
 #### POST - Create or Get Bitcoin Address
-This endpoint creates or gets a Bitcoin address that can be used to deposit Bitcoin. After using this endpoint to create and return an address, a new address will be created and returned from this endpoint once the currently returned address has Bitcoin sent to it with 6 confirmations. Addresses will always remain associated with a token, even after a new address is retrieved.
+This endpoint creates or gets a Bitcoin address that can be used to deposit Bitcoin. After using this endpoint to create and return an address, a new address will be created and returned from this endpoint once the currently returned address has Bitcoin sent to it with 6 confirmations. Addresses will always remain associated with the token used to create and retrieve them, even after a new address is created and retrieved.
 
 ##### Authorization 
 Token Endpoint
