@@ -83,7 +83,7 @@ npm install bitcoin-api --save
 
 const BitcoinAPI = require( 'bitcoin-api' );
 
-// uncomment the line below to enable mainnet mode, the default mode is testnet mode
+// Uncomment the line below to enable mainnet mode, the default mode is testnet mode.
 // process.env.BITCOIN_API_MAINNET_MODE = 'true';
 
 
@@ -110,7 +110,7 @@ const BitcoinAPI = require( 'bitcoin-api' );
 ```.js
 'use strict';
 
-// uncomment the line below to enable mainnet mode, the default mode is testnet mode
+// Uncomment the line below to enable mainnet mode, the default mode is testnet mode.
 // process.env.BITCOIN_API_MAINNET_MODE = 'true';
 
 
@@ -165,7 +165,7 @@ const bitcoinAPI = new BitcoinAPI({
             }
 
         Note:
-        
+
             A new address will be created and returned after
             the currently returned address has Bitcoin deposited to it
             with 6 confirmations.
@@ -211,7 +211,7 @@ const bitcoinAPI = new BitcoinAPI({
     });
     
     /*
-        This operation withdraws 0.002 BTC to 3AfV9QQQTgtCH6YEjBpDTyH5sswgGD5MLp
+        This operation withdraws 0.002 BTC to 3AfV9QQQTgtCH6YEjBpDTyH5sswgGD5MLp.
 
         Note:
         
