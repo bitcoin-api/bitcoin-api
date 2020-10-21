@@ -156,7 +156,6 @@ const bitcoinAPI = new BitcoinAPI({
     console.log( 'Address Data:', JSON.stringify( addressData, null, 4 ) );
     
     /*
-
         Logs:
 
             Address Data: {
@@ -183,7 +182,6 @@ const bitcoinAPI = new BitcoinAPI({
     console.log( 'Fee Data:', JSON.stringify( feeData, null, 4 ) );
     
     /*
-        
         Logs:
 
             Fee Data: {
@@ -298,7 +296,7 @@ Tokens are used as follows:
 #### POST - Create Token
 Create a new token.
 Tokens provide access to your Bitcoin and associated resources
-by authorizing token-only requests.
+by authorizing token-only requests (i.e. authorizing requests to endpoints that require "Token Endpoint" authorization).
 
 
 ##### Authorization
@@ -423,7 +421,7 @@ Token Endpoint
 {
     "amount": 0.00004, // 0.00004 is the min withdraw amount
     "address": "3AfV9QQQTgtCH6YEjBpDTyH5sswgGD5MLp",
-    "includeFeeInAmount": false // optional, defaults to false
+    "includeFeeInAmount": false, // optional, defaults to false
     "enviroWithdrawAmount": 0.00001 // optional, makes the withdraw an EnviroWithdraw!
 }
 ```
