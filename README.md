@@ -212,7 +212,6 @@ const bitcoinAPI = new BitcoinAPI({
         This operation withdraws 0.002 BTC to 3AfV9QQQTgtCH6YEjBpDTyH5sswgGD5MLp
 
         Note:
-        
             includeFeeInAmount is optional
                 When set to true, the fee will automatically
                 be deducted from the amount.
