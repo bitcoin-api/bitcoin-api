@@ -2,12 +2,6 @@
 
 [![npm version](https://badge.fury.io/js/bitcoin-api.svg)](https://badge.fury.io/js/bitcoin-api)
 
-<a href="#">
-    <img
-        src="https://bitcoin-api.s3.amazonaws.com/images/visual_art/altso-splush-bee-and-lamby-build-your-own-world-banner-30.png"
-    />
-</a>
-
 ### Bitcoin API NodeJS Driver and Documentation 
 
 ## Contents
