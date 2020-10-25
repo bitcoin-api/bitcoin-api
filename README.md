@@ -213,8 +213,8 @@ const bitcoinAPI = new BitcoinAPI({
 
             enviroWithdrawAmount is optional
                 The contribution is added to the withdraw fee.
-                This is an option that is used to allow
-                users to contribute Bitcoin to the environment🌲🌎!
+                This is an option which
+                allows users to contribute Bitcoin to the environment🌲🌎!
     */
 })();
 ```
@@ -425,7 +425,7 @@ Token Endpoint
 {}
 ```
 
-**EnviroWithdraw** - an optional Bitcoin amount is used to allow users to contribute Bitcoin to the environment🌲🌎! This contribution is added to the withdraw fee. How much collected Bitcoin for the environment and how it will be used will be documented here. Open to suggestions for the best ways to use the collected Bitcoin to help the environment.
+**EnviroWithdraw** - an optional Bitcoin amount which allows users to contribute Bitcoin to the environment🌲🌎! This contribution is added to the withdraw fee. How much collected Bitcoin for the environment and how it will be used will be documented here. Open to suggestions for the best ways to use the collected Bitcoin to help the environment.
 
 **Upcoming Feature**
 
