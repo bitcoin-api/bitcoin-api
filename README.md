@@ -2,6 +2,13 @@
 
 [![npm version](https://badge.fury.io/js/bitcoin-api.svg)](https://badge.fury.io/js/bitcoin-api)
 
+<a href="#">
+    <img
+        src="https://bitcoin-api.s3.amazonaws.com/images/visual_art/so-splush-bee-and-lamby-build-your-own-world-banner-25.png"
+    />
+</a>
+
+
 ### Bitcoin API NodeJS Driver and Documentation 
 
 ## Contents
@@ -10,6 +17,18 @@
 
 ## About
 The GitHub repo and NPM module *bitcoin-api* lets you add Bitcoin functionality to your websites and apps. Using a [token](#tokens), you can incorporate Bitcoin deposit and withdraw functionality into your tech.
+
+**Also, check out:**
+
+<a href="https://github.com/bitcoin-api/bitcoin-api-full-stack">
+    <img
+        src="https://bitcoin-api.s3.amazonaws.com/images/visual_art/so-splush-bee-and-lamby-full-stack-banner-55.png"
+        width="320"
+    />
+</a>
+
+
+**[`Bitcoin-API-Full-Stack` - full stack Bitcoin and digital currency API, exchange, and game platform code on GitHub](https://github.com/bitcoin-api/bitcoin-api-full-stack)**
 
 # NodeJS Driver
 
