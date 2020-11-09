@@ -1,6 +1,6 @@
 {
   "name": "bitcoin-api",
-  "version": "5.2.27",
+  "version": "5.2.28",
   "description": "Bitcoin-API.io - Bitcoin as a Service.",
   "main": "index.js",
   "scripts": {
