@@ -447,6 +447,11 @@ Token Endpoint
 
 **EnviroWithdraw** - an optional Bitcoin amount which allows users to contribute Bitcoin to the environment🌲🌎! This contribution is added to the withdraw fee. How much collected Bitcoin for the environment there is and how it will be used will be documented here. Open to suggestions for the best ways to use the collected Bitcoin to help the environment.
 
+**In the Future**
+
+Counter that shows the sum of all EnviroWithdrawAmount contributions ever made
+
+
 ---
 
 ### More Information
