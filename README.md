@@ -449,7 +449,7 @@ Token Endpoint
 
 **Project Roadmap**
 
-In the future will create a counter that shows the sum of all EnviroWithdraw contributions ever made
+In the future, a counter that shows the sum of all EnviroWithdraw contributions ever made will be created.
 
 
 ---
