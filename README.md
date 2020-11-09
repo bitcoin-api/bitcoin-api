@@ -449,7 +449,7 @@ Token Endpoint
 
 **In the Future**
 
-Will create a counter that shows the sum of all EnviroWithdrawAmount contributions ever made
+Will create a counter that shows the sum of all EnviroWithdraw contributions ever made
 
 
 ---
