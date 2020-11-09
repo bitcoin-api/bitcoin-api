@@ -16,7 +16,7 @@
 * [API](#api)
 
 ## About
-The GitHub repo and NPM module *bitcoin-api* is designed for adding Bitcoin functionality to websites, apps, and other technology that's connected to the internet. Using a [token](#tokens), Bitcoin deposit and withdraw functionality can be incorporated into technology.
+The GitHub repo and NPM module *bitcoin-api* is designed for adding Bitcoin functionality to websites, apps, and other technology that's connected to the internet. Using a [token](#tokens), Bitcoin deposit and withdraw functionality can be incorporated into tech.
 
 **Also, check out:**
 
