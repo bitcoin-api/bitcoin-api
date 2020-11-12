@@ -264,7 +264,7 @@ Testnet Base URL:
 
 Mainnet Base URL:
 
-`https://bitcoin-api.io`
+`https://bitcoin-api.io` (private access - please contact support@bitcoin-api.io for mainnet API access)
 
 Example Usage:
 

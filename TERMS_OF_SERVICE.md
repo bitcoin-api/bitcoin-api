@@ -35,7 +35,7 @@ BA as a technology company that provides several different internet based servic
 
 If you want to remove your token or your account (i.e. your "TA"), that will remove any personally identifiable information associated with it, except for that which is required to be kept by law. Deleting your personally identifiable information can be done programatically through the API, through the app, or through contacting support. If you have any questions about your TA or your personally identifiable information, email support@bitcoin-api.io.
 
-If you reside in the United States, Canada, or Europe, you are not permitted to use BA services.
+If you reside in the United States or Europe, you are not permitted to use BA services.
 
 Unacceptable Use or Conduct
 • using Bitcoin-Api.io to finance anything illegal is strictly against the Bitcoin-Api.io Terms of Service. If there is any suspected or discovered criminal activity being facilitated by BA, it will immediately be investigated by BA and reported to the appropriate authorities.
