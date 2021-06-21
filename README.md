@@ -25,7 +25,7 @@
 
 ## Demo Videos
 
-> Note: the below demos have been deprecated in favour better tech in this repo
+> Note: the below demos have been deprecated in favour of better tech in this repo
 
 * **[Withdrawing Bitcoin from Bitcoin-Api Instance Using Postman, Demo Video on Twitter](https://twitter.com/Bitcoin_Api_io/status/1294575054479654913/video/1)**
 
