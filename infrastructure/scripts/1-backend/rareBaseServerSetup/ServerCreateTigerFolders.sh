@@ -1,0 +1,19 @@
+cd 
+
+rm -rf tigerScript
+mkdir tigerScript
+
+mkdir tigerScript/addressGenerator
+mkdir tigerScript/feeDataBot
+mkdir tigerScript/withdrawsBot
+mkdir tigerScript/depositsBot
+
+mkdir tigerScript/productionCredentials/addressGenerator
+mkdir tigerScript/productionCredentials/feeDataBot
+mkdir tigerScript/productionCredentials/withdrawsBot
+mkdir tigerScript/productionCredentials/depositsBot
+
+mkdir tigerScript/stagingCredentials/addressGenerator
+mkdir tigerScript/stagingCredentials/feeDataBot
+mkdir tigerScript/stagingCredentials/withdrawsBot
+mkdir tigerScript/stagingCredentials/depositsBot

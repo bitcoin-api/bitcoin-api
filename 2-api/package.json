@@ -1,0 +1,29 @@
+{
+  "name": "api",
+  "version": "1.0.1",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deployv3": "./scripts/doTheDeploy.sh",
+    "deploy": "node ./scripts/deployFunctionsV3",
+    "update": "./update.sh"
+  },
+  "author": "Michael Stecky-Efantis",
+  "license": "ISC",
+  "dependencies": {
+    "@bitcoin-api/full-stack-api-private": "^8.0.0",
+    "@bitcoin-api/full-stack-exchange-private": "^8.0.0",
+    "axios": "^0.21.1",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.453.0",
+    "bluebird": "^3.7.0",
+    "dotenv": "^6.2.0",
+    "execa": "^1.0.0",
+    "express": "^4.17.1",
+    "yargs": "^16.2.0"
+  }
+}

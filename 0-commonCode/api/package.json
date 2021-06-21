@@ -1,0 +1,30 @@
+{
+  "name": "@bitcoin-api/full-stack-api-private",
+  "version": "8.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Stecky-Efantis",
+  "license": "ISC",
+  "dependencies": {
+    "@bitcoin-api/bitcoin-address-validation": "^1.0.0",
+    "@bitcoin-api/redis-streams-utils": "^2.0.1",
+    "aws-sdk": "^2.523.0",
+    "do-redis-request": "^1.0.6",
+    "drf": "^1.0.12",
+    "get-redis-client": "^1.0.5",
+    "uuid": "^3.3.2"
+  },
+  "description": "",
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/bitcoin-api"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/bitcoinapi"
+    }
+  ]
+}

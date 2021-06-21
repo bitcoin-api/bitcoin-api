@@ -1,0 +1,26 @@
+{
+  "name": "tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "doCommand.js",
+  "scripts": {
+    "unusedAddressData": "node doRedisCommand.js --command='lrange' -a='unusedAddressData' -b='0' -c='-1' --mode='canada'",
+    "unusedAddressDataSize": "node doRedisCommand.js --command='llen' -a='unusedAddressData' --mode='canada'",
+    "unusedAddressDataSizeS": "node doRedisCommand.js --command='llen' -a='unusedAddressData' --mode='ireland'",
+    "keys": "node doRedisCommand.js --command='keys' --a='*' --mode='canada'",
+    "keysS": "node doRedisCommand.js --command='keys' --a='*' --mode='ireland'",
+    "altruisticTrimS": "node doRedisCommand.js --command='xtrim' --a='altruisticCodeRateLimiterQueueId' -b='MAXLEN' -c='0' --mode='ireland'",
+    "altruisticLenS": "node doRedisCommand.js --command='xlen' --a='altruisticCodeRateLimiterQueueId' --mode='ireland'",
+    "ipTrimS": "node doRedisCommand.js --command='xtrim' --a='ipAddressRateLimiterQueueId' -b='MAXLEN' -c='0' --mode='ireland'",
+    "ipLenS": "node doRedisCommand.js --command='xlen' --a='ipAddressRateLimiterQueueId' --mode='ireland'"
+  },
+  "author": "Michael Stecky-Efantis",
+  "license": "ISC",
+  "dependencies": {
+    "api": "file:../0-commonCode/api",
+    "dotenv": "^8.2.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
+    "yargs": "^16.0.3"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "awardbonus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Stecky-Efantis",
+  "license": "ISC",
+  "dependencies": {
+    "@bitcoin-api/full-stack-api-private": "^8.0.0",
+    "@bitcoin-api/full-stack-exchange-private": "^8.0.0",
+    "dotenv": "^8.2.0",
+    "yargs": "^16.2.0"
+  }
+}

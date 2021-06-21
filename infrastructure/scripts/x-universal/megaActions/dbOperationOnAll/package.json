@@ -1,0 +1,17 @@
+{
+  "name": "exchangeuserallrefreshexistingataeue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "GatoradeFresh.js",
+  "scripts": {
+    "eUsers": "node Scan.js"
+  },
+  "author": "Michael Stecky-Efantis",
+  "license": "ISC",
+  "dependencies": {
+    "@bitcoin-api/full-stack-api-private": "^8.0.0",
+    "@bitcoin-api/full-stack-exchange-private": "^8.0.0",
+    "dotenv": "^8.2.0",
+    "yargs": "^16.2.0"
+  }
+}
