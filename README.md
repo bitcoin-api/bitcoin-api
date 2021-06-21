@@ -18,9 +18,7 @@
 
 ## Roadmap
 
-* Currently adding BSC integration
-
-* Better documentation + easy build
+* Currently adding BSC integration (we will see if time allows for this)
 
 
 ## Demo Videos
