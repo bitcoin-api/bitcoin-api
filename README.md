@@ -18,7 +18,7 @@
 
 ## Roadmap
 
-* Currently adding BSC integration (we will see if time and circumstances allows for this, or if the author has higher-level principle priorities)
+* Currently adding BSC integration (we will see if time and circumstances allows for this, or if the author has higher-level principle priorities, PR/ideas/comments/suggestions welcome!)
 
 
 ## Demo Videos
