@@ -1,51 +1,41 @@
 {
-  "name": "bitcoin-api",
-  "version": "5.2.32",
-  "description": "Bitcoin-API.io - Bitcoin as a Service.",
+  "name": "bitcoin-api-full-stack",
+  "version": "1.0.1",
+  "description": "Open source Bitcoin API, exchange, and game platform.",
   "main": "index.js",
   "scripts": {
-    "Test__tokens_getTokenInfo": "./node_modules/.bin/_mocha ./tests/integrationTests/tokens/getTokenInfo.js",
-    "Test__addresses_createOrGetAddress": "./node_modules/.bin/_mocha ./tests/integrationTests/addresses/createOrGetAddress.js",
-    "Test__fee_data_getFeeData": "./node_modules/.bin/_mocha ./tests/integrationTests/fee_data/getFeeData.js",
-    "Test__withdraws_withdraw": "./node_modules/.bin/_mocha ./tests/integrationTests/withdraws/withdraw.js",
-    "Test__tokens_createToken": "./node_modules/.bin/_mocha ./tests/integrationTests/tokens/createToken.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bitcoin-api/bitcoin-api.git"
-  },
-  "author": "Bitcoin-Api.io",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/bitcoin-api/bitcoin-api/issues"
-  },
-  "homepage": "https://github.com/bitcoin-api/bitcoin-api#readme",
-  "devDependencies": {
-    "chai": "^4.2.0",
-    "dotenv": "^8.2.0",
-    "mocha": "^7.1.1"
-  },
-  "dependencies": {
-    "@bitcoin-api/bitcoin-address-validation": "^1.0.0",
-    "axios": "^0.19.2"
+    "url": "git+https://github.com/bitcoin-api/bitcoin-api-full-stack.git"
   },
   "keywords": [
     "bitcoin",
     "api",
-    "happy",
-    "realdeal",
-    "bitcoin-api",
-    "api-bitcoin",
-    "quick",
-    "lightweight",
-    "small",
-    "fast",
-    "easy",
-    "light",
-    "btc",
-    "baas",
-    "bitcoin-as-a-service",
-    "baas-is-bitcoin-api",
-    "service"
-  ]
+    "full",
+    "stack",
+    "exchange",
+    "game",
+    "platform"
+  ],
+  "author": "Michael Stecky-Efantis",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/bitcoin-api/bitcoin-api-full-stack/issues"
+  },
+  "homepage": "https://github.com/bitcoin-api/bitcoin-api-full-stack#readme",
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/bitcoin-api"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/bitcoinapi"
+    }
+  ],
+  "dependencies": {
+    "@bitcoin-api/full-stack-exchange-private": "^6.0.2"
+  }
 }

@@ -1,0 +1,109 @@
+body { font-family: sans-serif; }
+
+.TheDinocoin-Scene {
+  width: 100%;
+  /* width: 300px; */
+  height: 125px;
+  /* background-color: black; */
+  /* border: 1px solid #CCC; */
+  margin-top: 42px;
+  margin-bottom: 86px;
+  perspective: 400px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.TheDinocoin-Box {
+  align-self: center;
+  width: 300px;
+  height: 150px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(-50px);
+  transition: transform 3s;
+}
+
+.TheDinocoin-Box.action-show-front  { transform: translateZ( -50px) rotateY(   0deg); }
+.TheDinocoin-Box.action-show-back   { transform: translateZ( -50px) rotateY(-180deg); }
+.TheDinocoin-Box.action-show-right  { transform: translateZ(-150px) rotateY( -90deg); }
+.TheDinocoin-Box.action-show-left   { transform: translateZ(-150px) rotateY(  90deg); }
+.TheDinocoin-Box.action-show-top    { transform: translateZ(-100px) rotateX( -90deg); }
+.TheDinocoin-Box.action-show-bottom { transform: translateZ(-100px) rotateX(  90deg); }
+.TheDinocoin-Box.action-reset  { transform: translateZ( -50px) rotateY( 0deg); transition: transform 0.002s; }
+.TheDinocoin-Box.action-reset-back  { transform: translateZ( -50px) rotateY( -180deg); transition: transform 0.002s; }
+.TheDinocoin-Box.action-win  { transform: translateZ( -50px) rotateY( 3600deg); transition: transform 3s; }
+.TheDinocoin-Box.action-lose  { transform: translateZ( -50px) rotateY( 3420deg); transition: transform 3s; }
+
+.TheDinocoin-Box.speed  { transform: translateZ( -50px) rotateY( 0deg); transition: transform 0.00002s; }
+/* .TheDinocoin-Box.action-test1  { transform: translateZ( -50px) rotateY( 18000deg); transition: transform 50s; } */
+/* .TheDinocoin-Box.action-test2  { transform: translateZ( -50px) rotateY( 18000deg); transition: transform 3s; } */
+.TheDinocoin-Box.action-test1  { transform: translateZ( -50px) rotateY( 360deg); transition: transform 0.5s; }
+.TheDinocoin-Box.action-test2  { transform: translateZ( -50px) rotateY( 720deg); transition: transform 1s; }
+.TheDinocoin-Box.action-test3  { transform: translateZ( -50px) rotateY( 1080deg); transition: transform 1.5s; }
+.TheDinocoin-Box.action-test4  { transform: translateZ( -50px) rotateY( 1440deg); transition: transform 2s; }
+
+
+.TheDinocoin-Box.action-testomega  { transform: translateZ( -50px) rotateY( 3600deg); transition: transform 7s; }
+
+
+.TheDinocoin-BoxFace {
+  position: absolute;
+  border: 2px solid black;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.TheDinocoin-BoxFace--front,
+.TheDinocoin-BoxFace--back {
+  font-size: 100px;
+  width: 300px;
+  height: 150px;
+  line-height: 150px;
+}
+
+.TheDinocoin-BoxFace--right,
+.TheDinocoin-BoxFace--left {
+  width: 100px;
+  height: 150px;
+  left: 100px;
+  line-height: 150px;
+}
+
+.TheDinocoin-BoxFace--top,
+.TheDinocoin-BoxFace--bottom {
+  width: 300px;
+  height: 100px;
+  top: 25px;
+  line-height: 100px;
+}
+
+/* .TheDinocoin-BoxFace--front  { background: hsla(  0, 100%, 50%, 0.7); }
+.TheDinocoin-BoxFace--right  { background: hsla( 60, 100%, 50%, 0.7); }
+.TheDinocoin-BoxFace--back   { background: hsla(120, 100%, 50%, 0.7); }
+.TheDinocoin-BoxFace--left   { background: hsla(180, 100%, 50%, 0.7); }
+.TheDinocoin-BoxFace--top    { background: hsla(240, 100%, 50%, 0.7); }
+.TheDinocoin-BoxFace--bottom { background: hsla(300, 100%, 50%, 0.7); } */
+
+.TheDinocoin-BoxFace--front  { background: hsla(120, 100%, 50%, 0.8); }
+.TheDinocoin-BoxFace--right  { background: hsla(120, 100%, 50%, 0.8); }
+.TheDinocoin-BoxFace--back   { background: hsla(120, 100%, 50%, 0.8); }
+.TheDinocoin-BoxFace--left   { background: hsla(120, 100%, 50%, 0.8); }
+.TheDinocoin-BoxFace--top    { background: hsla(120, 100%, 50%, 0.8); }
+.TheDinocoin-BoxFace--bottom { background: hsla(120, 100%, 50%, 0.8); }
+
+
+.TheDinocoin-BoxFace--front  { transform: rotateY(  0deg) translateZ( 50px); }
+.TheDinocoin-BoxFace--back   { transform: rotateY(180deg) translateZ( 50px); }
+
+.TheDinocoin-BoxFace--right  { transform: rotateY( 90deg) translateZ(150px); }
+.TheDinocoin-BoxFace--left   { transform: rotateY(-90deg) translateZ(150px); }
+
+.TheDinocoin-BoxFace--top    { transform: rotateX( 90deg) translateZ(75px); }
+.TheDinocoin-BoxFace--bottom { transform: rotateX(-90deg) translateZ(75px); }
+
+/* label { margin-right: 10px; } */

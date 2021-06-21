@@ -1,0 +1,21 @@
+{
+  "name": "@bitcoin-api/full-stack-backend-private",
+  "version": "8.0.0",
+  "description": "Magna-Tiger🦁",
+  "repository": {
+    "type": "tiger",
+    "url": "https://google.com"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@bitcoin-api/full-stack-api-private": "^8.0.0",
+    "bitcoin-request": "^1.0.2",
+    "bqe": "^1.0.5",
+    "mongodb": "^3.4.0"
+  }
+}
