@@ -112,6 +112,23 @@ scp \
     "${destinationUserName}@${destinationUrl}:${bitcoinAddressValidationDestinationPath}"
 
 
+echo '👾👾👾👾👾👾👾👾👾👾'
+echo '👽👽🛸PUBLIC-NPM: BITCOIN-API'
+echo '👾👾👾👾👾👾👾👾👾👾'
+
+bitcoinApiSourcePath="${sourceBaseCodePath}/bitcoin-api"
+bitcoinApiDestinationPath="${destinationBaseCodePath}/x-public/bitcoin-api"
+
+scp \
+    -i "${pemPath}" \
+    -r \
+    "${bitcoinApiSourcePath}/LICENSE" \
+    "${bitcoinApiSourcePath}/package-lock.json" \
+    "${bitcoinApiSourcePath}/package.json" \
+    "${bitcoinApiSourcePath}/README.md" \
+    "${destinationUserName}@${destinationUrl}:${bitcoinApiDestinationPath}"
+
+
 # if [ $deployCommand == 'drq' ]; then
 
 #     sourcePath="${sourceBaseCodePath}/drq"
