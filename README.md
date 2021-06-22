@@ -12,7 +12,7 @@
 
 ## About
 
-* Run your own highly scalable and performant Bitcoin wallet and game platform for as cheap as a few USD per month.
+* Run your own highly scalable and performant Bitcoin wallet and game platform for as cheap as a few USD per month
 
 * You own the private keys for all the users
 
