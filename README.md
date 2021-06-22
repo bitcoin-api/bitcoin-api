@@ -16,11 +16,6 @@
 **[DynastyBitcoin.com](https://dynastybitcoin.com) - Bitcoin Wallet and Games**
 
 
-## Roadmap
-
-* Currently adding BSC integration (we will see if time and circumstances allows for this, or if the author has higher-level principle priorities, PRs/ideas/comments/suggestions welcome!)
-
-
 ## Demo Videos
 
 > Note: the below demos have been deprecated in favour better tech in this repo
@@ -28,6 +23,8 @@
 * **[Withdrawing Bitcoin from Bitcoin-Api Instance Using Postman, Demo Video on Twitter](https://twitter.com/Bitcoin_Api_io/status/1294575054479654913/video/1)**
 
 * **[12 Concurrent Bitcoin Withdraws from Bitcoin-Api Instance Using a NodeJS Script, Demo Video on YouTube](https://www.youtube.com/watch?v=eIwgwse94Sg)**
+
+* **[Instant Deployment Methodology](https://youtu.be/ZZ4zdq4AJY8)**
 
 * **[Exchange and Game Technology, Demo Video on YouTube](https://youtu.be/EMAwIrHM2Qc)**
 
