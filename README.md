@@ -4,6 +4,14 @@
 
 <br>
 
+<a href="#">
+    <img
+        src="https://bitcoin-api.s3.amazonaws.com/images/visual_art/so-splush-bee-and-lamby-build-your-own-world-banner-25.png"
+    />
+</a>
+
+<br>
+
 ## About
 
 * Run your own highly scalable and performant Bitcoin wallet and game platform for as cheap as a few USD per month.
@@ -27,11 +35,3 @@
 * **[Instant Deployment Methodology](https://youtu.be/ZZ4zdq4AJY8)**
 
 * **[Exchange and Game Technology, Demo Video on YouTube](https://youtu.be/EMAwIrHM2Qc)**
-
-<br>
-
-<a href="#">
-    <img
-        src="https://bitcoin-api.s3.amazonaws.com/images/visual_art/so-splush-bee-and-lamby-build-your-own-world-banner-25.png"
-    />
-</a>
