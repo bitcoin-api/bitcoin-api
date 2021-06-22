@@ -1,6 +1,6 @@
 {
-  "name": "bitcoin-api-full-stack",
-  "version": "1.0.1",
+  "name": "bitcoin-api",
+  "version": "2.0.0",
   "description": "Open source Bitcoin API, exchange, and game platform.",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bitcoin-api/bitcoin-api-full-stack.git"
+    "url": "git+https://github.com/bitcoin-api/bitcoin-api.git"
   },
   "keywords": [
     "bitcoin",
@@ -22,20 +22,7 @@
   "author": "Michael Stecky-Efantis",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/bitcoin-api/bitcoin-api-full-stack/issues"
+    "url": "https://github.com/bitcoin-api/bitcoin-api/issues"
   },
-  "homepage": "https://github.com/bitcoin-api/bitcoin-api-full-stack#readme",
-  "funding": [
-    {
-      "type": "github",
-      "url": "https://github.com/sponsors/bitcoin-api"
-    },
-    {
-      "type": "patreon",
-      "url": "https://www.patreon.com/bitcoinapi"
-    }
-  ],
-  "dependencies": {
-    "@bitcoin-api/full-stack-exchange-private": "^6.0.2"
-  }
+  "homepage": "https://github.com/bitcoin-api/bitcoin-api#readme"
 }
