@@ -14,7 +14,7 @@
 
 * Run your own highly scalable and performant Bitcoin wallet and game platform for as cheap as a few USD per month
 
-* You own the private keys for all the users
+* You own the private keys for all the users (you are the custodian🧑‍🎨)
 
 
 ## Demo
@@ -24,7 +24,7 @@
 
 ## Demo Videos
 
-> Note: the below demos have been deprecated in favour better tech in this repo
+> Note: the below demos have been deprecated in favour of better tech in this repo
 
 * **[Withdrawing Bitcoin from Bitcoin-Api Instance Using Postman, Demo Video on Twitter](https://twitter.com/Bitcoin_Api_io/status/1294575054479654913/video/1)**
 
