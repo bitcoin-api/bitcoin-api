@@ -9,7 +9,7 @@
   "author": "Michael Stecky-Efantis",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.755.0",
+    "aws-sdk": "^2.814.0",
     "dotenv": "^8.2.0",
     "yargs": "^16.0.3"
   }
