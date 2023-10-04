@@ -19,7 +19,7 @@
     "uuid": "^3.3.2"
   },
   "devDependencies": {
-    "aws-sdk": "^2.453.0",
+    "aws-sdk": "^2.814.0",
     "bluebird": "^3.7.0",
     "dotenv": "^6.2.0",
     "execa": "^1.0.0",
